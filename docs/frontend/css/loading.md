@@ -1,5 +1,5 @@
 ---
-loading效果
+title: loading效果
 ---
 
 1. [魔方 loading 效果](https://www.handsome-css.com/loaders/young-dragon-29)
