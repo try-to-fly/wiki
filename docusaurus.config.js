@@ -39,17 +39,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          routeBasePath: "/",
         },
         blog: {
+          path: "./timeline",
+          routeBasePath: "/timeline",
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          blogSidebarTitle: "最近提交",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -76,7 +72,7 @@ const config = {
             position: "left",
             label: "docs",
           },
-          { to: "/timeline", label: "Timeline", position: "left" },
+          { to: "/timeline", label: "timeline", position: "left" },
           {
             href: "https://github.com/try-to-fly/wiki",
             label: "GitHub",
@@ -86,17 +82,6 @@ const config = {
       },
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} My Wiki, Inc. Built with Docusaurus.`,
       },
       prism: {
