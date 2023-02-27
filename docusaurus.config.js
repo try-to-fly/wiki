@@ -46,6 +46,7 @@ const config = {
           routeBasePath: "/timeline",
           showReadingTime: true,
           blogSidebarTitle: "最近提交",
+          blogSidebarCount: "ALL",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
