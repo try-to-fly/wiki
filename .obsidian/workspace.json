@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Mac/skills/清理磁盘空间.md",
+                "file": "docs/frontend/Vue/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -206,7 +206,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Mac/skills/清理磁盘空间.md",
+                "file": "docs/frontend/Vue/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,7 +223,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Mac/skills/清理磁盘空间.md",
+                "file": "docs/frontend/Vue/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -246,7 +246,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Mac/skills/清理磁盘空间.md"
+                "file": "docs/frontend/Vue/index.md"
               }
             }
           }
@@ -270,11 +270,11 @@
   },
   "active": "18a69d3861d1047e",
   "lastOpenFiles": [
-    "docs/Mac/skills/index.md",
-    "docs/Mac/skills/清理磁盘空间.md",
-    "docs/Mac/app.md",
-    "docs/Website/在线服务.md",
     "timeline/2023-02.md",
+    "docs/Mac/app.md",
+    "docs/Mac/skills/清理磁盘空间.md",
+    "docs/Mac/skills/index.md",
+    "docs/Website/在线服务.md",
     "docs/Mac/Code Editor.md",
     "docs/Life/订阅服务.md",
     "docs/ai/chatGPT.md",
