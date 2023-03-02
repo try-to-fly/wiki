@@ -1,3 +1,7 @@
+---
+title: Promise
+---
+
 # [Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 1. [有了 async/await, 我们和 Promise 还能像从前一样两小无猜吗?](https://zhuanlan.zhihu.com/p/22938062?utm_source=pocket_saves)
