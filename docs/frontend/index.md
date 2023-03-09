@@ -5,6 +5,6 @@ sidebar_position: 0
 
 # 前端
 
-### web 框架
+### 博客
 
-### node 服务
+1. [LABNOTES](https://labnotes.org/)
