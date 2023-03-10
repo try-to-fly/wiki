@@ -8,6 +8,7 @@ title: Promise
 2. [利用 generator 解决回调地狱](https://zhuanlan.zhihu.com/p/22319621?utm_source=pocket_saves)
 3. [史上最易读懂的 Promise/A+ 完全实现](https://zhuanlan.zhihu.com/p/21834559?utm_source=pocket_saves)
 4. [yield 原理篇](https://www.html-js.com/article/Understanding-the-Yield-principle?utm_source=pocket_saves)
+5. [异步调用可以转化为同步调用吗？](https://juejin.cn/post/6844903491861757966)
 
 ### 常见错误
 

@@ -5,6 +5,7 @@
 ### 技巧
 
 1. [Typescript 有什么冷门但是很好用的特性？](https://www.zhihu.com/question/276172039)
+2. [TypeScript 泛型入门](https://mp.weixin.qq.com/s/MPBNIz8dbDtVTYA2Z_0UAw)
 
 ### 学习 ts
 

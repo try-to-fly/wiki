@@ -11,6 +11,7 @@
 1. [Git 教程](https://cloud.tencent.com/developer/doc/1096)
 2. [git-scm](https://git-scm.com/book/zh/v2)：推荐
 3. [廖雪峰-Git 教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+4. [高质量的 Git 中文教程](https://github.com/geeeeeeeeek/git-recipes)
 
 ### 文章
 
