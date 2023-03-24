@@ -14,6 +14,10 @@
 2. 查找替换：`<leader>S`
 3. 搜索：`<leader>fg`
 
+### 技巧
+
+1. `d/字符串`：使用 d/字符串命令来删除从当前字符到某个字符串结尾的内容。例如，如果你想删除从当前字符到字符串"end"的内容，你可以使用 d/end 命令
+
 #### 插件
 
 1. [vim-surround](https://github.com/tpope/vim-surround)
@@ -34,3 +38,7 @@
     - plug、键位
 4.  [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
     - lua
+
+### 工具
+
+1. vim 在线教程：[https://openvim.com/](https://openvim.com/)：包含 vim 的一些基本操作
