@@ -1,13 +1,11 @@
----
-title: 前端
-sidebar_position: 0
----
+### 社区
 
-# 前端
+1. [掘金](https://juejin.cn/)
 
 ### 博客
 
-1. [LABNOTES](https://labnotes.org/)
+1. [阮一峰的网络日志](https://www.ruanyifeng.com/blog/)
+2. [labnotes](https://labnotes.org/)
 
 ### 资源
 
