@@ -15,3 +15,8 @@
 ### 经验
 
 1. [使用 gpt 解析 pdf](./chat-pdf.md)
+
+### 应用场景
+
+1. [钉钉 AI](https://www.qbitai.com/2023/04/47193.html)
+2. [飞书 AI](https://www.ithome.com/0/685/820.htm)

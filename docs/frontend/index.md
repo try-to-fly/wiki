@@ -14,11 +14,7 @@ sidebar_position: 1
 
 1. [React](./React/index.md)
 2. [Vue](./Vue/index.md)
-
-### 绘图能力
-
-1. [2D](./web-render/2D/Pixi.js.md)
-2. [3D](./web-render/3D/index.md)
+3. [Web 渲染引擎](./web-render/index.md)
 
 ### 运行环境
 
