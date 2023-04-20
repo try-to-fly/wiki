@@ -2,6 +2,10 @@
 title: 推荐App
 ---
 
+### 聊天 App
+
+1. [微信](./apps/wechat.md)
+
 ### 推荐的 app
 
 1. [Hyperduck](https://sindresorhus.com/hyperduck)：将链接从您的 iOS 设备发送到您的 Mac。

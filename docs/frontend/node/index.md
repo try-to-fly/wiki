@@ -4,8 +4,7 @@ title: nodejs
 
 ### all in one 框架
 
-1. [Nest.js](https://nestjs.com/)：一个用于构建高效、可靠和可扩展的服务器端应用程序的渐进式 Node.js 框架。
-   - [为什么说 Nest.js 提供了 Express 没有的架构能力？](https://mp.weixin.qq.com/s/JOxWt9gtYnNcGzsvjsf0Vw)
+1. [Nest.js](./nestjs.md)：一个用于构建高效、可靠和可扩展的服务器端应用程序的渐进式 Node.js 框架。
 2. [EggJs](https://www.eggjs.org/)：使用 Node.js 和 Koa 构建更好的企业框架和应用程序。
 3. [Midway](https://midwayjs.org/)：Midway 是阿里巴巴 - 淘宝前端架构团队，基于渐进式理念研发的 Node.js 框架
 

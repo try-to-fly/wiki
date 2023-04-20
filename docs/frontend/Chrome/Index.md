@@ -25,3 +25,7 @@ title: Chrome
 5. [mobx-devtools](https://github.com/mobxjs/mobx-devtools)：mobx 插件
 6. [LeetCode Helper by labuladong](https://chrome.google.com/webstore/detail/leetcode-helper-by-labula/elafhogmnaapleckojedgipgmidneccg?hl=zh-CN)：LeetCode 插件
 7. [github-writer](https://github.com/ckeditor/github-writer)：GitHub Writer 是 GitHub 的富文本编辑器，支持 Markdown，易用高效。
+
+#### 别人说很好用
+
+1. [immersive-translate](https://github.com/immersive-translate/immersive-translate)：沉浸式双语网页翻译扩展，支持 chatGPT，以及谷歌、百度等 10 多种翻译服务

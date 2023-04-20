@@ -1,3 +1,7 @@
+### 我的 vim 配置
+
+[https://github.com/try-to-fly/init.vim](https://github.com/try-to-fly/init.vim)
+
 ### 用法
 
 #### 文件
