@@ -18,3 +18,7 @@
 ### 资源
 
 1. https://civitai.com/ ：提供了各种衍生出来的模型
+
+### 教程
+
+1. [AIGC 教程：Stable Diffusion 精进，如何训练特定画风 LoRA 模型？](https://mp.weixin.qq.com/s/lahF5TJ94zPKY-Frjez-wg)

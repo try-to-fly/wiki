@@ -40,6 +40,7 @@ export class CatsController {
 ### 注意
 
 1. nestjs 好像不支持 esmodule，使用 got、delay 的时候需要安装低版本的 commonjs 版本才可以生效
+   - 解决方法: https://github.com/nestjs/nest/issues/11046#issuecomment-1416983059
 
 ### 文章
 
