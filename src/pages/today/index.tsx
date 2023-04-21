@@ -67,7 +67,7 @@ const Today: React.FC = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>今天</h1>
         <div>
-          Made By <a href="https://sharegpt.com/c/7YDyeuM">GPT-4</a>, For 猫猫
+          Made By <a href="https://sharegpt.com/c/lZB0UvD">GPT-4</a>, For 猫猫
         </div>
         <p className={styles.time}>{time}</p>
         <p className={styles.date}>{date}</p>
