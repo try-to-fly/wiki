@@ -75,7 +75,7 @@ const config = {
             label: "docs",
           },
           { to: "/timeline", label: "timeline", position: "left" },
-          { to: "/today", label: "today", position: "left" },
+          { to: "/tools", label: "tools", position: "left" },
           {
             href: "https://github.com/try-to-fly/wiki",
             label: "GitHub",
