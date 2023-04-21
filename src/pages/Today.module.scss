@@ -1,0 +1,29 @@
+// Today.module.scss
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.graphsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.graphWrapper {
+  flex: 1;
+  max-width: 32%;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
