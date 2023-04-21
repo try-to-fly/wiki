@@ -1,0 +1,30 @@
+.container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+.color {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.canvas {
+  display: none;
+}
