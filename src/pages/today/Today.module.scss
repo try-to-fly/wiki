@@ -1,4 +1,12 @@
 // Today.module.scss
+[data-theme="dark"] {
+  .container * {
+    color: #fff !important;
+  }
+  .ant-card {
+    background: #fff !important;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;

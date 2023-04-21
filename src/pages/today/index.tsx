@@ -15,6 +15,9 @@ import {
   LinearScale,
 } from "chart.js";
 import styles from "./Today.module.scss";
+import { Card, Row, Col, Typography, Space } from "antd";
+
+const { Title, Text } = Typography;
 
 dayjs.locale("zh-cn");
 dayjs.extend(weekOfYear);
@@ -65,27 +68,34 @@ const Today: React.FC = () => {
   return (
     <Layout>
       <div className={styles.container}>
-        <h1 className={styles.title}>今天</h1>
-        <div>
-          Made By <a href="https://sharegpt.com/c/lZB0UvD">GPT-4</a>, For 猫猫
-        </div>
-        <p className={styles.time}>{time}</p>
-        <p className={styles.date}>{date}</p>
-        <p className={styles.info}>
-          第 {dayOfYear} 天, 第 {weekOfYear} 周
-        </p>
-
-        <div className={styles.graphsContainer}>
-          <div className={styles.graphWrapper}>
-            <Pie data={pieChartData("今天进度百分比", todayProgress)} />
-          </div>
-          <div className={styles.graphWrapper}>
-            <Pie data={pieChartData("本周进度百分比", weekProgress)} />
-          </div>
-          <div className={styles.graphWrapper}>
-            <Pie data={pieChartData("当年进度百分比", yearProgress)} />
-          </div>
-        </div>
+        <Space direction="vertical">
+          <Title level={1}>今天</Title>
+          <Text className={styles.time}>{time}</Text>
+          <Text className={styles.date}>{date}</Text>
+          <Text className={styles.info}>
+            第 {dayOfYear} 天, 第 {weekOfYear} 周
+          </Text>
+          <Text>
+            Made By <a href="https://sharegpt.com/c/lZB0UvD">GPT-4</a>, For 猫猫
+          </Text>
+        </Space>
+        <Row gutter={[16, 16]}>
+          <Col xs={24} sm={12} md={8}>
+            <Card title="今天进度百分比">
+              <Pie data={pieChartData("今天进度百分比", todayProgress)} />
+            </Card>
+          </Col>
+          <Col xs={24} sm={12} md={8}>
+            <Card title="本周进度百分比">
+              <Pie data={pieChartData("本周进度百分比", weekProgress)} />
+            </Card>
+          </Col>
+          <Col xs={24} sm={12} md={8}>
+            <Card title="当年进度百分比">
+              <Pie data={pieChartData("当年进度百分比", yearProgress)} />
+            </Card>
+          </Col>
+        </Row>
       </div>
     </Layout>
   );

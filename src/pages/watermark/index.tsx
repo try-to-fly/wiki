@@ -176,12 +176,11 @@ const WatermarkTool: React.FC = () => {
   }, [handlePaste]);
 
   useEffect(() => {
-    const { watermarkText, fontSize, textSpacing } = form.getFieldsValue([
+    const { watermarkText, fontSize } = form.getFieldsValue([
       "watermarkText",
       "fontSize",
       "textSpacing",
     ]);
-    console.log("form changed", watermarkText, fontSize, textSpacing);
     if (watermarkText !== undefined && fontSize !== undefined) {
       debouncedApplyWatermark();
     } else {
@@ -194,7 +193,7 @@ const WatermarkTool: React.FC = () => {
       <div className={styles.container}>
         <Form
           form={form}
-          layout="inline"
+          layout="vertical"
           className={styles.controls}
           onValuesChange={debouncedApplyWatermark}
         >
