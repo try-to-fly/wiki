@@ -6,9 +6,15 @@ import weekOfYear from "dayjs/plugin/weekOfYear";
 import duration from "dayjs/plugin/duration";
 import advancedFormat from "dayjs/plugin/advancedFormat";
 import Layout from "@theme/Layout";
-import styles from "./Today.module.scss";
 import { Pie } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  LinearScale,
+} from "chart.js";
+import styles from "./Today.module.scss";
 
 dayjs.locale("zh-cn");
 dayjs.extend(weekOfYear);
@@ -16,7 +22,7 @@ dayjs.extend(duration);
 dayjs.extend(advancedFormat);
 dayjs.extend(isLeapYear);
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, LinearScale);
 const progressColor = "#36A2EB";
 const remainingColor = "#E0E0E0";
 
