@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Row, Col, Input, Upload, Button, Space } from "antd";
+import { Row, Col, Input, Upload, Button, Space, Typography } from "antd";
+const { Link } = Typography;
 import { UploadOutlined } from "@ant-design/icons";
 import styles from "./WatermarkTool.module.scss";
 import Layout from "@theme/Layout";
@@ -151,7 +152,7 @@ const WatermarkTool: React.FC = () => {
     <Layout>
       <div className={styles.container}>
         <Row gutter={[16, 16]} className={styles.controls}>
-          <Col xs={24} sm={6}>
+          <Col xs={12} sm={4}>
             <Upload
               multiple
               accept="image/*"
@@ -161,32 +162,29 @@ const WatermarkTool: React.FC = () => {
               <Button icon={<UploadOutlined />}>选择图片</Button>
             </Upload>
           </Col>
-          <Col xs={24} sm={6}>
+          <Col xs={12} sm={4}>
             <Input
               placeholder="水印文本"
               value={watermarkText}
               onChange={(e) => setWatermarkText(e.target.value)}
             />
           </Col>
-          <Col xs={24} sm={6}>
+          <Col xs={12} sm={4}>
             <Space>
               {/* 添加更多颜色 */}
-              <div
-                className={styles.color}
-                style={{ background: "rgba(0, 0, 0, 0.5)" }}
-                onClick={() => setWatermarkColor("rgba(0, 0, 0, 0.5)")}
-              />
-              <div
-                className={styles.color}
-                style={{ background: "rgba(255, 0, 0, 0.5)" }}
-                onClick={() => setWatermarkColor("rgba(255, 0, 0, 0.5)")}
-              />
+              {/* ...颜色选择器... */}
             </Space>
           </Col>
-          <Col xs={24} sm={6}>
+          <Col xs={12} sm={4}>
             <Button onClick={downloadImages}>批量下载图片</Button>
           </Col>
+          <Col xs={12} sm={4}>
+            <Link href="https://sharegpt.com/c/mgySV9T" target="_blank">
+              By GPT-4
+            </Link>
+          </Col>
         </Row>
+
         <div className={styles.preview}>
           {previewImages.map((imageUrl, index) => (
             <img
