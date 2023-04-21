@@ -4,9 +4,15 @@
 2. [ChatGPT 应用汇总及操作手册](https://www.mojidoc.com/05dbc-uvhdkr22fjazlowmiihngdoxvq-00b)：包含了各种场景和用途。
 3. [ChatGPT 终极指南](https://geekr.dev/posts/chatgpt-ultimate-guide)
 
+### 插件
+
+1. [KeepChatGPT](https://github.com/xcanwin/KeepChatGPT): 油猴子插件，可以解决 gpt 各种报错、登录等问题
+2. [ShareGPT](https://sharegpt.com/)：Chrome 插件,用于分享 gpt 的会话内容
+
 ### App
 
-1. [MacGpt](https://macgpt.com)：支持快捷键、inline、API、web 模式
+1. [MacGpt](https://macgpt.com)：支持 Mac，支持快捷键、inline、API、web 模式
+2. [QuickGPT](https://sindresorhus.gumroad.com/l/quickgpt)：支持 Mac，支持 ShareGpt
 
 #### 编程
 

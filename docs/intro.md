@@ -37,3 +37,4 @@ sidebar_position: 0
 1. [书籍](./books/小说.md)
 2. [其他](./others/index.md)
 3. [timeline](./timeline)
+4. [All in One](./others/all-in-one.md)：收录了各种资源的集合
