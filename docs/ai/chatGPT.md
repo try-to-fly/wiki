@@ -9,6 +9,10 @@
 1. [KeepChatGPT](https://github.com/xcanwin/KeepChatGPT): 油猴子插件，可以解决 gpt 各种报错、登录等问题
 2. [ShareGPT](https://sharegpt.com/)：Chrome 插件,用于分享 gpt 的会话内容
 
+### 第三方 Web
+
+1. [Vercel Ai Playground](https://play.vercel.ai/)：Vercel 提供的，用户可以方便地选择不同的模型，比较它们的生成结果。不稳定，目前使用体验不好。
+
 ### App
 
 1. [MacGpt](https://macgpt.com)：支持 Mac，支持快捷键、inline、API、web 模式

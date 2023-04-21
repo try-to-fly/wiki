@@ -4,7 +4,9 @@ title: 介绍
 sidebar_position: 0
 ---
 
-该 Wiki 包含了本人日常开发、生活的一些记录。
+该 Wiki 包含了本人日常开发、生活的一些记录。内容来源博客、周刊、Github 等。
+
+欢迎贡献，如果你发现有趣的、不错的内容，欢迎在[Issuses](https://github.com/try-to-fly/wiki/issues)中告诉我。
 
 ### 开发
 
