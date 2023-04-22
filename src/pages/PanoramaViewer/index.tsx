@@ -4,22 +4,17 @@ import { OrbitControls } from "@react-three/drei";
 import {
   BackSide,
   TextureLoader,
-  Mesh,
-  MutableRefObject,
   sRGBEncoding,
   LinearFilter,
+  MOUSE,
 } from "three";
-import { Button, Upload } from "antd";
-import {
-  FullscreenExitOutlined,
-  FullscreenOutlined,
-  UploadOutlined,
-} from "@ant-design/icons";
+import { Upload } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 import Layout from "@theme/Layout";
 import styles from "./PanoramaViewer.module.scss";
 
 const Panorama = ({ url, autoRotate }) => {
-  const meshRef = useRef() as MutableRefObject<Mesh | undefined>;
+  const meshRef = useRef() as any;
   const [loadingError, setLoadingError] = useState(null);
   const [geometryArgs, setGeometryArgs] = useState<[number, number, number]>([
     500, 60, 40,
@@ -64,7 +59,7 @@ const Panorama = ({ url, autoRotate }) => {
 
   useFrame((state, delta) => {
     if (autoRotate) {
-      state.camera.rotation.y += delta * 0.1;
+      meshRef.current.rotation.y += delta * 0.1;
       state.camera.updateProjectionMatrix();
     }
   });
@@ -90,16 +85,24 @@ const PanoramaCanvas = ({ url, autoRotate, fullscreen }) => {
         gl={{ alpha: false }}
         onCreated={({ gl }) => {
           gl.setClearColor("white");
+          gl.setPixelRatio(window.devicePixelRatio);
         }}
       >
         <Panorama url={url} autoRotate={autoRotate} />
+
         <OrbitControls
           enableZoom={true}
-          enablePan={false}
+          enablePan={true}
           enableDamping={true}
           dampingFactor={0.2}
           rotateSpeed={0.5}
-          onPointerDown={() => autoRotate(false)}
+          mouseButtons={{
+            LEFT: MOUSE.ROTATE,
+            MIDDLE: MOUSE.DOLLY,
+            RIGHT: MOUSE.PAN,
+          }}
+          onPointerUp={() => autoRotate(false)}
+          reverseOrbit={true}
         />
       </Canvas>
     </div>
@@ -111,6 +114,7 @@ const PanoramaViewer = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(-1);
   const [fullscreen, setFullscreen] = useState(false);
   const [autoRotate, setAutoRotate] = useState(false);
+  const [autoRotateTimeout, setAutoRotateTimeout] = useState(null);
 
   const handleImagePreview = (file, files: File[]) => {
     const blobUrls = files.map((file) => URL.createObjectURL(file));
@@ -119,18 +123,23 @@ const PanoramaViewer = () => {
     return false;
   };
 
-  const handleFullscreen = () => {
-    setFullscreen(!fullscreen);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAutoRotate(true);
+    }, 5000);
+    setAutoRotateTimeout(timer);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
-    if (selectedImageIndex !== -1) {
+    if (!autoRotate) {
+      clearTimeout(autoRotateTimeout);
       const timer = setTimeout(() => {
         setAutoRotate(true);
       }, 5000);
-      return () => clearTimeout(timer);
+      setAutoRotateTimeout(timer);
     }
-  }, [selectedImageIndex]);
+  }, [autoRotate]);
 
   return (
     <Layout>
@@ -147,9 +156,8 @@ const PanoramaViewer = () => {
             fullscreen ? styles.fullscreenToolbar : ""
           }`}
         >
-          {/* 修改 UploadOutlined 的样式，使其根据主题颜色改变 */}
           <Upload
-            accept="image/*"
+            accept="image/"
             multiple
             showUploadList={false}
             beforeUpload={handleImagePreview}
@@ -157,28 +165,6 @@ const PanoramaViewer = () => {
           >
             <UploadOutlined className={styles.uploadIcon} />
           </Upload>
-          {uploadedImages[selectedImageIndex] && (
-            <Button
-              type="text"
-              size="large"
-              onClick={handleFullscreen}
-              icon={
-                fullscreen ? <FullscreenExitOutlined /> : <FullscreenOutlined />
-              }
-              className={styles.fullscreenButton}
-            />
-          )}
-          {fullscreen && (
-            <div className={styles.exitFullscreenButton}>
-              <Button
-                type="text"
-                size="large"
-                onClick={handleFullscreen}
-                icon={<FullscreenExitOutlined />}
-                className={styles.fullscreenButton}
-              />
-            </div>
-          )}
         </div>
         <div className={styles.imageList}>
           {uploadedImages.map((url, index) => (
