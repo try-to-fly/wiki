@@ -149,7 +149,7 @@ const WatermarkTool: React.FC = () => {
   const debouncedApplyWatermark = useCallback(() => {
     const handler = setTimeout(() => {
       applyWatermark();
-    }, 300);
+    }, 800);
 
     return () => {
       clearTimeout(handler);
