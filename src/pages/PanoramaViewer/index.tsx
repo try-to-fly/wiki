@@ -57,12 +57,12 @@ const Panorama = ({ url, autoRotate }) => {
     );
   }, [url, loadingError]);
 
-  useFrame((state, delta) => {
-    if (autoRotate) {
-      meshRef.current.rotation.y += delta * 0.1;
-      state.camera.updateProjectionMatrix();
-    }
-  });
+  // useFrame((state, delta) => {
+  //   if (autoRotate) {
+  //     meshRef.current.rotation.y += delta * 0.1;
+  //     state.camera.updateProjectionMatrix();
+  //   }
+  // });
 
   return (
     <mesh ref={meshRef}>
