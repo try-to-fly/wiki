@@ -5,6 +5,7 @@ import styles from "./Navigation.module.scss";
 import Link from "@docusaurus/Link";
 import SmileOutlined from "@ant-design/icons/SmileOutlined";
 import FileImageOutlined from "@ant-design/icons/FileImageOutlined";
+import EyeOutlined from "@ant-design/icons/EyeOutlined";
 interface NavItem {
   name: string;
   url: string;
@@ -23,6 +24,12 @@ const navigationData = [
     url: "/watermark",
     gradient: "linear-gradient(135deg, #FDD819 0%, #FF8F00 100%)",
     icon: <FileImageOutlined />,
+  },
+  {
+    name: "全景图",
+    url: "/PanoramaViewer",
+    gradient: "linear-gradient(135deg, #F86D77 0%, #F88D50 50%, #FFBF00 100%)",
+    icon: <EyeOutlined />,
   },
 ];
 const Navigation: React.FC = () => {

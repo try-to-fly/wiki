@@ -6,6 +6,7 @@
 
 1. [阮一峰的网络日志](https://www.ruanyifeng.com/blog/)
 2. [labnotes](https://labnotes.org/)
+3. [InfoQ 前端专栏](https://www.infoq.cn/topic/33)
 
 ### 资源
 

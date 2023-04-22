@@ -1,0 +1,108 @@
+.panoramaViewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.toolbar {
+  margin-bottom: 16px;
+}
+
+.canvasContainer {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.imageList {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.imageItem {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.active {
+    border: 2px solid #1890ff;
+  }
+}
+.toolbar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+}
+
+.fullscreenToolbar {
+  top: 16px;
+  left: 16px;
+}
+.uploadIcon {
+  font-size: 24px;
+  color: var(--ifm-color-primary);
+}
+
+.fullscreenButton {
+  color: var(--ifm-color-primary);
+}
+
+.exitFullscreenButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+}
+
+.imageList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.imageThumbnail {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.selectedThumbnail {
+  border-color: var(--ifm-color-primary);
+}
