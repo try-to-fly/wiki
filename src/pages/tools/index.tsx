@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row } from "antd";
-import Layout from "@theme/Layout";
 import styles from "./Navigation.module.scss";
 import Link from "@docusaurus/Link";
 import {
@@ -9,6 +8,7 @@ import {
   EyeOutlined,
   ThunderboltOutlined,
 } from "@ant-design/icons";
+import { Wrap } from "@site/src/component/Wrap";
 
 interface NavItem {
   name: string;
@@ -42,11 +42,11 @@ const navigationData = [
     icon: <ThunderboltOutlined />,
   },
 ];
+
 const Navigation: React.FC = () => {
   return (
-    <Layout>
+    <Wrap gptUrl="https://sharegpt.com/c/rkKOVvF">
       <div className={styles.navigationWrapper}>
-        <a href="https://sharegpt.com/c/rkKOVvF">By GPT-4</a>
         <Row gutter={[24, 24]} justify="center">
           {navigationData.map((item: NavItem) => (
             <Col
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
           ))}
         </Row>
       </div>
-    </Layout>
+    </Wrap>
   );
 };
 

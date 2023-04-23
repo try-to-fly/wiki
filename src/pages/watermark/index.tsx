@@ -12,9 +12,9 @@ import {
 } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import styles from "./WatermarkTool.module.scss";
-import Layout from "@theme/Layout";
 import { SketchPicker } from "react-color";
 import prettyBytes from "pretty-bytes";
+import { Wrap } from "@site/src/component/Wrap";
 
 const { Option } = Select;
 
@@ -189,7 +189,7 @@ const WatermarkTool: React.FC = () => {
   }, [form, images, watermarkColor]);
 
   return (
-    <Layout>
+    <Wrap gptUrl="https://sharegpt.com/c/lkfBg8r">
       <div className={styles.container}>
         <Form
           form={form}
@@ -278,15 +278,6 @@ const WatermarkTool: React.FC = () => {
             <Col xs={24} sm={6}>
               <Button onClick={downloadImages}>下载</Button>
             </Col>
-            <Col xs={24} sm={6}>
-              <a
-                href="https://sharegpt.com/c/lkfBg8r"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                By GPT-4
-              </a>
-            </Col>
           </Row>
         </Form>
         <div className={styles.preview}>
@@ -301,7 +292,7 @@ const WatermarkTool: React.FC = () => {
         </div>
       </div>
       <canvas ref={canvasRef} className={styles.canvas}></canvas>
-    </Layout>
+    </Wrap>
   );
 };
 

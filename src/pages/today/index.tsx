@@ -5,7 +5,6 @@ import "dayjs/locale/zh-cn";
 import weekOfYear from "dayjs/plugin/weekOfYear";
 import duration from "dayjs/plugin/duration";
 import advancedFormat from "dayjs/plugin/advancedFormat";
-import Layout from "@theme/Layout";
 import { Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -16,6 +15,7 @@ import {
 } from "chart.js";
 import styles from "./Today.module.scss";
 import { Card, Row, Col, Typography, Space } from "antd";
+import { Wrap } from "@site/src/component/Wrap";
 
 const { Title, Text } = Typography;
 
@@ -66,7 +66,7 @@ const Today: React.FC = () => {
   };
 
   return (
-    <Layout>
+    <Wrap gptUrl="https://sharegpt.com/c/lZB0UvD">
       <div className={styles.container}>
         <Space direction="vertical">
           <Title level={1}>今天</Title>
@@ -74,9 +74,6 @@ const Today: React.FC = () => {
           <Text className={styles.date}>{date}</Text>
           <Text className={styles.info}>
             第 {dayOfYear} 天, 第 {weekOfYear} 周
-          </Text>
-          <Text>
-            Made By <a href="https://sharegpt.com/c/lZB0UvD">GPT-4</a>, For 猫猫
           </Text>
         </Space>
         <Row gutter={[16, 16]}>
@@ -97,7 +94,7 @@ const Today: React.FC = () => {
           </Col>
         </Row>
       </div>
-    </Layout>
+    </Wrap>
   );
 };
 

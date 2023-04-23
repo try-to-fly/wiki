@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import {
   BackSide,
@@ -10,8 +10,8 @@ import {
 } from "three";
 import { Upload } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import Layout from "@theme/Layout";
 import styles from "./PanoramaViewer.module.scss";
+import { Wrap } from "@site/src/component/Wrap";
 
 const Panorama = ({ url, autoRotate }) => {
   const meshRef = useRef() as any;
@@ -56,13 +56,6 @@ const Panorama = ({ url, autoRotate }) => {
       }
     );
   }, [url, loadingError]);
-
-  // useFrame((state, delta) => {
-  //   if (autoRotate) {
-  //     meshRef.current.rotation.y += delta * 0.1;
-  //     state.camera.updateProjectionMatrix();
-  //   }
-  // });
 
   return (
     <mesh ref={meshRef}>
@@ -142,7 +135,7 @@ const PanoramaViewer = () => {
   }, [autoRotate]);
 
   return (
-    <Layout>
+    <Wrap gptUrl="https://sharegpt.com/c/rleTjsb">
       <div className={styles.panoramaViewer}>
         {uploadedImages[selectedImageIndex] && (
           <PanoramaCanvas
@@ -180,7 +173,7 @@ const PanoramaViewer = () => {
           ))}
         </div>
       </div>
-    </Layout>
+    </Wrap>
   );
 };
 

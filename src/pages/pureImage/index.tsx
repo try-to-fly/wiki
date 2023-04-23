@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Space, Upload, Slider } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import Layout from "@theme/Layout";
 import styles from "./ImageColorProcessor.module.scss";
 import { RcFile } from "antd/lib/upload";
 import FloodFill from "q-floodfill";
+import { Wrap } from "@site/src/component/Wrap";
 
 const ImageColorProcessor: React.FC = () => {
   const [originalImage, setOriginalImage] = useState<HTMLImageElement | null>(
@@ -84,7 +84,7 @@ const ImageColorProcessor: React.FC = () => {
   }, [position, tolerance]);
 
   return (
-    <Layout>
+    <Wrap gptUrl="https://sharegpt.com/c/WtKNnHn">
       <div className={styles.container}>
         <Space size="large">
           <Upload
@@ -125,7 +125,7 @@ const ImageColorProcessor: React.FC = () => {
           )}
         </div>
       </div>
-    </Layout>
+    </Wrap>
   );
 };
 
