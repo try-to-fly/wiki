@@ -3,9 +3,13 @@ import { Col, Row } from "antd";
 import Layout from "@theme/Layout";
 import styles from "./Navigation.module.scss";
 import Link from "@docusaurus/Link";
-import SmileOutlined from "@ant-design/icons/SmileOutlined";
-import FileImageOutlined from "@ant-design/icons/FileImageOutlined";
-import EyeOutlined from "@ant-design/icons/EyeOutlined";
+import {
+  SmileOutlined,
+  FileImageOutlined,
+  EyeOutlined,
+  ThunderboltOutlined,
+} from "@ant-design/icons";
+
 interface NavItem {
   name: string;
   url: string;
@@ -30,6 +34,12 @@ const navigationData = [
     url: "/PanoramaViewer",
     gradient: "linear-gradient(135deg, #F86D77 0%, #F88D50 50%, #FFBF00 100%)",
     icon: <EyeOutlined />,
+  },
+  {
+    name: "图片去背景",
+    url: "/pureImage",
+    gradient: "linear-gradient(135deg, #F97794 0%, #623AA2 100%)",
+    icon: <ThunderboltOutlined />,
   },
 ];
 const Navigation: React.FC = () => {

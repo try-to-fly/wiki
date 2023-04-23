@@ -15,16 +15,6 @@ AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
 1. [chatGpt](./chatGPT.md)
 2. [文心一言](https://yiyan.baidu.com/)：国内的 gpt 能力，内置了 Stable Diffusion 绘图。
 
-#### 不实用
-
-1. [Web LLM](https://mlc.ai/web-llm/)：运行在浏览器中的模型，小玩具
-2. [Bard](https://bard.google.com/)：谷歌的模型，目前能力很差
-   - [Google Bard 大更新！我们用 GPT-4 给它出了 20 道题](https://mp.weixin.qq.com/s/nySMyAbnwhsmdv4kxmGMxQ)
-3. [StableLM](https://huggingface.co/spaces/stabilityai/stablelm-tuned-alpha-chat): Stability.ai 发布的开源模型
-
-   - [开源版 ChatGPT 要来了？这个 AI 做图神器团队，想让人人都能做自己的大模型](https://mp.weixin.qq.com/s/Sa5Qzeax4pK4irp6eSfvQQ)
-   - [Stable Diffusion 背后公司开源大语言模型，很火，但很烂](https://www.ithome.com/0/687/965.htm)
-
 #### 待观望
 
 1. [通义千问](https://tongyi.aliyun.com/):阿里的大语言模型
@@ -32,6 +22,16 @@ AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
 2. [MiniGPT-4](https://minigpt-4.github.io/)：号称具备 gpt4 没有发布的能力，但是大概率是炒作，需要后续留意
 3. [Open Assistant](https://open-assistant.io/zh)：又一个开源的大语言模型
    - [全球最大的 ChatGPT 开源替代品来了，支持 35 种语言](https://mp.weixin.qq.com/s/aeg-RMgElMaiKBwd8xZ37Q)
+4. [Bard](https://bard.google.com/)：谷歌的模型，目前能力很差
+   - [Google Bard 大更新！我们用 GPT-4 给它出了 20 道题](https://mp.weixin.qq.com/s/nySMyAbnwhsmdv4kxmGMxQ)
+   - [直连 Colab，支持 20 种编程语言：谷歌版 ChatGPT 代码水平反杀了？](https://mp.weixin.qq.com/s/LPB4X99pV7KuExWHcBqugA)
+
+#### 不实用
+
+1. [Web LLM](https://mlc.ai/web-llm/)：运行在浏览器中的模型，小玩具
+2. [StableLM](https://huggingface.co/spaces/stabilityai/stablelm-tuned-alpha-chat): Stability.ai 发布的开源模型
+   - [开源版 ChatGPT 要来了？这个 AI 做图神器团队，想让人人都能做自己的大模型](https://mp.weixin.qq.com/s/Sa5Qzeax4pK4irp6eSfvQQ)
+   - [Stable Diffusion 背后公司开源大语言模型，很火，但很烂](https://www.ithome.com/0/687/965.htm)
 
 ### 绘图类
 
