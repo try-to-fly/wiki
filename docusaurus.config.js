@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "微笑的Wiki",
   tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.png",
 
   // Set the production url of your site here
   url: "https://wiki.dev-hub.top",
@@ -65,7 +65,7 @@ const config = {
         title: "微笑的Wiki",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
