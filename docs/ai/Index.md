@@ -17,12 +17,13 @@ AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
 
 #### 待观望
 
-1. [通义千问](https://tongyi.aliyun.com/):阿里的大语言模型
+1. [LLaMA](./LLaMA.md)：FaceBook 泄漏的大语言模型
+2. [通义千问](https://tongyi.aliyun.com/):阿里的大语言模型
    - [阿里版 GPT 通义千问实测来了！中文十级，数学、编程、情书全套整活](https://mp.weixin.qq.com/s/Y-_k0QNEuR-Cz0rUi7kk2g)
-2. [MiniGPT-4](https://minigpt-4.github.io/)：号称具备 gpt4 没有发布的能力，但是大概率是炒作，需要后续留意
-3. [Open Assistant](https://open-assistant.io/zh)：又一个开源的大语言模型
+3. [MiniGPT-4](https://minigpt-4.github.io/)：号称具备 gpt4 没有发布的能力，但是大概率是炒作，需要后续留意
+4. [Open Assistant](https://open-assistant.io/zh)：又一个开源的大语言模型
    - [全球最大的 ChatGPT 开源替代品来了，支持 35 种语言](https://mp.weixin.qq.com/s/aeg-RMgElMaiKBwd8xZ37Q)
-4. [Bard](https://bard.google.com/)：谷歌的模型，目前能力很差
+5. [Bard](https://bard.google.com/)：谷歌的模型，目前能力很差
    - [Google Bard 大更新！我们用 GPT-4 给它出了 20 道题](https://mp.weixin.qq.com/s/nySMyAbnwhsmdv4kxmGMxQ)
    - [直连 Colab，支持 20 种编程语言：谷歌版 ChatGPT 代码水平反杀了？](https://mp.weixin.qq.com/s/LPB4X99pV7KuExWHcBqugA)
 
@@ -54,6 +55,7 @@ AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
 
 1. 类似 iPhone 的抠图能力：[https://segment-anything.com/](https://segment-anything.com/)
 2. [AnimatedDrawings](https://github.com/facebookresearch/AnimatedDrawings)：这个工具使用 AI 模型，将手绘的人物草图变成一段动画。
+3. [DINOv2](https://dinov2.metademolab.com/): 可以产生适用于图像级视觉任务（如图像分类、实例检索、视频理解）以及像素级视觉任务（如深度估计、语义分割）的通用特征
 
 ## 模型社区
 
