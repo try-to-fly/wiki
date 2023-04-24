@@ -1,0 +1,16 @@
+---
+title: UI-组件库
+---
+
+### 常用
+
+1. [antd](https://ant.design/index-cn)：国内大部分公司都在用 <Badge npm="antd" github="https://github.com/ant-design/ant-design" />
+
+### 移动端
+
+1. [antd-mobile](https://mobile.ant.design/zh)：antd 移动端 <Badge npm="antd-mobile" github="https://github.com/ant-design/ant-design-mobile" />
+
+### 别人推荐
+
+1. [Shad](https://ui.shadcn.com/docs/installation)：这不是组件库。它是可重复使用的组件的集合，您可以将它们复制并粘贴到您的应用程序中。<Badge npm="shadcn-ui" />
+2. [Radix UI](https://www.radix-ui.com/):一个组件一个 npm 包，好多大公司都在用，还不知道好用在哪儿 <Badge github="https://github.com/radix-ui/primitives"  />

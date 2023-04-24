@@ -10,7 +10,15 @@ export const Wrap = ({
 }) => {
   return (
     <Layout>
-      {gptUrl && <a href={gptUrl}>By GPT-4</a>}
+      {/* {gptUrl && (
+        <a href={gptUrl}>
+          <img
+            style={{ width: 16, height: 16 }}
+            alt="By GPT-4"
+            src="https://chat.openai.com/favicon-32x32.png"
+          />
+        </a>
+      )} */}
       {children}
     </Layout>
   );
