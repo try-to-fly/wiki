@@ -22,3 +22,10 @@
 ### 教程
 
 1. [AIGC 教程：Stable Diffusion 精进，如何训练特定画风 LoRA 模型？](https://mp.weixin.qq.com/s/lahF5TJ94zPKY-Frjez-wg)
+2. [如何用 Stable Diffusion+ControlNet 做角色设计？](https://mp.weixin.qq.com/s/-5U3oHWP4c4YN0X4Vji0LA)
+3. [如何使用 Stable Diffusion 生成风格化游戏物品和图标](https://mp.weixin.qq.com/s/aNeQr4N0BT4qiFWTO5XF7A)
+4. [精通 Stable Diffusion 画图，理解 LoRA、Dreambooth、Hypernetworks 四大模型差异](https://mp.weixin.qq.com/s/eaAFW0DFpzX-HyZp4LaThg)
+
+### 第三方衍生
+
+1. [Dreamstudio](https://dreamstudio.ai/)：使用独有的 StableDiffusion 模型、文本到图像、图像到图像、变体和样式来实现您的目标。有免费额度。

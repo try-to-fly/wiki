@@ -4,21 +4,41 @@
 2.  拥有强大的学习和推理能力，来自顶尖的斯坦福团队。
 3.  涵盖广泛的领域，深入的知识，用户友好，具备良好的扩展性。
 
+### 如何用
+
+1. 选择一个合适的 gpt 应用：浏览器插件、IM 机器人、客户端 API 封装、第三方封装。
+2. 选择合适的 [prompts](./prompts.md)。
+3. 继续对话，来调优细节。
+
 ### 镜像站、开箱即用
 
-1.  [ChatGPT 镜像站点](https://github.com/xx025/carrot)
-2.  [Vercel Ai Playground](https://play.vercel.ai/): Vercel 提供，便捷选择不同模型比较生成结果，但当前稳定性不佳。
+#### 推荐
+
+1.  [Poe](https://poe.com/)： Quora 出的 ai 封装，支持 App 端。不需要 key 可以免费用。
+
+#### 其他
+
+1.  [Vercel Ai Playground](https://play.vercel.ai/): Vercel 提供，便捷选择不同模型比较生成结果，但当前稳定性不佳。
+2.  [forefront](https://chat.forefront.ai/): 预设了好多游戏角色。
+3.  [Free ChatGpt Site](https://cc.ai55.cc/)： 聚合了各种 chatGPT 第三方账户<Badeg github="https://github.com/xx025/carrot" />
 
 ### 插件
 
 1.  [KeepChatGPT](https://github.com/xcanwin/KeepChatGPT): 解决 GPT 报错、登录等问题的油猴子插件 <Badge github="https://github.com/xcanwin/KeepChatGPT" />
 2.  [ShareGPT](https://sharegpt.com/): 分享 GPT 会话内容的 Chrome 插件 <Badge github="https://github.com/domeccleston/sharegpt" />
+3.  [Glarity Summary ](https://glarity.app/): 适用于 YouTube/Google 的 ChatGPT
+4.  [HeartBeat](https://greasyfork.org/zh-CN/scripts/462967-chatgpt-heartbeat)：解决 gpt 一直断线的油猴子脚本。
 
-### 应用程序
+### 客户端 App
 
 1.  [MacGpt](https://macgpt.com/): 支持 Mac，具备快捷键、内联、API、web 模式
 2.  [QuickGPT](https://sindresorhus.gumroad.com/l/quickgpt): 支持 Mac，兼容 ShareGpt
 3.  [lencx.ChatGPT](https://github.com/lencx/ChatGPT): 全平台客户端，预设角色更强大 <Badge github="https://github.com/lencx/ChatGPT" />
+
+### Web
+
+1. [trywale](https://trywale.com/)：支持数据集功能。
+2. [trydyno](https://embed.trydyno.com/)：可以内嵌到网站用的 gpt 问答。
 
 ### 自行部署
 
@@ -46,9 +66,17 @@
     - [飞书版 Copilot 来了！一键总结、一键续写，还能一键对齐 OKR](https://mp.weixin.qq.com/s/3Yq4CDJJCxvJDYZpW7IbOQ)
 3.  [WPS AI](https://aiwrite.wps.cn/#/)
     - [WPS AI 来了，比 ChatGPT 更适合办公，还更懂中文](https://mp.weixin.qq.com/s/wviAAIHmlO1QSX4BUjNv4A)
-4.  [chat-pdf](https://chat.openai.com/chat-pdf.md): 使用 ChatGPT 学习 PDF 文档
-5.  [Raycast AI](https://www.raycast.com/ai): 内置多种便捷 AI 能力，搭配 Raycast 使用更佳。
+4.  [chat-pdf](https://chat.openai.com/chat-pdf.md): 使用 ChatGPT 学习 PDF 文档，免费账户支持 2000 页以内 PDF。
+5.  [Raycast AI](https://www.raycast.com/ai): 内置多种便捷 AI 能力，搭配 Raycast 使用更佳，而且目前 api 免费使用。
 6.  [Notion AI](https://www.notion.so/product/ai): 方便总结、优化内容，淘宝可购买账号
+7.  [Cursor](https://www.cursor.so/)：使用 AI 开发代码。一开始用的 gpt-4，api 被滥用后，改成 3.5 了。
+8.  [new bing](https://www.bing.com/new)：内置 gpt 的搜索软件，由于目前限制非常多，还有广告。已经非常难用了。
+
+### 其他人在做
+
+1. [使用 gpt-驱动浏览器](https://twitter.com/natfriedman/status/1575631194032549888)：用 gpt 在亚马逊购物
+2. [ggetmumu](https://getmumu.com/)：使用 gpt 搜索 Emoji 表情, 付费软件，不推荐。
+3. [tldrthis](https://tldrthis.com/): 长文摘要，支持输入 url 摘要。
 
 ### 过时资源
 

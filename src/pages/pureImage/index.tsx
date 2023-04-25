@@ -6,6 +6,10 @@ import { RcFile } from "antd/lib/upload";
 import FloodFill from "q-floodfill";
 import { Wrap } from "@site/src/component/Wrap";
 
+/**
+ * 更强大的擦除工具参考: https://github.com/advimman/lama
+ */
+
 const ImageColorProcessor: React.FC = () => {
   const [originalImage, setOriginalImage] = useState<HTMLImageElement | null>(
     null

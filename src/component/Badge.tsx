@@ -18,7 +18,7 @@ const Badges: React.FC<BadgesProps> = ({ github, npm }) => {
 
     return (
       <Tooltip title="GitHub Stars">
-        <a href={`${repoUrl}/stargazers`} target="_blank" rel="noreferrer">
+        <a href={repoUrl} target="_blank" rel="noreferrer">
           <img src={imageUrl} alt="GitHub stars" style={{ marginRight: 8 }} />
         </a>
       </Tooltip>

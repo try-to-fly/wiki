@@ -2,22 +2,18 @@
 title: AI能力
 ---
 
-AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
-
 ## AI 产品
 
 ### LLM(大语言模型)类
 
-#### 实用
+#### 实用: 可以在实际环境中实用的模型
 
-> 可以在实际环境中实用的模型
-
-1. [chatGpt](./chatGPT.md)
+1. [chatGpt](./chatGPT.md)：翻译、润色写作、编码、QA。
 2. [文心一言](https://yiyan.baidu.com/)：国内的 gpt 能力，内置了 Stable Diffusion 绘图。
 
 #### 待观望
 
-1. [LLaMA](./LLaMA.md)：FaceBook 泄漏的大语言模型
+1. [LLaMA](./LLaMA.md)：FaceBook 泄漏的大语言模型，外号羊驼 🦙。
 2. [通义千问](https://tongyi.aliyun.com/):阿里的大语言模型
    - [阿里版 GPT 通义千问实测来了！中文十级，数学、编程、情书全套整活](https://mp.weixin.qq.com/s/Y-_k0QNEuR-Cz0rUi7kk2g)
 3. [MiniGPT-4](https://minigpt-4.github.io/)：号称具备 gpt4 没有发布的能力，但是大概率是炒作，需要后续留意
@@ -36,8 +32,8 @@ AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
 
 ### 绘图类
 
-1. [Midjourney](./Midjourney.md)：基于 Discord 的 AI 绘图能力，需要梯子
-2. [Stable Diffusion](./Stable-Diffusion.md)：Stability.ai 发布的开源模型，本地可以运行的 AI 绘图
+1. [Midjourney](./Midjourney.md)：不需要部署，提供 Prompts 即可作图。出图质量很高。但是需要付费，可以考虑共享账户。
+2. [Stable Diffusion](./Stable-Diffusion.md)：Stability.ai 发布的开源模型，本地可以运行的 AI 绘图，又衍生出了非常多的能力。
 
 ### 语音转文本
 
@@ -48,19 +44,21 @@ AI 能做什么：对话、图片、视频、音频、作曲、写作、Code
 
 ### 开发辅助
 
-1. [Autodoc](https://github.com/context-labs/autodoc)：使用 LLM 模型自动生成代码文档，代码变更后，就自动更新
+1. [Autodoc](https://github.com/context-labs/autodoc)：使用 LLM 模型自动生成代码文档，代码变更后，就自动更新 <Badge github="https://github.com/context-labs/autodoc" />
 2. [GitHubNext](https://githubnext.com/)：GitHub Next 旨在探索软件开发的未来，包括 Copilot。
+
+### AI 导航
+
+1. [emo-ai 导航](https://emo.qhplus.cn/ai/dashboard/portal)
+2. [值得试用的工具](https://learningprompt.wiki/docs/recommend/%E5%80%BC%E5%BE%97%E8%AF%95%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7)
+3. [ChatGPT 网址导航](https://github.com/LangLangShanDeNanKe/chatgpt): <Badge github="https://github.com/LangLangShanDeNanKe/chatgpt" />
 
 ### 其他：
 
-1. 类似 iPhone 的抠图能力：[https://segment-anything.com/](https://segment-anything.com/)
+1. [segment-anything](https://github.com/facebookresearch/segment-anything)：类似 iPhone 的抠图能力。<Badge github="https://github.com/facebookresearch/segment-anything" />
 2. [AnimatedDrawings](https://github.com/facebookresearch/AnimatedDrawings)：这个工具使用 AI 模型，将手绘的人物草图变成一段动画。
 3. [DINOv2](https://dinov2.metademolab.com/): 可以产生适用于图像级视觉任务（如图像分类、实例检索、视频理解）以及像素级视觉任务（如深度估计、语义分割）的通用特征
 
 ## 模型社区
 
 1.[Hugging Face](https://huggingface.co/)：Hugging Face 是一个提供自然语言处理模型和工具的开源社区和平台。
-
-## Prompt
-
-1. [Learning Prompt](https://learningprompt.wiki/)：包含了 chatGPT 和 Midjourney 的教程
