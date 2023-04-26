@@ -29,3 +29,7 @@ title: Chrome
 #### 别人说很好用
 
 1. [immersive-translate](https://github.com/immersive-translate/immersive-translate)：沉浸式双语网页翻译扩展，支持 chatGPT，以及谷歌、百度等 10 多种翻译服务
+
+### Chrome 介绍
+
+1. [深入了解现代 Web 浏览器（第 1 部分）](https://developer.chrome.com/blog/inside-browser-part1/)
