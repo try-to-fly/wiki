@@ -1,0 +1,13 @@
+{
+  "name": "微笑的Wiki",
+  "short_name": "Wiki",
+  "start_url": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "664x654",
+      "type": "image/png"
+    }
+  ]
+}
