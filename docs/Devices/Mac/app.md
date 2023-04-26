@@ -15,6 +15,7 @@ title: 推荐App
 2. [SwitchHosts](https://switchhosts.vercel.app/zh): SwitchHosts 是一个管理、切换多个 hosts 方案的工具
 3. [shottr](https://shottr.cc/)：Mac 最好用的截图工具，只有不到 1.3M
 4. [Proxyman](https://proxyman.io/)：更好用的代理软件
+5. [Apifox](https://apifox.com/): 目前最好用的 API 管理 app，集合了 postman、yapi 等功能，支持分享 api 文档。 <Badge rate={45} />
 
 #### 内网穿透
 
@@ -25,7 +26,7 @@ title: 推荐App
 
 > 之前在用，但是现在有更好的选择了
 
-1. [Charles](https://www.charlesproxy.com/)：代理软件，可以网上搜一下授权码就可以用了
+1. [Charles](https://www.charlesproxy.com/)：代理软件，推荐用 Proxyman 代替。
 
 ### 待研究
 

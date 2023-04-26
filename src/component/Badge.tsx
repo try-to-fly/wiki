@@ -1,5 +1,5 @@
 import React from "react";
-import { Tooltip, Badge } from "antd";
+import { Tooltip, Badge, Rate } from "antd";
 
 interface BadgesProps {
   github?: string;
@@ -10,8 +10,15 @@ interface BadgesProps {
  * 来自gpt-4：https://sharegpt.com/c/XnNywsD
  * */
 
-const Badges: React.FC<BadgesProps> = ({ github, npm }) => {
-  console.log(github, npm);
+const Badges: React.FC<BadgesProps> = ({
+  github,
+  npm,
+  rate,
+}: {
+  github?: string;
+  npm?: string;
+  rate?: number;
+}) => {
   const getGithubStarsBadge = (repoUrl: string) => {
     const [_, user, repo] = repoUrl.split("/").slice(-3);
     const imageUrl = `https://img.shields.io/github/stars/${user}/${repo}.svg?style=social&label=Star&maxAge=2592000`;
@@ -47,6 +54,7 @@ const Badges: React.FC<BadgesProps> = ({ github, npm }) => {
     <span style={{ display: "inline-flex", alignItems: "center" }}>
       {github && getGithubStarsBadge(github)}
       {npm && getNpmDownloadsBadge(npm)}
+      {rate && <Rate defaultValue={rate} disabled />}
     </span>
   );
 };

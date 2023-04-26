@@ -37,6 +37,5 @@ sidebar_position: 1
 ### 其他
 
 1. [面试](./Interview.md)
-2. [算法](./Algorithm.md)
-3. [博客&社区](./blog.md)
-4. [前端趋势](./Trend.md)
+2. [博客&社区](./blog.md)
+3. [前端趋势](./Trend.md)

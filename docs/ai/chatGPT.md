@@ -18,8 +18,8 @@
 
 #### 其他
 
-1.  [Vercel Ai Playground](https://play.vercel.ai/): Vercel 提供，便捷选择不同模型比较生成结果，但当前稳定性不佳。
-2.  [forefront](https://chat.forefront.ai/): 预设了好多游戏角色。
+1.  [Vercel Ai playground](https://play.vercel.ai/): vercel 提供，便捷选择不同模型比较生成结果，但当前稳定性不佳。
+2.  [Forefront](https://chat.forefront.ai/): 预设了好多游戏角色。
 3.  [Free ChatGpt Site](https://cc.ai55.cc/)： 聚合了各种 chatGPT 第三方账户<Badeg github="https://github.com/xx025/carrot" />
 
 ### 插件
@@ -44,8 +44,9 @@
 
 1.  [ChatGPT Next Web](https://github.com/Yidadaa/ChatGPT-Next-Web): 一键免费部署私人 ChatGPT 网页应用 <Badge github="https://github.com/Yidadaa/ChatGPT-Next-Web" />
 2.  [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web): 基于 API_KEY 的 Web 页面 <Badge github="https://github.com/Chanzhaoyu/chatgpt-web" />
-3.  [wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt): 微信 GPT <Badge github="https://github.com/fuergaosi233/wechat-chatgpt" />
-4.  [Dingtalk-OpenAI](https://github.com/ConnectAI-E/Dingtalk-OpenAI): 钉钉 GPT <Badge github="https://github.com/ConnectAI-E/Dingtalk-OpenAI" />
+3.  [川虎 Chat](https://github.com/GaiZhenbiao/ChuanhuChatGPT): 为 ChatGPT/ChatGLM/LLaMA/StableLM/MOSS 等多种 LLM 提供了一个轻快好用的 Web 图形界面 <Badge github="https://github.com/GaiZhenbiao/ChuanhuChatGPT" />
+4.  [wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt): 微信 GPT <Badge github="https://github.com/fuergaosi233/wechat-chatgpt" />
+5.  [Dingtalk-OpenAI](https://github.com/ConnectAI-E/Dingtalk-OpenAI): 钉钉 GPT <Badge github="https://github.com/ConnectAI-E/Dingtalk-OpenAI" />
 
 ### 发展趋势
 
