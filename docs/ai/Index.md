@@ -9,7 +9,7 @@ title: AI能力
 #### 实用: 可以在实际环境中实用的模型
 
 1. [chatGpt](./chatGPT.md)：翻译、润色写作、编码、QA。
-2. [文心一言](https://yiyan.baidu.com/)：国内的 gpt 能力，内置了 Stable Diffusion 绘图。
+2. [文心一言](https://yiyan.baidu.com/)：国内的 gpt 能力，内置了 Stable Diffusion 绘图。<Badge rate={3} />
 
 #### 待观望
 
@@ -41,6 +41,11 @@ title: AI能力
     - [Aiko](https://sindresorhus.com/aiko)：支持 Mac、Ios 版本，免费
     - [Whisper Notes](https://apps.apple.com/cn/app/id6447090616?platform=iphone): 支持 Mac、Ios 版本，免费
     - [cheetah](https://github.com/leetcode-mafia/cheetah)：利用 Whisper 和 gpt，辅助面试
+
+### 待研究
+
+1. [JinaAI](https://github.com/jina-ai): JinaAI 是一个基于现代云原生架构的开源搜索和推荐框架，支持多种类型数据和查询方式。
+   [以型搜型｜神经搜索赋能 3D 模型搜索新突破](https://blog.csdn.net/Jina_AI/article/details/129192975?spm=1001.2014.3001.5501)
 
 ### 开发辅助
 

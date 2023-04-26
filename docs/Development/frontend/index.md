@@ -28,11 +28,11 @@ sidebar_position: 1
 3. [Typescript](./Typescript.md)
 4. [文本编辑器](./text-editor.md)
 5. [小程序开发](./webapp.md)：微信小程序、钉钉小程序
-6. [Debug](./Debug.md): web 和 mobile 开发中的一些调试技巧和工具
 
 ### 开发环境
 
 1. [编程相关](./code/index.md)
+2. [Debug](./Debug.md): web 和 mobile 开发中的一些调试技巧和工具
 
 ### 其他
 

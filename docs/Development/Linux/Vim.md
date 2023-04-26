@@ -43,6 +43,10 @@
 4.  [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
     - lua
 
+#### 相关博客
+
+1. [PegasusWang](https://www.zhihu.com/people/pegasus-wang/posts): 分享了好多 vim 教程。
+
 ### 工具
 
 1. vim 在线教程：[https://openvim.com/](https://openvim.com/)：包含 vim 的一些基本操作

@@ -21,13 +21,15 @@
 1.  [Vercel Ai playground](https://play.vercel.ai/): vercel 提供，便捷选择不同模型比较生成结果，但当前稳定性不佳。
 2.  [Forefront](https://chat.forefront.ai/): 预设了好多游戏角色。
 3.  [Free ChatGpt Site](https://cc.ai55.cc/)： 聚合了各种 chatGPT 第三方账户<Badeg github="https://github.com/xx025/carrot" />
+4.  [gpt4free](https://chatbot.sex)：逆向了第三方的 gptapi。 <Badeg github="https://github.com/xtekky/gpt4free" />
 
 ### 插件
 
 1.  [KeepChatGPT](https://github.com/xcanwin/KeepChatGPT): 解决 GPT 报错、登录等问题的油猴子插件 <Badge github="https://github.com/xcanwin/KeepChatGPT" />
 2.  [ShareGPT](https://sharegpt.com/): 分享 GPT 会话内容的 Chrome 插件 <Badge github="https://github.com/domeccleston/sharegpt" />
 3.  [Glarity Summary ](https://glarity.app/): 适用于 YouTube/Google 的 ChatGPT
-4.  [HeartBeat](https://greasyfork.org/zh-CN/scripts/462967-chatgpt-heartbeat)：解决 gpt 一直断线的油猴子脚本。
+4.  [BibiGPT](https://b.jimmylv.cn/): 一键总结视频内容 <Badge github="https://github.com/JimmyLv/BibiGPT"/>
+5.  [HeartBeat](https://greasyfork.org/zh-CN/scripts/462967-chatgpt-heartbeat)：解决 gpt 一直断线的油猴子脚本。
 
 ### 客户端 App
 
@@ -50,9 +52,10 @@
 
 ### 发展趋势
 
-1.  [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT): 使 GPT-4 完全自主化的项目
-    - [AutoGPT 爆火，两周斩获 50k+ Star：无需人类插手，自主完成任务！](https://mp.weixin.qq.com/s/Pig7DGqXUep8Ex-5CItnuQ)>)
-2.  . [OpenAI 现场演示官方版 AutoGPT，创作画画发推一条龙，自主调用外部应用完成任务](https://www.ithome.com/0/688/529.htm)
+1.  [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT): 使 GPT-4 完全自主化的项目 <Badge github="https://github.com/Significant-Gravitas/Auto-GPT" />
+2.  [AgentGPT](https://agentgpt.reworkd.ai/): 在浏览器组装、配置、部署 AI。<Badge github="https://github.com/reworkd/AgentGPT" />
+    - [AutoGPT 爆火，两周斩获 50k+ Star：无需人类插手，自主完成任务！](https://mp.weixin.qq.com/s/Pig7DGqXUep8Ex-5CItnuQ)
+3.  . [OpenAI 现场演示官方版 AutoGPT，创作画画发推一条龙，自主调用外部应用完成任务](https://www.ithome.com/0/688/529.htm)
 
 ### 经验分享
 
