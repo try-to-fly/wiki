@@ -16,6 +16,7 @@ Facebook 团队开发的内容网站，用于文档、博客。<Badge github="ht
 3. 显示文档更新时间：showLastUpdateTime
 4. MDX 添加自定义组件: [MDXComponents.js](https://github.com/try-to-fly/wiki/blob/main/src/theme/MDXComponents.js)
 5. 使用 Reat 渲染页面：[src/pages](https://github.com/try-to-fly/wiki/tree/main/src/pages)
+6. 等博客有一定内容后，可以申请免费的[Algolia DocSearch](https://docsearch.algolia.com/apply)
 
 ### 注意事项
 

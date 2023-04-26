@@ -92,6 +92,12 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+
+      algolia: {
+        appId: "9UW5P96GU5",
+        apiKey: "b34e3dc2882fc21748b96a0805a34ab1",
+        indexName: "wiki-hub",
+      },
       navbar: {
         title: "微笑的Wiki",
         logo: {
