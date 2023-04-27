@@ -7,6 +7,7 @@ import {
   FileImageOutlined,
   EyeOutlined,
   ThunderboltOutlined,
+  IeOutlined,
 } from "@ant-design/icons";
 import { Wrap } from "@site/src/component/Wrap";
 
@@ -40,6 +41,12 @@ const navigationData = [
     url: "/pureImage",
     gradient: "linear-gradient(135deg, #F97794 0%, #623AA2 100%)",
     icon: <ThunderboltOutlined />,
+  },
+  {
+    name: "URL 解析",
+    url: "/url-parse",
+    gradient: "linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%)",
+    icon: <IeOutlined />,
   },
 ];
 

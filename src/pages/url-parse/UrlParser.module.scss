@@ -1,0 +1,36 @@
+.container {
+  padding: 20px;
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.copyable {
+  cursor: pointer;
+}
+
+.table-responsive {
+  @media (max-width: 767px) {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+.table {
+  min-width: 100%;
+  table-layout: fixed;
+
+  th,
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
