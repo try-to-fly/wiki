@@ -9,6 +9,7 @@ import {
   ThunderboltOutlined,
   IeOutlined,
   BulbOutlined,
+  CoffeeOutlined,
 } from "@ant-design/icons";
 import { Wrap } from "@site/src/component/Wrap";
 
@@ -54,6 +55,12 @@ const navigationData = [
     url: "/json",
     gradient: "linear-gradient(135deg, #FFC107 0%, #FF9800 50%, #FF5722 100%)",
     icon: <BulbOutlined />,
+  },
+  {
+    name: "时间戳",
+    url: "/timestamp",
+    gradient: "linear-gradient(135deg, #9C27B0 0%, #E91E63 50%, #F44336 100%)",
+    icon: <CoffeeOutlined />,
   },
 ];
 
