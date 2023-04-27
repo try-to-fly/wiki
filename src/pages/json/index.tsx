@@ -1,0 +1,137 @@
+import React, { useState, useCallback } from "react";
+import { Button, message, Popover, Space } from "antd";
+import ReactJson from "react-json-view";
+import { Wrap } from "@site/src/component/Wrap";
+import { CodeMirrorWrapper } from "@site/src/component/CodeEditor";
+import styles from "./JsonTool.module.scss";
+import copy from "copy-to-clipboard";
+import JsonToTS from "json-to-ts";
+
+const JsonTool: React.FC = () => {
+  const [jsonInput, setJsonInput] = useState("");
+  const [jsonOutput, setJsonOutput] = useState({});
+  const [tsPopoverVisible, setTsPopoverVisible] = useState(false);
+  const [tsOutput, setTsOutput] = useState("");
+
+  const handleReadClipboard = useCallback(async () => {
+    try {
+      const clipboardText = await navigator.clipboard.readText();
+      setJsonInput(clipboardText);
+    } catch (err) {
+      message.error("无法读取剪切板内容");
+    }
+  }, []);
+
+  const handleJsonInputChange = useCallback((value: string) => {
+    setJsonInput(value);
+    try {
+      const parsedJson = JSON.parse(value, (key, value) => {
+        if (typeof value === "string" && value.includes("\\")) {
+          try {
+            return JSON.parse(`"${value}"`);
+          } catch (error) {
+            return value;
+          }
+        }
+        return value;
+      });
+      setJsonOutput(parsedJson);
+    } catch (error) {
+      try {
+        const parsedJson = JSON.parse(JSON.stringify(eval(`(${value})`)));
+        setJsonOutput(parsedJson);
+      } catch (err) {
+        setJsonOutput({});
+      }
+    }
+  }, []);
+
+  const handleSerializeClick = useCallback(() => {
+    copy(JSON.stringify(jsonOutput));
+    message.success("已复制到剪贴板");
+  }, [jsonOutput]);
+
+  const handleFormat = useCallback(() => {
+    setJsonInput(JSON.stringify(jsonOutput, null, 2));
+    message.success("已格式化");
+  }, [jsonOutput]);
+
+  const handleConvertToTs = useCallback(() => {
+    const tsInterfaces = JsonToTS(jsonOutput);
+    const tsOutput = tsInterfaces
+      .map((interfaceObj) => interfaceObj)
+      .join("\n\n");
+    setTsOutput(tsOutput);
+  }, [jsonOutput]);
+
+  const handleTsPopoverCopy = useCallback(() => {
+    copy(tsOutput);
+    message.success("已复制到剪贴板");
+  }, [tsOutput]);
+
+  return (
+    <Wrap>
+      <div className={styles.JsonTool}>
+        <div className={styles.header}>
+          <Space>
+            <Button size="small" onClick={handleReadClipboard}>
+              读取剪切板
+            </Button>
+            <Button size="small" onClick={handleFormat}>
+              格式化
+            </Button>
+            <Button size="small" onClick={handleSerializeClick}>
+              序列化
+            </Button>
+            <Popover
+              content={
+                <div className={styles.tsPopover}>
+                  <div className={styles.tsEditor}>
+                    <CodeMirrorWrapper
+                      value={tsOutput}
+                      onChange={setTsOutput}
+                      mode="typescript"
+                    />
+                  </div>
+                  <div className={styles.tsPopoverFooter}>
+                    <Button size="small" onClick={handleTsPopoverCopy}>
+                      复制
+                    </Button>
+                  </div>
+                </div>
+              }
+              title="TS 类型定义"
+              trigger="click"
+              destroyTooltipOnHide
+              placement="bottom"
+              overlayStyle={{
+                width: "600px",
+                height: "400px",
+              }}
+              overlayClassName={styles.tsPopoverOverlay}
+              getPopupContainer={(triggerNode) => triggerNode.parentElement}
+            >
+              <Button size="small" onClick={handleConvertToTs}>
+                转换为 TS 类型
+              </Button>
+            </Popover>
+          </Space>
+        </div>
+        <div className={styles.main}>
+          <div className={styles.editor}>
+            <CodeMirrorWrapper
+              value={jsonInput}
+              onChange={handleJsonInputChange}
+              mode="javascript"
+            />
+          </div>
+          <div className={styles.preview}>
+            <ReactJson src={jsonOutput} theme="rjv-default" />
+          </div>
+        </div>
+      </div>
+    </Wrap>
+  );
+};
+
+export default JsonTool;

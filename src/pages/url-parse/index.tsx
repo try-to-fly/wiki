@@ -171,7 +171,7 @@ const UrlParser: React.FC = () => {
   const tableDataSource = url ? urlData.params : [];
 
   return (
-    <Wrap>
+    <Wrap gptUrl="https://sharegpt.com/c/oq2Yxrc">
       <div className={styles.container}>
         <Input.TextArea
           placeholder="请输入一个URL"

@@ -8,6 +8,7 @@ import {
   EyeOutlined,
   ThunderboltOutlined,
   IeOutlined,
+  BulbOutlined,
 } from "@ant-design/icons";
 import { Wrap } from "@site/src/component/Wrap";
 
@@ -47,6 +48,12 @@ const navigationData = [
     url: "/url-parse",
     gradient: "linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%)",
     icon: <IeOutlined />,
+  },
+  {
+    name: "json工具",
+    url: "/json",
+    gradient: "linear-gradient(135deg, #FFC107 0%, #FF9800 50%, #FF5722 100%)",
+    icon: <BulbOutlined />,
   },
 ];
 
