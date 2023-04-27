@@ -5,3 +5,8 @@ title: React
 1. [文章](./Article.md)
 2. [状态管理](./store.md)
 3. [组件开发](./Component-develop.md)
+
+### npm 模块
+
+1. [React if](https://github.com/romac/react-if): 流程控制组件。<Badge github="https://github.com/romac/react-if" />
+2. [React Helmet](https://www.npmjs.com/package/react-helmet): 用于在组件中配置 head 元素。<Badge npm='react-helmet' github="https://github.com/nfl/react-helmet" />

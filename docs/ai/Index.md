@@ -42,6 +42,10 @@ title: AI能力
     - [Whisper Notes](https://apps.apple.com/cn/app/id6447090616?platform=iphone): 支持 Mac、Ios 版本，免费
     - [cheetah](https://github.com/leetcode-mafia/cheetah)：利用 Whisper 和 gpt，辅助面试
 
+### Gen-2
+
+1. [Gen-2 重磅发布，一句话一张图，3 秒让视频无中生有](https://blog.csdn.net/xixiaoyaoww/article/details/129761222)
+
 ### 待研究
 
 1. [JinaAI](https://github.com/jina-ai): JinaAI 是一个基于现代云原生架构的开源搜索和推荐框架，支持多种类型数据和查询方式。
@@ -57,6 +61,7 @@ title: AI能力
 1. [emo-ai 导航](https://emo.qhplus.cn/ai/dashboard/portal)
 2. [值得试用的工具](https://learningprompt.wiki/docs/recommend/%E5%80%BC%E5%BE%97%E8%AF%95%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7)
 3. [ChatGPT 网址导航](https://github.com/LangLangShanDeNanKe/chatgpt): <Badge github="https://github.com/LangLangShanDeNanKe/chatgpt" />
+4. [AI 知识库](https://ssw9noe1h6.feishu.cn/wiki/wikcn59pPXfAiF1ONajdPzvhA9d)
 
 ### 其他：
 

@@ -14,7 +14,8 @@ sidebar_position: 1
 
 1. [React](./React/index.md)
 2. [Vue](./Vue/index.md)
-3. [Web 渲染引擎](./web-render/index.md)
+3. [Lit](https://lit.dev/docs/): 定义原生 html 组件，由 Google 开发。
+4. [Web 渲染引擎](./web-render/index.md)
 
 ### 运行环境
 

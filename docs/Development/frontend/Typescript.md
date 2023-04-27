@@ -1,5 +1,6 @@
 ### 工具
 
+1. [Playground](https://www.typescriptlang.org/play): 官方的 Palyground，支持 url 分享。
 1. [json-to-typescript](https://transform.tools/json-to-typescript)
 
 ### 技巧

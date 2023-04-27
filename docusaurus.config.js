@@ -123,6 +123,17 @@ const config = {
       footer: {
         style: "dark",
         copyright: `Copyright © ${new Date().getFullYear()} My Wiki, Inc. Built with Docusaurus.`,
+        links: [
+          {
+            title: "友情链接",
+            items: [
+              {
+                label: "akong",
+                to: "https://akong.fun",
+              },
+            ],
+          },
+        ],
       },
       prism: {
         theme: lightCodeTheme,

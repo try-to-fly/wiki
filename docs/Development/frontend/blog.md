@@ -8,6 +8,10 @@
 2. [labnotes](https://labnotes.org/)
 3. [InfoQ 前端专栏](https://www.infoq.cn/topic/33)
 
+#### 待研究
+
+1. [Frontend Focus](https://frontendfoc.us/)
+
 ### 资源
 
 1. [前端开发者手册](https://dwqs.gitbooks.io/frontenddevhandbook/content/)

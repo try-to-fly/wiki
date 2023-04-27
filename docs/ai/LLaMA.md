@@ -41,3 +41,7 @@ Meta 发布了人工智能大语言模型 LLaMA，包含 70 亿(7b)、130 亿(13
 1. [llama.cpp](https://github.com/ggerganov/llama.cpp):在 C/C++ 中移植 Facebook 的 LLaMA 模型
    <Badge github="https://github.com/ggerganov/llama.cpp" />
    - [在 Mac 上可以跑 LLaMA 啦！附上详细教程](https://mp.weixin.qq.com/s/W0WadNpw8yBFCZKF7iKsQA)
+
+### 其他
+
+1. [AI 时代，重识羊驼](https://sspai.com/post/79443)
