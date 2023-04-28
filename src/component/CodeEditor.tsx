@@ -1,5 +1,4 @@
 import React from "react";
-import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import { json } from "@codemirror/lang-json";
 
@@ -24,6 +23,11 @@ export const CodeMirrorWrapper: React.FC<CodeMirrorWrapperProps> = ({
   onChange,
   mode = "javascript",
 }) => {
+  const CodeMirror =
+    typeof window !== "undefined"
+      ? require("@uiw/react-codemirror").default
+      : null;
+  if (!CodeMirror) return null;
   return (
     <CodeMirror
       value={value}

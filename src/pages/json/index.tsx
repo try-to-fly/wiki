@@ -1,16 +1,14 @@
 import React, { useState, useCallback } from "react";
 import { Button, message, Popover, Space } from "antd";
-import ReactJson from "react-json-view";
 import { Wrap } from "@site/src/component/Wrap";
 import { CodeMirrorWrapper } from "@site/src/component/CodeEditor";
 import styles from "./JsonTool.module.scss";
-import copy from "copy-to-clipboard";
 import JsonToTS from "json-to-ts";
+import copy from "copy-to-clipboard";
 
 const JsonTool: React.FC = () => {
   const [jsonInput, setJsonInput] = useState("");
   const [jsonOutput, setJsonOutput] = useState({});
-  const [tsPopoverVisible, setTsPopoverVisible] = useState(false);
   const [tsOutput, setTsOutput] = useState("");
 
   const handleReadClipboard = useCallback(async () => {
@@ -69,6 +67,9 @@ const JsonTool: React.FC = () => {
     message.success("已复制到剪贴板");
   }, [tsOutput]);
 
+  const ReactJson =
+    typeof window !== "undefined" ? require("react-json-view").default : null;
+
   return (
     <Wrap>
       <div className={styles.JsonTool}>
@@ -126,7 +127,7 @@ const JsonTool: React.FC = () => {
             />
           </div>
           <div className={styles.preview}>
-            <ReactJson src={jsonOutput} theme="rjv-default" />
+            {ReactJson && <ReactJson src={jsonOutput} theme="rjv-default" />}
           </div>
         </div>
       </div>

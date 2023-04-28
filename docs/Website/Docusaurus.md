@@ -27,3 +27,15 @@ Facebook 团队开发的内容网站，用于文档、博客。<Badge github="ht
 2. 不支持 React18：使用第三方模块的时候需要选择 React17 版本。
 3. 项目要发布之前，最好在本地 build 下
    - 用于提前排查一下构建错误，不然代码提交部署后，遇到错误还需要重新 push。
+
+### 遇到的问题
+
+1. 客户端代码无法 SSR 报错：`ReferenceError: document is not defined`
+   - 解决办法：由于目前版本是 react17，使用 lazy 加载组件会有错误：https://legacy.reactjs.org/docs/error-decoder.html/?invariant=294
+
+```js
+const CodeMirror =
+  typeof window !== "undefined"
+    ? require("@uiw/react-codemirror").default
+    : null;
+```
