@@ -137,10 +137,10 @@ const Navigation: React.FC = () => {
   return (
     <Wrap gptUrl="https://sharegpt.com/c/rkKOVvF">
       <div className={styles.navigationWrapper}>
-        {groupedNavigationData.map((category: Category) => (
-          <div className={styles.category} key={category.title}>
-            <h2>{category.title}</h2>
-            <Row gutter={[24, 24]}>
+        {groupedNavigationData.map((category: Category, index: number) => (
+          <React.Fragment key={`category-${index}`}>
+            <h2 className={styles.categoryTitle}>{category.title}</h2>
+            <Row gutter={[24, 24]} justify="start">
               {category.items.map((item: NavItem) => (
                 <Col
                   key={item.name}
@@ -149,7 +149,7 @@ const Navigation: React.FC = () => {
                   md={8}
                   lg={6}
                   xl={4}
-                  style={{ display: "flex", justifyContent: "left" }}
+                  style={{ display: "flex", justifyContent: "center" }}
                 >
                   <Link
                     to={item.url}
@@ -164,7 +164,7 @@ const Navigation: React.FC = () => {
                 </Col>
               ))}
             </Row>
-          </div>
+          </React.Fragment>
         ))}
       </div>
     </Wrap>

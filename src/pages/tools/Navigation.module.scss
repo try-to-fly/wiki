@@ -1,10 +1,16 @@
 .navigationWrapper {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--ifm-background-color);
   margin: 20px;
 }
 .category {
   margin-bottom: 10px;
+}
+.categoryTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--ifm-font-color-base);
+  margin-bottom: 20px;
 }
 .navigationItem {
   width: 90%;
