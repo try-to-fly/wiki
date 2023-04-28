@@ -10,6 +10,7 @@ import {
   IeOutlined,
   BulbOutlined,
   CoffeeOutlined,
+  BookOutlined,
 } from "@ant-design/icons";
 import { Wrap } from "@site/src/component/Wrap";
 
@@ -19,6 +20,33 @@ interface NavItem {
   gradient: string;
   icon: React.ReactNode;
 }
+
+/**
+linear-gradient(135deg, #F2BAC9, #F5D5D7)
+linear-gradient(135deg, #F3D3BD, #F5E2D5)
+linear-gradient(135deg, #E3E3E3, #F5F5F5)
+linear-gradient(135deg, #C2D4E8, #E3EFF9)
+linear-gradient(135deg, #E4D4C2, #F9ECE1)
+linear-gradient(135deg, #A4D4B8, #D5F5E5)
+linear-gradient(135deg, #D2C2E4, #EFE1F9)
+linear-gradient(135deg, #FBE7CB, #F9F9F9)
+linear-gradient(135deg, #FBD3E9, #F7F1FE)
+linear-gradient(135deg, #FCD2C2, #FFE7E7)
+linear-gradient(135deg, #B5EAD7, #E1F8F7)
+linear-gradient(135deg, #EAE0C8, #F9F6E5)
+linear-gradient(135deg, #B4DCE7, #E2F8FE)
+linear-gradient(135deg, #D9B9E8, #F3E4F9)
+linear-gradient(135deg, #FBE5C8, #F9F9F9)
+linear-gradient(135deg, #B5E5AB, #E1F9E2)
+linear-gradient(135deg, #E8D2B2, #F9EFE5)
+linear-gradient(135deg, #D6C7F9, #F0E7FF)
+linear-gradient(135deg, #FAC8B8, #FEE3D3)
+linear-gradient(135deg, #FBECC8, #F9F9F9)
+linear-gradient(135deg, #B5D5E5, #E1F1F9)
+linear-gradient(135deg, #D8B1E8, #F3DCEC)
+linear-gradient(135deg, #F9E9C8, #FFF9F9)
+linear-gradient(135deg, #B5E5D8, #E1F9F0)
+*/
 const navigationData = [
   {
     name: "时间进度",
@@ -61,6 +89,12 @@ const navigationData = [
     url: "/timestamp",
     gradient: "linear-gradient(135deg, #9C27B0 0%, #E91E63 50%, #F44336 100%)",
     icon: <CoffeeOutlined />,
+  },
+  {
+    name: "剪切板",
+    url: "/clipboard",
+    gradient: "linear-gradient(135deg, #F0E0A4, #F9F5E3)",
+    icon: <BookOutlined />,
   },
 ];
 
