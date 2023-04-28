@@ -1,9 +1,11 @@
 .navigationWrapper {
   height: 100vh;
   background-color: var(--ifm-background-color);
-  margin-top: 20px;
+  margin: 20px;
 }
-
+.category {
+  margin-bottom: 10px;
+}
 .navigationItem {
   width: 90%;
   height: 100px;
