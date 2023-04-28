@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.regexInput {
+  margin-bottom: 16px;
+}
+
+.editorRow {
+  .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+.captureResult {
+  background-color: #f0f2f5;
+  padding: 16px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.eittorWrap {
+  :global(.cm-theme) {
+    height: calc(100vh - 130px);
+  }
+}

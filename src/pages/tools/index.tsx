@@ -12,6 +12,7 @@ import {
   CoffeeOutlined,
   BookOutlined,
   AppstoreOutlined,
+  HighlightOutlined,
 } from "@ant-design/icons";
 import { Wrap } from "@site/src/component/Wrap";
 
@@ -38,7 +39,6 @@ linear-gradient(135deg, #D6C7F9, #F0E7FF)
 linear-gradient(135deg, #FAC8B8, #FEE3D3)
 linear-gradient(135deg, #FBECC8, #F9F9F9)
 linear-gradient(135deg, #B5D5E5, #E1F1F9)
-linear-gradient(135deg, #F9E9C8, #FFF9F9)
 */
 const navigationData = [
   {
@@ -94,6 +94,12 @@ const navigationData = [
     url: "/qrcode",
     gradient: "linear-gradient(135deg, #D8B1E8, #F3DCEC)",
     icon: <AppstoreOutlined />,
+  },
+  {
+    name: "文本提取",
+    url: "/textmatch",
+    gradient: "linear-gradient(135deg, #F9E9C8, #FFF9F9)",
+    icon: <HighlightOutlined />,
   },
 ];
 
