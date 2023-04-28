@@ -5,6 +5,7 @@ import { CodeMirrorWrapper } from "@site/src/component/CodeEditor";
 import styles from "./JsonTool.module.scss";
 import JsonToTS from "json-to-ts";
 import copy from "copy-to-clipboard";
+import { PreviewJson } from "./_JsonView";
 
 const JsonTool: React.FC = () => {
   const [jsonInput, setJsonInput] = useState("");
@@ -126,9 +127,7 @@ const JsonTool: React.FC = () => {
               mode="javascript"
             />
           </div>
-          <div className={styles.preview}>
-            {ReactJson && <ReactJson src={jsonOutput} theme="rjv-default" />}
-          </div>
+          <PreviewJson json={jsonOutput} />
         </div>
       </div>
     </Wrap>

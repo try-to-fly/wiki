@@ -2732,6 +2732,22 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
+"@uiw/codemirror-theme-github@^4.19.16":
+  version "4.19.16"
+  resolved "https://registry.npmmirror.com/@uiw/codemirror-theme-github/-/codemirror-theme-github-4.19.16.tgz#c9cb5c369f27796d89b813410b31ab094e15f5c3"
+  integrity sha512-B3XmfphgnHiRedrP2adHjJsTc12Rw+tXrPmFUTurQrPyIITpCDLl9PJSsaJl9w5AuYhGcBxAeod7CEzMfdL1OA==
+  dependencies:
+    "@uiw/codemirror-themes" "4.19.16"
+
+"@uiw/codemirror-themes@4.19.16":
+  version "4.19.16"
+  resolved "https://registry.npmmirror.com/@uiw/codemirror-themes/-/codemirror-themes-4.19.16.tgz#33553214698dedb158638edb647fdcd5f502edae"
+  integrity sha512-c16zrvMEEfNkYydjwa6Eq+aDrYCbtmt4O0jBWPX1P4CxFATCn59aeW9HFZ4uqMko8aYOiTupOsizxlJ+MBwW2Q==
+  dependencies:
+    "@codemirror/language" "^6.0.0"
+    "@codemirror/state" "^6.0.0"
+    "@codemirror/view" "^6.0.0"
+
 "@uiw/react-codemirror@^4.19.16":
   version "4.19.16"
   resolved "https://registry.npmmirror.com/@uiw/react-codemirror/-/react-codemirror-4.19.16.tgz#f7d792b55849b4ee80c2b19ac3d78ac6a40f0f88"

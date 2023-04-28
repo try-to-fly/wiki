@@ -1,6 +1,8 @@
 import React from "react";
+import { useColorMode } from "@docusaurus/theme-common";
 import { javascript } from "@codemirror/lang-javascript";
 import { json } from "@codemirror/lang-json";
+import { githubLight, githubDark } from "@uiw/codemirror-theme-github";
 
 interface CodeMirrorWrapperProps {
   value: string;
@@ -23,6 +25,7 @@ export const CodeMirrorWrapper: React.FC<CodeMirrorWrapperProps> = ({
   onChange,
   mode = "javascript",
 }) => {
+  const { colorMode } = useColorMode();
   const CodeMirror =
     typeof window !== "undefined"
       ? require("@uiw/react-codemirror").default
@@ -31,6 +34,7 @@ export const CodeMirrorWrapper: React.FC<CodeMirrorWrapperProps> = ({
   return (
     <CodeMirror
       value={value}
+      theme={colorMode === "dark" ? githubDark : githubLight}
       height="100%"
       extensions={[getMode(mode)]}
       onChange={(value) => {

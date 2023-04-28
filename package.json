@@ -24,6 +24,7 @@
     "@mdx-js/react": "^1.6.22",
     "@react-three/drei": "8.20.2",
     "@react-three/fiber": "7.0.10",
+    "@uiw/codemirror-theme-github": "^4.19.16",
     "@uiw/react-codemirror": "^4.19.16",
     "antd": "^5.4.4",
     "chart.js": "^4.2.1",

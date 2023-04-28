@@ -1,25 +1,34 @@
 import React from "react";
-import Layout from "@theme/Layout";
+import Layout, { Props as LayoutProps } from "@theme/Layout";
+import { ConfigProvider, theme } from "antd";
+import { useColorMode } from "@docusaurus/theme-common";
+
+export const Content = ({ children }: { children: React.ReactNode }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <ConfigProvider
+      theme={{
+        algorithm:
+          colorMode === "dark" ? theme.darkAlgorithm : theme.defaultAlgorithm,
+      }}
+    >
+      {children}
+    </ConfigProvider>
+  );
+};
 
 export const Wrap = ({
   children,
   gptUrl,
+  ...props
 }: {
   children: React.ReactNode;
   gptUrl?: string;
-}) => {
+} & LayoutProps) => {
   return (
-    <Layout>
-      {/* {gptUrl && (
-        <a href={gptUrl}>
-          <img
-            style={{ width: 16, height: 16 }}
-            alt="By GPT-4"
-            src="https://chat.openai.com/favicon-32x32.png"
-          />
-        </a>
-      )} */}
-      {children}
+    <Layout {...props}>
+      <Content>{children}</Content>
     </Layout>
   );
 };
