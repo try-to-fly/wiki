@@ -3,6 +3,7 @@ import { useColorMode } from "@docusaurus/theme-common";
 import { javascript } from "@codemirror/lang-javascript";
 import { json } from "@codemirror/lang-json";
 import { githubLight, githubDark } from "@uiw/codemirror-theme-github";
+import { EditorView } from "@codemirror/view";
 
 interface CodeMirrorWrapperProps {
   value: string;
@@ -36,7 +37,7 @@ export const CodeMirrorWrapper: React.FC<CodeMirrorWrapperProps> = ({
       value={value}
       theme={colorMode === "dark" ? githubDark : githubLight}
       height="100%"
-      extensions={[getMode(mode)]}
+      extensions={[getMode(mode), EditorView.lineWrapping]}
       onChange={(value) => {
         onChange(value);
       }}

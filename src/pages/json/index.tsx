@@ -121,7 +121,7 @@ const JsonTool: React.FC = () => {
               </Button>
             </Popover>{" "}
             <Button size="small" onClick={gotoJsonHero}>
-              高级预览模式
+              高级模式&分享
             </Button>
           </Space>
         </div>

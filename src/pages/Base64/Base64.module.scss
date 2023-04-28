@@ -1,0 +1,8 @@
+.btns {
+  padding-top: 10px;
+}
+.editor {
+  :global(.cm-theme) {
+    height: calc(100vh - 110px);
+  }
+}
