@@ -14,8 +14,14 @@ sidebar_position: 1
 
 1. [React](./React/index.md)
 2. [Vue](./Vue/index.md)
-3. [Lit](https://lit.dev/docs/): 定义原生 html 组件，由 Google 开发。
-4. [Web 渲染引擎](./web-render/index.md)
+3. [Web 渲染引擎](./web-render/index.md)
+
+#### Web Component
+
+1. [Lit](https://lit.dev/docs/): 定义原生 html 组件，由 Google 开发。<Badge github="https://github.com/lit/lit" />
+   - [2023 Web Components 现状](https://blog.5bang.top/2023/04/21/2023_state_of_web_component)
+   - 浏览器版 Photoship 用的就是 Lit。
+2. [Fast](https://www.fast.design/): 微软封装的框架, MDN 用的这个框架改版。<Badge github="https://github.com/microsoft/fast" />
 
 ### 运行环境
 

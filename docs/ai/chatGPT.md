@@ -81,6 +81,7 @@
 1. [使用 gpt-驱动浏览器](https://twitter.com/natfriedman/status/1575631194032549888)：用 gpt 在亚马逊购物
 2. [ggetmumu](https://getmumu.com/)：使用 gpt 搜索 Emoji 表情, 付费软件，不推荐。
 3. [tldrthis](https://tldrthis.com/): 长文摘要，支持输入 url 摘要。
+4. [law-cn-ai](https://github.com/lvwzhen/law-cn-ai): AI 法律助手。<Badge github="https://github.com/lvwzhen/law-cn-ai" />
 
 ### 过时资源
 

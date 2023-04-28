@@ -5,6 +5,10 @@ title: css
 1. [css 样式重置](./reset.md)
 2. [loading 效果](./loading.md)
 
+### 简单样式库：只修饰 html 元素
+
+1. [boltcss](https://boltcss.com/)
+
 ### 图标库
 
 1. [Iconfont](https://www.iconfont.cn/)：阿里巴巴矢量图标。

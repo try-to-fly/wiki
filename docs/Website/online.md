@@ -15,9 +15,11 @@ title: 在线服务&网站
    - 你可以将你的截图或设计拖放到它提供的各种设备模型中，如 iPhone、Mac、iPad 等，
    - 生成漂亮的图片效果。
 2. [screenrun.app](https://screenrun.app/)：截图转换成动态展示的效果。
+3. [Clipdrop](https://clipdrop.co/relight): 使用 AI 处理图片：抠图、调整灯光等效果。
 
 ### 其他
 
 1. [crontab](https://crontab.guru/): 可视化配置 corn 表达式，支持 url 分享。
 2. [carbon](https://carbon.now.sh/): 代码高亮转图片。<Badge rate={5} />
 3. [UseTheKeyboard](https://usethekeyboard.com/): 查询常用网站的快捷键。
+4. [SMS online](https://www.receivesms.io/): 国外的 SMS 平台。用于注册 openai 等。

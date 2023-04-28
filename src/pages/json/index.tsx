@@ -68,8 +68,11 @@ const JsonTool: React.FC = () => {
     message.success("已复制到剪贴板");
   }, [tsOutput]);
 
-  const ReactJson =
-    typeof window !== "undefined" ? require("react-json-view").default : null;
+  const gotoJsonHero = useCallback(() => {
+    // json转换为base64
+    const base64 = btoa(JSON.stringify(jsonOutput));
+    window.open(`https://jsonhero.io/new?j=${base64}`);
+  }, [jsonOutput]);
 
   return (
     <Wrap>
@@ -116,7 +119,10 @@ const JsonTool: React.FC = () => {
               <Button size="small" onClick={handleConvertToTs}>
                 转换为 TS 类型
               </Button>
-            </Popover>
+            </Popover>{" "}
+            <Button size="small" onClick={gotoJsonHero}>
+              高级预览模式
+            </Button>
           </Space>
         </div>
         <div className={styles.main}>
