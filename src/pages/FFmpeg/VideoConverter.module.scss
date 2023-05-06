@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.videoPreview {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 1rem;
+}
