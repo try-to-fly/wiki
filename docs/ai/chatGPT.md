@@ -20,8 +20,8 @@
 
 1.  [Vercel Ai playground](https://play.vercel.ai/): vercel 提供，便捷选择不同模型比较生成结果，但当前稳定性不佳。
 2.  [Forefront](https://chat.forefront.ai/): 预设了好多游戏角色。
-3.  [Free ChatGpt Site](https://cc.ai55.cc/)： 聚合了各种 chatGPT 第三方账户<Badeg github="https://github.com/xx025/carrot" />
-4.  [gpt4free](https://chatbot.sex)：逆向了第三方的 gptapi。 <Badeg github="https://github.com/xtekky/gpt4free" />
+3.  [Free ChatGpt Site](https://cc.ai55.cc/)： 聚合了各种 chatGPT 第三方账户<Badge github="https://github.com/xx025/carrot" />
+4.  [gpt4free](https://chatbot.sex)：逆向了第三方的 gptapi。 <Badge github="https://github.com/xtekky/gpt4free" />
 
 ### 插件
 

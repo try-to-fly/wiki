@@ -2,6 +2,10 @@
 title: AI能力
 ---
 
+## AI 框架
+
+1. [LangChain](https://js.langchain.com/docs/): GPT 框架。 <Badge github="https://github.com/hwchase17/langchainjs" />
+
 ## AI 产品
 
 ### LLM(大语言模型)类
@@ -58,10 +62,11 @@ title: AI能力
 
 ### AI 导航
 
-1. [emo-ai 导航](https://emo.qhplus.cn/ai/dashboard/portal)
-2. [值得试用的工具](https://learningprompt.wiki/docs/recommend/%E5%80%BC%E5%BE%97%E8%AF%95%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7)
-3. [ChatGPT 网址导航](https://github.com/LangLangShanDeNanKe/chatgpt): <Badge github="https://github.com/LangLangShanDeNanKe/chatgpt" />
-4. [AI 知识库](https://ssw9noe1h6.feishu.cn/wiki/wikcn59pPXfAiF1ONajdPzvhA9d)
+1. [Awesome ChatGPT](https://github.com/sindresorhus/awesome-chatgpt): 聚合了各种 chatGPT 工具。 <Badge github="https://github.com/sindresorhus/awesome-chatgpt" />
+2. [emo-ai 导航](https://emo.qhplus.cn/ai/dashboard/portal)
+3. [值得试用的工具](https://learningprompt.wiki/docs/recommend/%E5%80%BC%E5%BE%97%E8%AF%95%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7)
+4. [ChatGPT 网址导航](https://github.com/LangLangShanDeNanKe/chatgpt): <Badge github="https://github.com/LangLangShanDeNanKe/chatgpt" />
+5. [AI 知识库](https://ssw9noe1h6.feishu.cn/wiki/wikcn59pPXfAiF1ONajdPzvhA9d)
 
 ### 其他：
 

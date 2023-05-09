@@ -8,6 +8,10 @@
 1. [Typescript 有什么冷门但是很好用的特性？](https://www.zhihu.com/question/276172039)
 2. [TypeScript 泛型入门](https://mp.weixin.qq.com/s/MPBNIz8dbDtVTYA2Z_0UAw)
 
+### 操作符
+
+1. [satisfies](https://devblogs.microsoft.com/typescript/announcing-typescript-4-9-beta/#hamilton): 既要确保表达式匹配某些类型，又要保留该表达式的具体类型
+
 ### 学习 ts
 
 1. [type-challenges](https://github.com/type-challenges/type-challenges)：ts 挑战

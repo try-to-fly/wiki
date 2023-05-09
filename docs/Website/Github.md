@@ -6,3 +6,7 @@
 ### 趋势
 
 1.  [Gitstar Ranking](https://gitstar-ranking.com/): 查看 Github 的排名。
+
+### Chrome 插件
+
+1. [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf/related): Github 增加插件，可以显示仓库年龄。 <Badge github="https://github.com/github/opensource.guide" rate={5} />
