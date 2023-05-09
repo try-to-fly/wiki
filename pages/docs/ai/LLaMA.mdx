@@ -1,0 +1,47 @@
+---
+title: FaceBook-LLaMA模型
+---
+
+### 介绍
+
+Meta 发布了人工智能大语言模型 LLaMA，包含 70 亿(7b)、130 亿(13b)、330 亿(33b)和 650 亿(56b)这 4 种参数规模的模型
+[LLaMA 源码](https://github.com/facebookresearch/llama)：<Badge github="https://github.com/facebookresearch/llama" />
+
+### 缺点：
+
+1. 没有指令微调，所以需要精准的 prompts 才可以作答。
+
+### 能力
+
+1. 具备代码生成能力。
+2. 能力和 GPT-3 相当（持怀疑态度）
+
+### 文章
+
+1. [Meta 开源的 LLaMa 到底好不好用？最全测评结果来了](https://mp.weixin.qq.com/s/k4mYf7ZwHWhi7dWb7gEjcQ)
+2. [开发者笑疯了！ LLaMa 惊天泄露引爆 ChatGPT 平替狂潮，开源 LLM 领域变天](https://mp.weixin.qq.com/s/kjzRzoUenP0NYa1A9lS7Aw)
+
+### 衍生
+
+1. Alpaca(羊驼): 在三月中旬，斯坦福发布的大模型 Alpaca 火了。LLaMa 7B 微调，能力约等于 GPT-3.5
+2. Vicuna(骆马)：来自 UC 伯克利、卡内基梅隆大学、斯坦福大学和加州大学圣地亚哥分校的研究人员开源了 Vicuna
+   - 这是一个与 GPT-4 性能相匹配的 LLaMA 微调版本
+   - 13B 的模型改造
+   - 从 shareGPT 上收集 70k 对话来训练。
+3. Koala(考拉): UC 伯克利 AI Research Institute（BAIR）又发布了一个新模型「考拉」
+   - 使用网络获取的高质量数据进行训练。
+4. [ChatLLaMA](https://github.com/nebuly-ai/nebullvm)：Nebuly 开源了 ChatLLaMA ，这是一个使用让我们使用自己的数据创建对话助手的框架。
+
+5. [FreedomGPT](https://freedomgpt.com/): FreedomGPT 使用 Electron 和 React 构建，它是一个桌面应用程序，允许用户在他们的本地机器上运行 LLaMA。<Badge github="https://freedomgpt.com/" />
+   - 它回答的问题不受任何审查或安全过滤。
+6. ColossalChat: UC 伯克利提出的 ColossalChat 只需要不到 100 亿个参数就可以达到中英文双语能力，效果与 ChatGPT 和 GPT-3.5 相当。
+
+### 应用
+
+1. [llama.cpp](https://github.com/ggerganov/llama.cpp):在 C/C++ 中移植 Facebook 的 LLaMA 模型
+   <Badge github="https://github.com/ggerganov/llama.cpp" />- [在 Mac 上可以跑 LLaMA
+   啦！附上详细教程](https://mp.weixin.qq.com/s/W0WadNpw8yBFCZKF7iKsQA)
+
+### 其他
+
+1. [AI 时代，重识羊驼](https://sspai.com/post/79443)

@@ -1,0 +1,15 @@
+{
+  "docs": {
+    "title": "Wiki",
+    "type": "page"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "type": "page"
+  },
+  "tools": {
+    "title": "Tools",
+    "type": "page",
+    "href": "/tools"
+  }
+}

@@ -1,0 +1,38 @@
+.JsonTool {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .editor {
+      flex: 1;
+      margin-right: 20px;
+
+      height: calc(100vh - 100px);
+      overflow: auto;
+
+      @media (max-width: 767px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+#body {
+  :global(.cm-theme-light) {
+    height: 100%;
+  }
+}

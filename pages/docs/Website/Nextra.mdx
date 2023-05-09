@@ -1,0 +1,47 @@
+# [官网](https://nextra.site) <Badge github="https://github.com/shuding/nextra" />
+
+### 从 Docusaurus 迁移
+
+1. 修改 package.json 文件
+
+- 移除 docusaurus 依赖
+- 新增依赖
+
+```json
+{
+  "dependencies": {
+    "@vercel/analytics": "^0.1.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^13.2.4",
+    "nextra": "^2.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
+}
+```
+
+- 配置 script
+
+```json
+{
+  "dev": "next",
+  "start": "next start",
+  "build": "next build"
+}
+```
+
+- pkg 重新排序：`npx sort-package-json`
+
+2. 迁移文档到 pages 目录中，配置`_meta.json`文件
+3. 复制[docs 模版项目](https://github.com/shuding/nextra-docs-template)中的配置文件：
+
+- tsconfig.json
+- theme.config.tsx
+- next.config.js
+- next-env.d.ts
+
+4. 修改`.md`为`.mdx`：不然 md 是没办法使用 react 组件的。[参考](https://github.com/shuding/nextra/issues/1446)
