@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Badge } from "./components/Badge";
 import dayjs from "dayjs";
 import { DocSearch } from "@docsearch/react";
+import { Steps } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   logo: <Image width={30} height={30} alt="" src="/img/logo.png" />,
@@ -15,10 +16,20 @@ const config: DocsThemeConfig = {
     // 默认都折叠
     defaultMenuCollapseLevel: 1,
   },
+  toc: {
+    float: true,
+    title: "目录",
+  },
   useNextSeoProps() {
     return {
       titleTemplate: "%s – 微笑Wiki",
     };
+  },
+  editLink: {
+    text: null,
+  },
+  feedback: {
+    content: null,
   },
   search: {
     component: () => (
@@ -47,6 +58,7 @@ const config: DocsThemeConfig = {
   },
   components: {
     Badge: Badge,
+    Steps,
   },
   gitTimestamp: ({ timestamp }) => {
     return (

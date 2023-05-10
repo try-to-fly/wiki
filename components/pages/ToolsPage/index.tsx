@@ -133,7 +133,7 @@ function groupItemsByType(items: NavItem[]): Category[] {
 
 const groupedNavigationData: Category[] = groupItemsByType(navigationData);
 
-const Navigation: React.FC = () => {
+export const ToolsPage: React.FC = () => {
   return (
     <Wrap gptUrl="https://sharegpt.com/c/rkKOVvF">
       <div className={styles.navigationWrapper}>
@@ -170,5 +170,3 @@ const Navigation: React.FC = () => {
     </Wrap>
   );
 };
-
-export default Navigation;

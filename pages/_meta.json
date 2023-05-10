@@ -1,4 +1,16 @@
 {
+  "index": {
+    "title": "首页",
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "toc": true,
+      "sidebar": true,
+      "pagination": false,
+      "footer": false
+    }
+  },
   "docs": {
     "title": "Wiki",
     "type": "page"
@@ -7,9 +19,19 @@
     "title": "Timeline",
     "type": "page"
   },
+  "cook": {
+    "title": "菜谱",
+    "type": "page"
+  },
   "tools": {
-    "title": "Tools",
+    "title": "工具库",
     "type": "page",
-    "href": "/tools"
+    "theme": {
+      "breadcrumb": false,
+      "toc": false,
+      "sidebar": false,
+      "pagination": false,
+      "layout": "full"
+    }
   }
 }

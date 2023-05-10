@@ -4,19 +4,4 @@ const withNextra = require("nextra")({
   defaultShowCopyCode: true,
 });
 
-module.exports = withNextra({
-  redirects: () => {
-    return [
-      {
-        source: "/",
-        destination: "/docs/intro",
-        statusCode: 301,
-      },
-      {
-        source: "/docs",
-        destination: "/docs/intro",
-        statusCode: 301,
-      },
-    ];
-  },
-});
+module.exports = withNextra({});
