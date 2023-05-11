@@ -21,7 +21,15 @@ export const Badge: React.FC<BadgesProps> = ({
 }) => {
   const getGithubStarsBadge = (repoUrl: string) => {
     const [_, user, repo] = repoUrl.split("/").slice(-3);
-    const imageUrl = `https://img.shields.io/github/stars/${user}/${repo}.svg?style=social&label=Star&maxAge=2592000`;
+    let imageUrl;
+
+    if (repoUrl.includes("github")) {
+      imageUrl = `https://img.shields.io/github/stars/${user}/${repo}`;
+    } else if (repoUrl.includes("gitlab")) {
+      imageUrl = `https://img.shields.io/gitlab/stars/${user}/${repo}`;
+    } else {
+      return null;
+    }
 
     return (
       <Tooltip title="GitHub Stars">
@@ -50,9 +58,31 @@ export const Badge: React.FC<BadgesProps> = ({
     );
   };
 
+  const getLastCommitBadge = (repoUrl: string) => {
+    const [_, user, repo] = repoUrl.split("/").slice(-3);
+    let imageUrl;
+
+    if (repoUrl.includes("github")) {
+      imageUrl = `https://img.shields.io/github/last-commit/${user}/${repo}`;
+    } else if (repoUrl.includes("gitlab")) {
+      imageUrl = `https://img.shields.io/gitlab/last-commit/${user}/${repo}`;
+    } else {
+      return null;
+    }
+
+    return (
+      <Tooltip title="Last Commit">
+        <a href={repoUrl} target="_blank" rel="noreferrer">
+          <img src={imageUrl} alt="last commit" style={{ marginRight: 8 }} />
+        </a>
+      </Tooltip>
+    );
+  };
+
   return (
     <span style={{ display: "inline-flex", alignItems: "center" }}>
       {github && getGithubStarsBadge(github)}
+      {github && getLastCommitBadge(github)}
       {npm && getNpmDownloadsBadge(npm)}
       {rate && <Rate defaultValue={rate} disabled />}
     </span>
