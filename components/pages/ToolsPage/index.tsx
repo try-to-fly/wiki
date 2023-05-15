@@ -113,6 +113,13 @@ const navigationData: NavItem[] = [
     icon: <RestOutlined />,
     type: NavigationType.Tool,
   },
+  {
+    name: "CSV预览",
+    url: "/csv",
+    gradient: "linear-gradient(135deg, #FDD819 0%, #FF8F00 100%)",
+    icon: <FileImageOutlined />,
+    type: NavigationType.Tool,
+  },
 ];
 
 function groupItemsByType(items: NavItem[]): Category[] {
