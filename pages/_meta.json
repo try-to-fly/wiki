@@ -1,16 +1,4 @@
 {
-  "index": {
-    "title": "首页",
-    "type": "page",
-    "display": "hidden",
-    "theme": {
-      "breadcrumb": false,
-      "toc": true,
-      "sidebar": true,
-      "pagination": false,
-      "footer": false
-    }
-  },
   "docs": {
     "title": "Wiki",
     "type": "page"

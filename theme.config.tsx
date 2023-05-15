@@ -5,6 +5,7 @@ import { Badge } from "./components/Badge";
 import dayjs from "dayjs";
 import { DocSearch } from "@docsearch/react";
 import { Steps } from "nextra-theme-docs";
+import { Image as AntdImage } from "antd";
 
 const config: DocsThemeConfig = {
   logo: <Image width={30} height={30} alt="" src="/img/logo.png" />,
@@ -57,8 +58,9 @@ const config: DocsThemeConfig = {
     text: "Nextra Docs Template",
   },
   components: {
-    Badge: Badge,
+    Badge,
     Steps,
+    Image: AntdImage,
   },
   gitTimestamp: ({ timestamp }) => {
     return (
