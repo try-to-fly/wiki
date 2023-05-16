@@ -6,6 +6,7 @@ import dayjs from "dayjs";
 import { DocSearch } from "@docsearch/react";
 import { Steps } from "nextra-theme-docs";
 import { Image as AntdImage } from "antd";
+import { Tweet } from "react-tweet";
 
 const config: DocsThemeConfig = {
   logo: <Image width={30} height={30} alt="" src="/img/logo.png" />,
@@ -61,6 +62,7 @@ const config: DocsThemeConfig = {
     Badge,
     Steps,
     Image: AntdImage,
+    Tweet,
   },
   gitTimestamp: ({ timestamp }) => {
     return (

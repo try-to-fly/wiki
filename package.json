@@ -53,6 +53,7 @@
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.8.0",
     "react-json-view": "^1.21.3",
+    "react-tweet": "^2.0.1",
     "three": "^0.151.3"
   },
   "devDependencies": {
