@@ -5,7 +5,7 @@ import { Badge } from "./components/Badge";
 import dayjs from "dayjs";
 import { DocSearch } from "@docsearch/react";
 import { Steps } from "nextra-theme-docs";
-import { Image as AntdImage } from "antd";
+import { Image as AntdImage, Col, Row, List } from "antd";
 import { Tweet } from "react-tweet";
 
 const config: DocsThemeConfig = {
@@ -56,7 +56,29 @@ const config: DocsThemeConfig = {
     );
   },
   footer: {
-    text: "Nextra Docs Template",
+    text: (
+      <Row>
+        <Col span={12} style={{ width: 300 }}>
+          <List
+            header="友情链接"
+            size="small"
+            dataSource={[
+              {
+                title: "微笑Wiki",
+                url: "https://wiki.dev-hub.top",
+              },
+            ]}
+            renderItem={(item) => (
+              <List.Item>
+                <a href={item.url} target="_blank">
+                  {item.title}
+                </a>
+              </List.Item>
+            )}
+          />
+        </Col>
+      </Row>
+    ),
   },
   components: {
     Badge,
