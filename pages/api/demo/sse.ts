@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const maxEvent = 10;
+const maxEvent = 5;
 // pages/api/events.js
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // 设置HTTP头以启用SSE
