@@ -1,8 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
+  "@ant-design/icons": ^5.0.1
   "@codemirror/lang-javascript": ^6.1.7
   "@codemirror/lang-json": ^6.0.1
+  "@codemirror/view": ^6.11.3
   "@codesandbox/sandpack-react": ^2.6.4
   "@docsearch/react": ^3.3.4
   "@react-three/drei": ^9.66.6
@@ -11,6 +13,7 @@ specifiers:
   "@types/ms": ^0.7.31
   "@types/node": 18.11.10
   "@types/papaparse": ^5.3.7
+  "@types/react": ^18.2.6
   "@types/three": ^0.150.2
   "@uiw/codemirror-theme-github": ^4.19.16
   "@uiw/react-codemirror": ^4.19.16
@@ -20,6 +23,7 @@ specifiers:
   chart.js: ^4.2.1
   clsx: ^1.2.1
   codemirror: ^6.0.1
+  copy-to-clipboard: ^3.3.3
   dayjs: ^1.11.7
   got: ^12.6.0
   husky: ^7.0.0
@@ -52,19 +56,22 @@ specifiers:
   typescript: ^4.9.3
 
 dependencies:
+  "@ant-design/icons": 5.0.1_biqbaboplfbrettd7655fr4n2y
   "@codemirror/lang-javascript": 6.1.8
   "@codemirror/lang-json": 6.0.1
+  "@codemirror/view": 6.11.3
   "@codesandbox/sandpack-react": 2.6.4_biqbaboplfbrettd7655fr4n2y
-  "@docsearch/react": 3.3.5_biqbaboplfbrettd7655fr4n2y
+  "@docsearch/react": 3.3.5_tqcjxml4rosq5qpg5cznikfcd4
   "@react-three/drei": 9.68.3_fxpeuo4oxyxiz54elztolpoevy
   "@react-three/fiber": 8.13.0_42od2y7wbz57ukb7jorrhqe6ja
-  "@uiw/codemirror-theme-github": 4.19.16
-  "@uiw/react-codemirror": 4.19.16_amtgy7u26fu42vqx4z2brx7xau
+  "@uiw/codemirror-theme-github": 4.19.16_@codemirror+view@6.11.3
+  "@uiw/react-codemirror": 4.19.16_2t4hfpzi76viszccvdoofxvmgm
   "@vercel/analytics": 1.0.1
   antd: 5.5.0_biqbaboplfbrettd7655fr4n2y
   chart.js: 4.3.0
   clsx: 1.2.1
   codemirror: 6.0.1
+  copy-to-clipboard: 3.3.3
   dayjs: 1.11.7
   got: 12.6.0
   is-base64: 1.1.0
@@ -85,7 +92,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-dropzone: 14.2.3_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
-  react-json-view: 1.21.3_biqbaboplfbrettd7655fr4n2y
+  react-json-view: 1.21.3_tqcjxml4rosq5qpg5cznikfcd4
   react-tweet: 2.0.1_biqbaboplfbrettd7655fr4n2y
   three: 0.151.3
 
@@ -94,6 +101,7 @@ devDependencies:
   "@types/ms": 0.7.31
   "@types/node": 18.11.10
   "@types/papaparse": 5.3.7
+  "@types/react": 18.2.6
   "@types/three": 0.150.2
   autoprefixer: 10.4.14_postcss@8.4.23
   husky: 7.0.4
@@ -390,11 +398,13 @@ packages:
       }
     dev: false
 
-  /@codemirror/autocomplete/6.7.1:
+  /@codemirror/autocomplete/6.7.1_@codemirror+view@6.11.3:
     resolution:
       {
         integrity: sha512-hSxf9S0uB+GV+gBsjY1FZNo53e1FFdzPceRfCfD1gWOnV6o21GfB5J5Wg9G/4h76XZMPrF0A6OCK/Rz5+V1egg==,
       }
+    peerDependencies:
+      "@codemirror/view": ^6.0.0
     dependencies:
       "@codemirror/language": 6.6.0
       "@codemirror/state": 6.2.0
@@ -414,17 +424,19 @@ packages:
       "@lezer/common": 1.0.2
     dev: false
 
-  /@codemirror/lang-css/6.2.0:
+  /@codemirror/lang-css/6.2.0_@codemirror+view@6.11.3:
     resolution:
       {
         integrity: sha512-oyIdJM29AyRPM3+PPq1I2oIk8NpUfEN3kAM05XWDDs6o3gSneIKaVJifT2P+fqONLou2uIgXynFyMUDQvo/szA==,
       }
     dependencies:
-      "@codemirror/autocomplete": 6.7.1
+      "@codemirror/autocomplete": 6.7.1_@codemirror+view@6.11.3
       "@codemirror/language": 6.6.0
       "@codemirror/state": 6.2.0
       "@lezer/common": 1.0.2
       "@lezer/css": 1.1.2
+    transitivePeerDependencies:
+      - "@codemirror/view"
     dev: false
 
   /@codemirror/lang-html/6.4.3:
@@ -433,8 +445,8 @@ packages:
         integrity: sha512-VKzQXEC8nL69Jg2hvAFPBwOdZNvL8tMFOrdFwWpU+wc6a6KEkndJ/19R5xSaglNX6v2bttm8uIEFYxdQDcIZVQ==,
       }
     dependencies:
-      "@codemirror/autocomplete": 6.7.1
-      "@codemirror/lang-css": 6.2.0
+      "@codemirror/autocomplete": 6.7.1_@codemirror+view@6.11.3
+      "@codemirror/lang-css": 6.2.0_@codemirror+view@6.11.3
       "@codemirror/lang-javascript": 6.1.8
       "@codemirror/language": 6.6.0
       "@codemirror/state": 6.2.0
@@ -450,7 +462,7 @@ packages:
         integrity: sha512-5cIA6IOkslTu1DtldcYnj7hsBm3p+cD37qSaKvW1kV16M6q9ysKvKrveCOWgbrj4+ilSWRL2JtSLudbeB158xg==,
       }
     dependencies:
-      "@codemirror/autocomplete": 6.7.1
+      "@codemirror/autocomplete": 6.7.1_@codemirror+view@6.11.3
       "@codemirror/language": 6.6.0
       "@codemirror/lint": 6.2.1
       "@codemirror/state": 6.2.0
@@ -567,9 +579,9 @@ packages:
       react: ^16.8.0 || ^17 || ^18
       react-dom: ^16.8.0 || ^17 || ^18
     dependencies:
-      "@codemirror/autocomplete": 6.7.1
+      "@codemirror/autocomplete": 6.7.1_@codemirror+view@6.11.3
       "@codemirror/commands": 6.2.4
-      "@codemirror/lang-css": 6.2.0
+      "@codemirror/lang-css": 6.2.0_@codemirror+view@6.11.3
       "@codemirror/lang-html": 6.4.3
       "@codemirror/lang-javascript": 6.1.8
       "@codemirror/language": 6.6.0
@@ -606,7 +618,7 @@ packages:
       }
     dev: false
 
-  /@docsearch/react/3.3.5_biqbaboplfbrettd7655fr4n2y:
+  /@docsearch/react/3.3.5_tqcjxml4rosq5qpg5cznikfcd4:
     resolution:
       {
         integrity: sha512-Zuxf4z5PZ9eIQkVCNu76v1H+KAztKItNn3rLzZa7kpBS+++TgNARITnZeUS7C1DKoAhJZFr6T/H+Lvc6h/iiYg==,
@@ -626,6 +638,7 @@ packages:
       "@algolia/autocomplete-core": 1.8.2
       "@algolia/autocomplete-preset-algolia": 1.8.2_algoliasearch@4.17.0
       "@docsearch/css": 3.3.5
+      "@types/react": 18.2.6
       algoliasearch: 4.17.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -1630,7 +1643,6 @@ packages:
       {
         integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==,
       }
-    dev: false
 
   /@types/react-reconciler/0.26.7:
     resolution:
@@ -1659,14 +1671,12 @@ packages:
       "@types/prop-types": 15.7.5
       "@types/scheduler": 0.16.3
       csstype: 3.1.2
-    dev: false
 
   /@types/scheduler/0.16.3:
     resolution:
       {
         integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==,
       }
-    dev: false
 
   /@types/stats.js/0.17.0:
     resolution:
@@ -1698,13 +1708,15 @@ packages:
         integrity: sha512-szL74BnIcok9m7QwYtVmQ+EdIKwbjPANudfuvDrAF8Cljg9MKUlIoc1w5tjj9PMpeSH3U1Xnx//czQybJ0EfSw==,
       }
 
-  /@uiw/codemirror-extensions-basic-setup/4.19.16:
+  /@uiw/codemirror-extensions-basic-setup/4.19.16_@codemirror+view@6.11.3:
     resolution:
       {
         integrity: sha512-Xm0RDpyYVZ/8hWqaBs3+wZwi4uLwZUBwp/uCt89X80FeR6mr3BFuC+a+gcDO4dBu3l+WQE3jJdhjKjB2TCY/PQ==,
       }
+    peerDependencies:
+      "@codemirror/view": ">=6.0.0"
     dependencies:
-      "@codemirror/autocomplete": 6.7.1
+      "@codemirror/autocomplete": 6.7.1_@codemirror+view@6.11.3
       "@codemirror/commands": 6.2.4
       "@codemirror/language": 6.6.0
       "@codemirror/lint": 6.2.1
@@ -1713,27 +1725,31 @@ packages:
       "@codemirror/view": 6.11.3
     dev: false
 
-  /@uiw/codemirror-theme-github/4.19.16:
+  /@uiw/codemirror-theme-github/4.19.16_@codemirror+view@6.11.3:
     resolution:
       {
         integrity: sha512-B3XmfphgnHiRedrP2adHjJsTc12Rw+tXrPmFUTurQrPyIITpCDLl9PJSsaJl9w5AuYhGcBxAeod7CEzMfdL1OA==,
       }
     dependencies:
-      "@uiw/codemirror-themes": 4.19.16
+      "@uiw/codemirror-themes": 4.19.16_@codemirror+view@6.11.3
+    transitivePeerDependencies:
+      - "@codemirror/view"
     dev: false
 
-  /@uiw/codemirror-themes/4.19.16:
+  /@uiw/codemirror-themes/4.19.16_@codemirror+view@6.11.3:
     resolution:
       {
         integrity: sha512-c16zrvMEEfNkYydjwa6Eq+aDrYCbtmt4O0jBWPX1P4CxFATCn59aeW9HFZ4uqMko8aYOiTupOsizxlJ+MBwW2Q==,
       }
+    peerDependencies:
+      "@codemirror/view": ">=6.0.0"
     dependencies:
       "@codemirror/language": 6.6.0
       "@codemirror/state": 6.2.0
       "@codemirror/view": 6.11.3
     dev: false
 
-  /@uiw/react-codemirror/4.19.16_amtgy7u26fu42vqx4z2brx7xau:
+  /@uiw/react-codemirror/4.19.16_2t4hfpzi76viszccvdoofxvmgm:
     resolution:
       {
         integrity: sha512-uElraR7Mvwz2oZKrmtF5hmIB8dAlIiU65nfg484e/V9k4PV6/5KtPUQL3JPO4clH2pcd+TQqRTQrFFkP/D25ew==,
@@ -1748,7 +1764,8 @@ packages:
       "@codemirror/commands": 6.2.4
       "@codemirror/state": 6.2.0
       "@codemirror/theme-one-dark": 6.1.2
-      "@uiw/codemirror-extensions-basic-setup": 4.19.16
+      "@codemirror/view": 6.11.3
+      "@uiw/codemirror-extensions-basic-setup": 4.19.16_@codemirror+view@6.11.3
       codemirror: 6.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -2409,7 +2426,7 @@ packages:
         integrity: sha512-J8j+nZ+CdWmIeFIGXEFbFPtpiYacFMDR8GlHK3IyHQJMCaVRfGx9NT+Hxivv1ckLWPvNdZqndbr/7lVhrf/Svg==,
       }
     dependencies:
-      "@codemirror/autocomplete": 6.7.1
+      "@codemirror/autocomplete": 6.7.1_@codemirror+view@6.11.3
       "@codemirror/commands": 6.2.4
       "@codemirror/language": 6.6.0
       "@codemirror/lint": 6.2.1
@@ -2559,7 +2576,6 @@ packages:
       {
         integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==,
       }
-    dev: false
 
   /d/1.0.1:
     resolution:
@@ -6725,7 +6741,7 @@ packages:
       }
     dev: false
 
-  /react-json-view/1.21.3_biqbaboplfbrettd7655fr4n2y:
+  /react-json-view/1.21.3_tqcjxml4rosq5qpg5cznikfcd4:
     resolution:
       {
         integrity: sha512-13p8IREj9/x/Ye4WI/JpjhoIwuzEgUAtgJZNBJckfzJt1qyh24BdTm6UQNGnyTq9dapQdrqvquZTo3dz1X6Cjw==,
@@ -6739,7 +6755,7 @@ packages:
       react-base16-styling: 0.6.0
       react-dom: 18.2.0_react@18.2.0
       react-lifecycles-compat: 3.0.4
-      react-textarea-autosize: 8.4.1_react@18.2.0
+      react-textarea-autosize: 8.4.1_s3k22s5ab4eu26xuel7hiaraxy
     transitivePeerDependencies:
       - "@types/react"
       - encoding
@@ -6773,7 +6789,7 @@ packages:
       scheduler: 0.21.0
     dev: false
 
-  /react-textarea-autosize/8.4.1_react@18.2.0:
+  /react-textarea-autosize/8.4.1_s3k22s5ab4eu26xuel7hiaraxy:
     resolution:
       {
         integrity: sha512-aD2C+qK6QypknC+lCMzteOdIjoMbNlgSFmJjCV+DrfTPwp59i/it9mMNf2HDzvRjQgKAyBDPyLJhcrzElf2U4Q==,
@@ -6785,7 +6801,7 @@ packages:
       "@babel/runtime": 7.21.5
       react: 18.2.0
       use-composed-ref: 1.3.0_react@18.2.0
-      use-latest: 1.2.1_react@18.2.0
+      use-latest: 1.2.1_s3k22s5ab4eu26xuel7hiaraxy
     transitivePeerDependencies:
       - "@types/react"
     dev: false
@@ -7993,7 +8009,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /use-isomorphic-layout-effect/1.1.2_react@18.2.0:
+  /use-isomorphic-layout-effect/1.1.2_s3k22s5ab4eu26xuel7hiaraxy:
     resolution:
       {
         integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==,
@@ -8005,10 +8021,11 @@ packages:
       "@types/react":
         optional: true
     dependencies:
+      "@types/react": 18.2.6
       react: 18.2.0
     dev: false
 
-  /use-latest/1.2.1_react@18.2.0:
+  /use-latest/1.2.1_s3k22s5ab4eu26xuel7hiaraxy:
     resolution:
       {
         integrity: sha512-xA+AVm/Wlg3e2P/JiItTziwS7FK92LWrDB0p+hgXloIMuVCeJJ8v6f0eeHyPZaJrM+usM1FkFfbNCrJGs8A/zw==,
@@ -8020,8 +8037,9 @@ packages:
       "@types/react":
         optional: true
     dependencies:
+      "@types/react": 18.2.6
       react: 18.2.0
-      use-isomorphic-layout-effect: 1.1.2_react@18.2.0
+      use-isomorphic-layout-effect: 1.1.2_s3k22s5ab4eu26xuel7hiaraxy
     dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:

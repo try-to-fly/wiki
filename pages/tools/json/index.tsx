@@ -5,12 +5,14 @@ import styles from "./JsonTool.module.scss";
 import JsonToTS from "json-to-ts";
 import copy from "copy-to-clipboard";
 import dynamic from "next/dynamic";
+import type { CodeMirrorWrapperProps } from "@components/CodeEditor";
+import type { PreviewJsonProps } from "@components/JsonView";
 
-const CodeMirrorWrapper = dynamic(
+const CodeMirrorWrapper = dynamic<CodeMirrorWrapperProps>(
   () => import("@components/CodeEditor").then((mod) => mod.CodeMirrorWrapper),
   { ssr: false }
 );
-const PreviewJson = dynamic(
+const PreviewJson = dynamic<PreviewJsonProps>(
   () => import("@components/JsonView").then((mod) => mod.PreviewJson),
   { ssr: false }
 );

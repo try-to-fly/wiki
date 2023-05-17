@@ -5,10 +5,13 @@ import { Wrap } from "@components/Wrap";
 import isBase64 from "is-base64";
 import styles from "./Base64.module.scss";
 import dynamic from "next/dynamic";
+import type { CodeMirrorWrapperProps } from "@components/CodeEditor";
 
-const CodeMirrorWrapper = dynamic(
-  () => import("@components/CodeEditor").then((mod) => mod.CodeMirrorWrapper),
-  { ssr: false }
+const CodeMirrorWrapper = dynamic<CodeMirrorWrapperProps>(
+  () => import("@components/CodeEditor"),
+  {
+    ssr: false,
+  }
 );
 
 const Base64Tool: React.FC = () => {

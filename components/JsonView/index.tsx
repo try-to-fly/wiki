@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./JsonView.module.scss";
 
-export const PreviewJson = ({ json }: { json: Object }) => {
+export type PreviewJsonProps = {
+  json: Object;
+};
+
+export const PreviewJson = ({ json }: PreviewJsonProps) => {
   const ReactJson =
     typeof window !== "undefined" ? require("react-json-view").default : null;
   return (

@@ -6,8 +6,9 @@ import { useDropzone } from "react-dropzone";
 import { Wrap } from "@components/Wrap";
 
 import styles from "./CSVPreviewer.module.scss";
+import type { CodeMirrorWrapperProps } from "@components/CodeEditor";
 
-const CodeMirrorWrapper = dynamic(
+const CodeMirrorWrapper = dynamic<CodeMirrorWrapperProps>(
   () => import("@components/CodeEditor").then((mod) => mod.CodeMirrorWrapper),
   { ssr: false }
 );
@@ -30,7 +31,7 @@ export default function CSVPreviewer() {
     setColumns(cols);
   };
 
-  const onDrop = (acceptedFiles) => {
+  const onDrop = (acceptedFiles: File[]) => {
     acceptedFiles.forEach((file) => {
       const reader = new FileReader();
 

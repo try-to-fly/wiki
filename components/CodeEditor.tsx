@@ -4,7 +4,7 @@ import { json } from "@codemirror/lang-json";
 import { githubLight, githubDark } from "@uiw/codemirror-theme-github";
 import { EditorView } from "@codemirror/view";
 
-interface CodeMirrorWrapperProps {
+export interface CodeMirrorWrapperProps {
   value: string;
   onChange: (value: string) => void;
   mode?: string;
@@ -42,3 +42,5 @@ export const CodeMirrorWrapper: React.FC<CodeMirrorWrapperProps> = ({
     />
   );
 };
+
+export default CodeMirrorWrapper;
