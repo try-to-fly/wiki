@@ -1,0 +1,27 @@
+# [Server-Sent Events](https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)
+
+> Server-Sent Events (SSE) 是一种使服务器能够向客户端推送实时事件的技术。这种技术基于 HTTP 协议，服务器可以在一个打开的连接中发送新数据，而不需要客户端重新请求。这对于需要实时数据更新的应用（例如实时新闻更新，股票价格更新等）非常有用
+
+### [查看 DEMO](/demo/sse)
+
+### 几个相似技术的总结
+
+| Technology               | Description                                                                                                |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Server-Sent Events (SSE) | 基于 HTTP 的技术，允许服务器在一个持久的连接中向客户端推送实时事件。                                       |
+| HTTP Chunked Transfer    | HTTP 协议的一部分，允许服务器在不知道整个响应大小的情况下开始发送响应，将响应分块逐个发送。                |
+| HTTP/2 Server Push       | HTTP/2 协议的功能，允许服务器在客户端请求某些资源之前就主动发送这些资源，以提高页面加载性能。              |
+| HTTP Streaming           | 一种让服务器能够连续地发送数据到客户端的技术，客户端发送一次请求，然后服务器保持响应开放，并持续发送数据。 |
+
+### Polyfill
+
+1. [sse.js](https://github.com/mpetazzoni/sse.js)
+
+### 相关文章
+
+1. [ChatGPT 的打字回复效果，原理是什么？我带你们实现！](https://mp.weixin.qq.com/s/4lVYGfq26ckpDds297XxXg)
+
+### 遇到的问题
+
+1. [Server-Sent Events don't work in Next API routes](https://github.com/vercel/next.js/issues/9965)
+2. sse 在中断后会重新轮训：解决办法，在收到结束事件后，主动关闭请求。
