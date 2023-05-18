@@ -1,12 +1,11 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import Image from "next/image";
-import { Badge } from "./components/Badge";
 import dayjs from "dayjs";
 import { DocSearch } from "@docsearch/react";
 import { Steps } from "nextra-theme-docs";
-import { Image as AntdImage, Col, Row, List } from "antd";
-import { Tweet } from "react-tweet";
+import { Col, Row, List } from "antd";
+import { components } from "mdx-elements";
 
 const config: DocsThemeConfig = {
   logo: <Image width={30} height={30} alt="" src="/img/logo.png" />,
@@ -81,10 +80,8 @@ const config: DocsThemeConfig = {
     ),
   },
   components: {
-    Badge,
+    ...components,
     Steps,
-    Image: AntdImage,
-    Tweet,
   },
   gitTimestamp: ({ timestamp }) => {
     return (
