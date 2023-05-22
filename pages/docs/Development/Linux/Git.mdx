@@ -17,3 +17,18 @@
 
 1. [理解了这个 3 个 object，你甚至能自己写个 git！](https://mp.weixin.qq.com/s/FNrFXgp1uqobMcuPjo5mvA)
 2. [Github 博客-Git 系列](https://github.blog/tag/git/)
+
+### 技巧
+
+1. 批量修改 Author 和 Commit Author:
+
+```bash
+git filter-branch -f --env-filter '
+CORRECT_NAME="微笑"
+CORRECT_EMAIL="<wang1234561211@outlook.com>"
+export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+export GIT_AUTHOR_NAME="$CORRECT_NAME"
+export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+export GIT_COMMITTER_NAME="$CORRECT_NAME"
+' -- --all
+```
