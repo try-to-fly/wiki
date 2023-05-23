@@ -2,6 +2,14 @@
 
 1. [Tmux 使用手册](http://louiszhai.github.io/2017/09/30/tmux/)
 
+### 主题
+
+1. [Dracula](https://draculatheme.com/tmux): 提供了漂亮的 tmux 主题，同时支持 cpu、ram 等状态插件。<Badge rate="5" />
+
+### 插件
+
+1. [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible): 提供了 tmux 开箱即用的配置。<Badge rate="5" />
+
 ### 我的配置
 
 ```bash
@@ -35,21 +43,20 @@ setw -g pane-base-index 1
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 
-# Other examples:
-# set -g @plugin 'github_username/plugin_name'
-# set -g @plugin 'github_username/plugin_name#branch'
-# set -g @plugin 'git@github.com:user/plugin'
-# set -g @plugin 'git@bitbucket.com:user/plugin'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 set -g @plugin 'dracula/tmux'
 run -b '~/.tmux/plugins/tpm/tpm'
 
-set-option -sg escape-time 10
-set-option default-terminal "tmux-256color"
+set -s escape-time 0
+# 这个配置会导致tmux的输入重叠，还不知道为啥。
+set -g default-terminal "screen-256color"
 set-option -g renumber-windows on
 
+# 配置dracula主题
+set -g @dracula-plugins "battery network cpu-usage ram-usage git weather"
+set -g @dracula-show-flags true
+set -g @dracula-show-fahrenheit false
+set -g @dracula-fixed-location "Hangzhou"
 ```
