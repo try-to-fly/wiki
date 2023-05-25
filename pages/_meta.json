@@ -1,7 +1,12 @@
 {
-  "docs": {
+  "home": {
     "title": "Wiki",
+    "href": "/docs/intro",
     "type": "page"
+  },
+  "docs": {
+    "type": "page",
+    "display": "hidden"
   },
   "timeline": {
     "title": "Timeline",
