@@ -10,7 +10,12 @@ module.exports = withNextra({
     return [
       {
         source: "/",
-        destination: "/docs",
+        destination: "/docs/intro",
+        statusCode: 302,
+      },
+      {
+        source: "/docs",
+        destination: "/docs/intro",
         statusCode: 302,
       },
     ];
