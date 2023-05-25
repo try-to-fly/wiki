@@ -4,8 +4,8 @@ import Image from "next/image";
 import dayjs from "dayjs";
 import { DocSearch } from "@docsearch/react";
 import { Steps } from "nextra-theme-docs";
-import { Col, Row, List } from "antd";
 import { components } from "mdx-elements";
+import { Vercel } from "./components/Vercel";
 
 const config: DocsThemeConfig = {
   logo: <Image width={30} height={30} alt="" src="/img/logo.png" />,
@@ -55,29 +55,21 @@ const config: DocsThemeConfig = {
     );
   },
   footer: {
-    text: (
-      <Row>
-        <Col span={12} style={{ width: 300 }}>
-          <List
-            header="友情链接"
-            size="small"
-            dataSource={[
-              {
-                title: "微笑Wiki",
-                url: "https://wiki.dev-hub.top",
-              },
-            ]}
-            renderItem={(item) => (
-              <List.Item>
-                <a href={item.url} target="_blank">
-                  {item.title}
-                </a>
-              </List.Item>
-            )}
-          />
-        </Col>
-      </Row>
-    ),
+    text: () => {
+      return (
+        <a
+          href={`https://vercel.com`}
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center no-underline text-current font-semibold"
+        >
+          <span className="mr-2">Powered by</span>
+          <span>
+            <Vercel />
+          </span>
+        </a>
+      );
+    },
   },
   components: {
     ...components,
