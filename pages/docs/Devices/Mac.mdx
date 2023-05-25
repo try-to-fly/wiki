@@ -6,3 +6,18 @@ title: Mac
 
 1. [App 推荐](./Mac/apps.mdx)
 2. [使用技巧](./Mac/skills.mdx)
+
+### Homebrew 同步
+
+1. 导出：
+
+```bash
+brew bundle dump --describe --force --file="~/Downloads/Brewfile"
+
+```
+
+2. 导入：
+
+```bash
+brew bundle --file="~/Downloads/Brewfile"
+```
