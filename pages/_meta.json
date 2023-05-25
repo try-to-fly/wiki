@@ -21,5 +21,16 @@
       "pagination": false,
       "layout": "full"
     }
+  },
+  "links": {
+    "title": "友情链接",
+    "type": "page",
+    "theme": {
+      "breadcrumb": false,
+      "pagination": false,
+      "footer": false,
+      "header": false,
+      "toc": false
+    }
   }
 }
