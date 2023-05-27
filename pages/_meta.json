@@ -34,7 +34,6 @@
       "breadcrumb": false,
       "pagination": false,
       "footer": false,
-      "header": false,
       "toc": false
     }
   }
