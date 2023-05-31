@@ -2,9 +2,22 @@
 title: 图片
 ---
 
-### 工具
+### 图片压缩
 
-1. [图片在线压缩](https://squoosh.app/): Google 做的图片压缩工具。<Badge gtihub="https://github.com/GoogleChromeLabs/squoosh"/>
+| 工具                              | 优点                       | 缺点                                                                                       |
+| --------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------ |
+| [squoosh](https://squoosh.app/)   | 谷歌出品、压缩率高、速度快 | 单次只能处理一张，[超大图片不支持](https://github.com/GoogleChromeLabs/squoosh/issues/298) |
+| [tinypng](https://tinypng.com/)   | 服务器压缩，支持 API       | 超大图片上传速度慢，处理速慢                                                               |
+| [optimage](https://optimage.app/) | 支持批量处理、付费软件     | 超大图片不支持                                                                             |
+
+### 图片裁剪
+
+1. `sips`: Mac 自带的图片裁剪工具。
+
+```bash
+# 批量把images目录下的图片，裁剪到宽度12000，高度保持比例。
+find ~/Downloads/images -type f \( -iname "*.png" -o -iname "*.jpg" \) | xargs -I {} sips -Z 12000 "{}"
+```
 
 ### 渐进式图片
 
@@ -13,3 +26,4 @@ title: 图片
 ### 二维码
 
 1. [草料二维码](https://cli.im/)：web 端二维码编解码
+2. [参数化二维码生成器](https://qrbtf.com/)
