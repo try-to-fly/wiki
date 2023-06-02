@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build ",
-    "dev": "next dev --port 6666",
+    "dev": "next dev --port 8888",
     "start": "next start"
   },
   "packageManager": "pnpm@8.5.1",
