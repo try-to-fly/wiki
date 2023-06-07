@@ -1,0 +1,25 @@
+# [yocto-queue](https://www.npmjs.com/package/yocto-queue): <Badge github="https://github.com/sindresorhus/yocto-queue" npm="yocto-queue" />
+
+如果你在一个大型数组上执行 push、shift 的操作，那么你应该使用这个模块。因为它的性能比 Array 要好。
+
+### 流程图
+
+```mermaid
+graph TB
+  start((开始)) --> A[Instantiate Queue]
+  A --> B{Queue empty?}
+  B -- Yes --> C[Enqueue: Create new Node]
+  B -- No --> D[Enqueue: Create new Node, set tail.next to new Node, update tail]
+  C --> E[Set head, tail to new Node, increase size]
+  D --> E
+  E --> F{Queue empty?}
+  F -- Yes --> G[End of Queue]
+  F -- No --> H[Dequeue: Set head to head.next, decrease size, return head.value]
+  H --> F
+  G --> I[Iterate: Next Node exist?]
+  I -- Yes --> J[Yield value: Set current Node to next Node]
+  I -- No --> EndNode((End))
+  J --> I
+  EndNode --> K[Clear: Set head, tail to undefined, size to 0]
+  K --> start
+```
