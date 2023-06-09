@@ -1,3 +1,26 @@
 # Typescript Changelog
 
+### [5.1](https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/)
+
+1. 返回函数可以隐式返回了
+
+```typescript
+// ✅ Works in TypeScript 5.1!
+function f4(): undefined {
+  // no returns
+}
+```
+
+2. get、set 可以是不同类型的值了
+
+```typescript
+interface CSSStyleRule {
+  /** Always reads as a `CSSStyleDeclaration` */
+  get style(): CSSStyleDeclaration;
+
+  /** Can only write a `string` here. */
+  set style(newValue: string);
+}
+```
+
 ### [5.0](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html)

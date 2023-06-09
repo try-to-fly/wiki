@@ -3,6 +3,16 @@ date: 2023-06-01
 title: 2023年6月
 ---
 
+### 06-08
+
+1. 给 mermaid 提交 mr: [Update docs: Added Nextra to Blogs category on integrations page #4463](https://github.com/mermaid-js/mermaid/pull/4463)
+2. 给 Flowise 提交 mr: [Add basePath configuration option to support OpenAI mirror #264](https://github.com/FlowiseAI/Flowise/pull/264)
+3. React 踩坑总结：
+   - ref.current 需要在使用的 useEffect 添加依赖项，不然 current 更新的时候，会导致索引错误的 ref
+   - useEffect 需要在返回值函数中，及时清理第三方事件监听。不然引用的一直是之前更新函数的数据
+   - eslint 还是非常有必要的，有时候感觉有了 ts，没有配置 eslint 导致依赖没有配置正确
+   - 复杂的状态更新，还是得考虑用 mobx 这种了，心智成本会低很多。 不用考虑依赖问题
+
 ### 06-07
 
 1. [mermaid](https://mermaid.js.org/): 第一次接触 mermaid。
