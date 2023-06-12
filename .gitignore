@@ -11,3 +11,8 @@ public/.nextra
 .vercel
 .obsidian
 build
+
+# sitemap
+sitemap.xml
+sitemap*.xml
+robots.txt
