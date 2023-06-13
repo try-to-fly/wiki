@@ -1,0 +1,23 @@
+.scenicSpotDisplay {
+  padding: 16px;
+
+  .imageTextItem {
+    position: relative;
+
+    p {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 8px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .scenicSpotDisplay {
+    padding: 32px;
+  }
+}

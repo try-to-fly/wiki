@@ -8,10 +8,8 @@ import {
   LinearFilter,
   MOUSE,
 } from "three";
-import { Upload } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
+
 import styles from "./PanoramaViewer.module.scss";
-import { Wrap } from "@components/Wrap";
 
 const Panorama = ({ url }) => {
   const meshRef = useRef() as any;
@@ -65,7 +63,15 @@ const Panorama = ({ url }) => {
   );
 };
 
-const PanoramaCanvas = ({ url, autoRotate, fullscreen }) => {
+export const PanoramaCanvas = ({
+  url,
+  autoRotate,
+  fullscreen,
+}: {
+  url: string;
+  autoRotate?: (autoRotate: boolean) => void;
+  fullscreen?: boolean;
+}) => {
   return (
     <div
       className={`${styles.canvasContainer} ${
@@ -94,87 +100,10 @@ const PanoramaCanvas = ({ url, autoRotate, fullscreen }) => {
             MIDDLE: MOUSE.DOLLY,
             RIGHT: MOUSE.PAN,
           }}
-          onPointerUp={() => autoRotate(false)}
+          onPointerUp={() => autoRotate?.(false)}
           reverseOrbit={true}
         />
       </Canvas>
     </div>
   );
 };
-
-const PanoramaViewer = () => {
-  const [uploadedImages, setUploadedImages] = useState([]);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(-1);
-  const [fullscreen, setFullscreen] = useState(false);
-  const [autoRotate, setAutoRotate] = useState(false);
-  const [autoRotateTimeout, setAutoRotateTimeout] = useState(null);
-
-  const handleImagePreview = (file, files: File[]) => {
-    const blobUrls = files.map((file) => URL.createObjectURL(file));
-    setUploadedImages(blobUrls);
-    setSelectedImageIndex(0);
-    return false;
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAutoRotate(true);
-    }, 5000);
-    setAutoRotateTimeout(timer);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!autoRotate) {
-      clearTimeout(autoRotateTimeout);
-      const timer = setTimeout(() => {
-        setAutoRotate(true);
-      }, 5000);
-      setAutoRotateTimeout(timer);
-    }
-  }, [autoRotate]);
-
-  return (
-    <Wrap gptUrl="https://sharegpt.com/c/rleTjsb">
-      <div className={styles.panoramaViewer}>
-        {uploadedImages[selectedImageIndex] && (
-          <PanoramaCanvas
-            url={uploadedImages[selectedImageIndex]}
-            autoRotate={autoRotate}
-            fullscreen={fullscreen}
-          />
-        )}
-        <div
-          className={`${styles.toolbar} ${
-            fullscreen ? styles.fullscreenToolbar : ""
-          }`}
-        >
-          <Upload
-            accept="image/"
-            multiple
-            showUploadList={false}
-            beforeUpload={handleImagePreview}
-            style={{ marginRight: "8px" }}
-          >
-            <UploadOutlined className={styles.uploadIcon} />
-          </Upload>
-        </div>
-        <div className={styles.imageList}>
-          {uploadedImages.map((url, index) => (
-            <img
-              key={url}
-              src={url}
-              alt={`Uploaded Image ${index + 1}`}
-              onClick={() => setSelectedImageIndex(index)}
-              className={`${styles.imageThumbnail} ${
-                selectedImageIndex === index ? styles.selectedThumbnail : ""
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-    </Wrap>
-  );
-};
-
-export default PanoramaViewer;
