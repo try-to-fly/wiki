@@ -13,11 +13,11 @@
 | HTTP/2 Server Push       | HTTP/2 协议的功能，允许服务器在客户端请求某些资源之前就主动发送这些资源，以提高页面加载性能。              |
 | HTTP Streaming           | 一种让服务器能够连续地发送数据到客户端的技术，客户端发送一次请求，然后服务器保持响应开放，并持续发送数据。 |
 
-### Polyfill
+### 相关 npm 包
 
 1. [sse.js](https://github.com/mpetazzoni/sse.js)
-2. [Fetch Event Source](https://github.com/Azure/fetch-event-source): <Badge github="https://github.com/Azure/fetch-event-source"/>
-3. [eventsource](https://www.npmjs.com/package/eventsource): <Badge npm="eventsource" github="https://github.com/EventSource/eventsource" />
+2. [Fetch Event Source](https://github.com/Azure/fetch-event-source): 增强 sse，支持错误重试，可以 post 数据。 <Badge github="https://github.com/Azure/fetch-event-source"/>
+3. [eventsource](https://www.npmjs.com/package/eventsource): 基础的 polyfill <Badge npm="eventsource" github="https://github.com/EventSource/eventsource" />
 
 ### 相关文章
 
@@ -27,3 +27,4 @@
 
 1. [Server-Sent Events don't work in Next API routes](https://github.com/vercel/next.js/issues/9965)
 2. sse 在中断后会重新轮训：解决办法，在收到结束事件后，主动关闭请求。
+3. 【踩坑】sse 的消息需要以 data: 开头才可以。 不然客户端接收不到消息。
