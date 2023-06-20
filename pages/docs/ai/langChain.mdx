@@ -20,6 +20,8 @@
    - langchain 的官方文档用的就是这个。
 4. [helicone](https://github.com/Helicone/helicone): 还不知道是啥。
 
-### 知识点
+### 最佳实践
 
-1. ChatMessage: https://js.langchain.com/docs/modules/models/chat/
+1. 预设 SystemMessage, 可以避免被问出基于 GPT 的信息。
+2. [redis memory](https://js.langchain.com/docs/modules/memory/examples/redis)可以持久化对话。
+3. 聊天对话可以参考[这里](https://js.langchain.com/docs/modules/memory/examples/buffer_memory_chat)
