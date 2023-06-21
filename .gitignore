@@ -12,7 +12,3 @@ public/.nextra
 .obsidian
 build
 
-# sitemap
-sitemap.xml
-sitemap*.xml
-robots.txt

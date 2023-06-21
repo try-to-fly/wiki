@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://wiki.dev-hub.top
+
+# Sitemaps
+Sitemap: http://wiki.dev-hub.top/sitemap.xml
