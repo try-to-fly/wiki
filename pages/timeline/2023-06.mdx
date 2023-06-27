@@ -6,6 +6,21 @@ title: 2023年06月
 ### 06-27
 
 1. [十三年后，我终于知道，DOTA 是什么](https://www.bilibili.com/video/BV1am4y1a7G8/): 大一接触的 Dota，如今也十年了。
+2. node 18 版本安装`pinyin`模块会报错
+
+   - 解决方法：使用`pinyin-pro`模块代替，[参考](https://github.com/hotoo/pinyin/issues/365#issuecomment-1554215594)
+
+3. `pnpm`也支持`Overrides`: 用来指定 sub-module 的依赖，类似 yarn 的 resolutions
+
+```json
+{
+  "pnpm": {
+    "overrides": {
+      "foo": "^1.0.0"
+    }
+  }
+}
+```
 
 ### 06-22
 
@@ -77,3 +92,4 @@ title: 2023年06月
   src="https://raw.githubusercontent.com/smile618/imgs/main/static202306012105828.png"
   width="400px"
 />
+````
