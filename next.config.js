@@ -5,7 +5,7 @@ const withNextra = require("nextra")({
 });
 
 module.exports = withNextra({
-  transpilePackages: ["react-tweet", "mdx-elements"],
+  transpilePackages: ["react-tweet", "mdx-elements", "cmdk"],
   redirects: () => {
     return [
       {

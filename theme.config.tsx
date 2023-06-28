@@ -33,13 +33,7 @@ const config: DocsThemeConfig = {
     content: null,
   },
   search: {
-    component: () => (
-      <DocSearch
-        appId="9UW5P96GU5"
-        apiKey="b34e3dc2882fc21748b96a0805a34ab1"
-        indexName="wiki-hub"
-      />
-    ),
+    component: () => null,
   },
   head: () => {
     return (
