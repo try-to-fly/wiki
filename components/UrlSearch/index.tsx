@@ -123,13 +123,7 @@ export function UrlSearch() {
           />
           <Command.List>
             <Command.Empty>No results found.</Command.Empty>
-            {activePage === "home" && (
-              <Home
-                list={list}
-                setOpen={setOpen}
-                searchProjects={() => setPages([...pages, "projects"])}
-              />
-            )}
+            {activePage === "home" && <Home list={list} setOpen={setOpen} />}
           </Command.List>
         </Command>
       </div>
