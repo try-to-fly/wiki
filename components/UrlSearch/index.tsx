@@ -3,6 +3,7 @@ import { Command } from "cmdk";
 import ky from "ky";
 import styles from "./index.module.scss";
 import { Modal } from "antd";
+import { useRouter } from "next/router";
 
 export function UrlSearch() {
   const [open, setOpen] = React.useState(false);
@@ -138,6 +139,7 @@ function Home({
   list: any[];
   setOpen?: (value: boolean) => void;
 }) {
+  const router = useRouter();
   return (
     <>
       <Command.Group heading="url 列表">
@@ -146,8 +148,7 @@ function Home({
             key={url}
             value={url}
             onSelect={() => {
-              console.log(url);
-              location.href = `${location.origin}/${url}`;
+              router.push(url);
               setOpen(false);
             }}
           >
