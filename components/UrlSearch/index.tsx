@@ -34,7 +34,7 @@ export function UrlSearch() {
   React.useEffect(() => {
     // 该函数在键盘按键按下时执行
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.metaKey && event.key === "p") {
+      if ((event.metaKey || event.ctrlKey) && event.key === "p") {
         // 阻止浏览器默认的打印功能
         event.preventDefault();
         // 在这里编写你要执行的代码
