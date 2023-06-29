@@ -1,9 +1,9 @@
 import React from "react";
 import { Command } from "cmdk";
 import ky from "ky";
-import styles from "./index.module.scss";
 import { Modal } from "antd";
 import { useRouter } from "next/router";
+import { useHotkeys } from "react-hotkeys-hook";
 
 export function UrlSearch() {
   const [open, setOpen] = React.useState(false);
@@ -31,33 +31,18 @@ export function UrlSearch() {
       });
   }, []);
 
-  React.useEffect(() => {
-    // 该函数在键盘按键按下时执行
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if ((event.metaKey || event.ctrlKey) && event.key === "p") {
-        // 阻止浏览器默认的打印功能
-        event.preventDefault();
-        // 在这里编写你要执行的代码
-        setOpen(true);
-        setTimeout(() => {
-          const input = divRef.current?.querySelector("input");
-          if (input) {
-            input.value = "";
-          }
-          input?.focus();
-          input?.focus();
-        }, 100);
+  useHotkeys("mod+p", (e) => {
+    e.preventDefault();
+    setOpen(true);
+    setTimeout(() => {
+      const input = divRef.current?.querySelector("input");
+      if (input) {
+        input.value = "";
       }
-    };
-
-    // 添加事件监听器
-    window.addEventListener("keydown", handleKeyDown);
-
-    // 在组件卸载时移除事件监听器
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+      input?.focus();
+      input?.focus();
+    }, 100);
+  });
 
   const [pages, setPages] = React.useState<string[]>(["home"]);
   const activePage = pages[pages.length - 1];
