@@ -4,5 +4,27 @@ title: 富文本编辑器
 
 ### npm 模块
 
-1. [slate](https://github.com/ianstormtaylor/slate)
-2. [quilljs](https://quilljs.com/)
+#### [slate](https://github.com/ianstormtaylor/slate)
+
+1. [数据结构](https://docs.slatejs.org/concepts/02-nodes)
+
+2. [自定义标签渲染](https://docs.slatejs.org/walkthroughs/03-defining-custom-elements)
+   - [需要同时配置 isInline](https://docs.slatejs.org/api/nodes/element#element-behavior-types): 不然默认是 block 元素
+   - [扩展类型定义](https://docs.slatejs.org/concepts/12-typescript#defining-editor-element-and-text-types)
+3. 清空编辑器
+
+```ts
+const clearEditor = (editor: BaseEditor & ReactEditor) => {
+  editor.children.forEach(() => {
+    Transforms.removeNodes(editor, { at: [0] });
+  });
+};
+```
+
+4. 编辑器插入
+
+```ts
+Transforms.insertNodes(editor, nodes);
+```
+
+#### [quilljs](https://quilljs.com/)
