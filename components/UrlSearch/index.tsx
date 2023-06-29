@@ -40,8 +40,13 @@ export function UrlSearch() {
         // 在这里编写你要执行的代码
         setOpen(true);
         setTimeout(() => {
-          divRef.current?.querySelector("input")?.focus();
-        }, 0);
+          const input = divRef.current?.querySelector("input");
+          if (input) {
+            input.value = "";
+          }
+          input?.focus();
+          input?.focus();
+        }, 100);
       }
     };
 
