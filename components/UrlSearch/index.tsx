@@ -139,10 +139,8 @@ export function UrlSearch() {
 
 function Home({
   list,
-  searchProjects,
   setOpen,
 }: {
-  searchProjects: Function;
   list: any[];
   setOpen?: (value: boolean) => void;
 }) {
@@ -152,6 +150,7 @@ function Home({
         {list.map(({ label, url }) => (
           <Item
             key={url}
+            value={url}
             onSelect={() => {
               console.log(url);
               location.href = `${location.origin}/${url}`;
@@ -168,10 +167,16 @@ function Home({
 
 function Item({
   children,
+  value,
   onSelect = () => {},
 }: {
   children: React.ReactNode;
   onSelect?: (value: string) => void;
+  value: string;
 }) {
-  return <Command.Item onSelect={onSelect}>{children}</Command.Item>;
+  return (
+    <Command.Item value={value} onSelect={onSelect}>
+      {children}
+    </Command.Item>
+  );
 }
