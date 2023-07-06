@@ -50,6 +50,8 @@
 1. 批量修改 Author 和 Commit Author:
 
 ```bash
+:q
+
 git filter-branch -f --env-filter '
 CORRECT_NAME="微笑"
 CORRECT_EMAIL="<wang1234561211@outlook.com>"
@@ -62,8 +64,16 @@ export GIT_COMMITTER_NAME="$CORRECT_NAME"
 
 ### Git 配置
 
+1. push 新分支
+
 ```
 # 推送新分支，就可以直接使用 git push了。
 git config --global --add --bool push.autoSetupRemote true
 
+```
+
+2. 友好的 date 格式
+
+```
+git config --global log.date "format:%Y-%m-%d %H:%M:%S"
 ```

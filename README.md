@@ -18,3 +18,7 @@ pnpm install
 pnpm dev
 
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=try-to-fly/wiki&type=Timeline)](https://star-history.com/#try-to-fly/wiki&Timeline)
