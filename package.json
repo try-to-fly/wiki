@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build": "next build ",
+    "prebuild": "pnpm run modify-date",
     "postbuild": "next-sitemap",
     "dev": "next dev --port 8888",
-    "start": "next start"
+    "start": "next start",
+    "modify-date": "bash ./scripts/get-mdx-modify-time.sh ./pages  ./public/last_modified.json"
   },
   "packageManager": "pnpm@8.5.1",
   "browserslist": {

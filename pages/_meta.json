@@ -36,5 +36,16 @@
       "footer": false,
       "toc": false
     }
+  },
+
+  "changelog": {
+    "title": "更新日志",
+    "type": "page",
+    "theme": {
+      "breadcrumb": false,
+      "pagination": false,
+      "footer": false,
+      "toc": false
+    }
   }
 }
