@@ -1,3 +1,5 @@
+import { ConfigProvider, theme } from "antd";
+import { useTheme } from "nextra-theme-docs";
 import React from "react";
 
 export const Content = ({ children }: { children: React.ReactNode }) => {
@@ -13,5 +15,17 @@ export const Wrap = ({
   gptUrl?: string;
   title?: string;
 }) => {
-  return <Content>{children}</Content>;
+  const { theme: currentTheme } = useTheme();
+  return (
+    <ConfigProvider
+      theme={{
+        algorithm:
+          currentTheme === "dark"
+            ? theme.darkAlgorithm
+            : theme.defaultAlgorithm,
+      }}
+    >
+      <Content>{children}</Content>
+    </ConfigProvider>
+  );
 };
