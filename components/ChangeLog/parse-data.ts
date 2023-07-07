@@ -3,9 +3,32 @@ import dayjs from "dayjs";
 export type DataItem = {
   file: string;
   last_modified: string;
+  update_count: number;
 };
 
 type TimeRange = "week" | "month";
+
+function formatWithinHour(diffInMinutes: number) {
+  return `${diffInMinutes} 分钟前`;
+}
+
+function formatWithinDay(diffInHours: number) {
+  return `${diffInHours} 小时前`;
+}
+
+function formatWithinWeek(diffInDays: number) {
+  if (diffInDays === 1) {
+    return "昨天";
+  } else if (diffInDays === 2) {
+    return "前天";
+  } else {
+    return `${diffInDays} 天前`;
+  }
+}
+
+function formatExactDate(lastModified: dayjs.Dayjs) {
+  return lastModified.format("YYYY-MM-DD");
+}
 
 export function filterByDateRange(data: DataItem[], range: TimeRange) {
   const now = dayjs();
@@ -26,14 +49,22 @@ export function filterByDateRange(data: DataItem[], range: TimeRange) {
   // 格式化日期
   return filteredData.map((item) => {
     const lastModified = dayjs(item.last_modified);
-    if (lastModified.isSame(now, "day")) {
-      return { ...item, last_modified: "今天" };
-    } else if (lastModified.isSame(now.subtract(1, "day"), "day")) {
-      return { ...item, last_modified: "昨天" };
-    } else if (lastModified.isSame(now.subtract(2, "day"), "day")) {
-      return { ...item, last_modified: "前天" };
+    const diffInMinutes = now.diff(lastModified, "minute");
+    const diffInHours = now.diff(lastModified, "hour");
+    const diffInDays = now.diff(lastModified, "day");
+
+    let formattedDate;
+
+    if (diffInMinutes < 60) {
+      formattedDate = formatWithinHour(diffInMinutes);
+    } else if (diffInHours < 24) {
+      formattedDate = formatWithinDay(diffInHours);
+    } else if (diffInDays < 5) {
+      formattedDate = formatWithinWeek(diffInDays);
     } else {
-      return { ...item, last_modified: lastModified.format("YYYY-MM-DD") };
+      formattedDate = formatExactDate(lastModified);
     }
+
+    return { ...item, last_modified: formattedDate };
   });
 }

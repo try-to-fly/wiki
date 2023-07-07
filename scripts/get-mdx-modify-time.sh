@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # 检查命令行参数
@@ -26,8 +25,11 @@ do
     # 获取Git最后一次修改时间
     last_modified=$(git log -1 --format="%ai" -- "$file")
 
+    # 获取过去一周内的更新次数
+    update_count=$(git log --since="1 week ago" --oneline -- "$file" | wc -l)
+
     # 将结果添加到JSON数组
-    json_array+="$(printf '{"file": "%s", "last_modified": "%s"},' "$file" "$last_modified")"
+    json_array+="$(printf '{"file": "%s", "last_modified": "%s", "update_count": %d},' "$file" "$last_modified" "$update_count")"
 
 done < <(find "$target_directory" -type f -name '*.mdx' -print0)
 
