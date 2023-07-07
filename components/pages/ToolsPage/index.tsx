@@ -13,6 +13,7 @@ import {
   QrcodeOutlined,
   HighlightOutlined,
   RestOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 import { Wrap } from "@components/Wrap";
 import Link from "next/link";
@@ -118,6 +119,13 @@ const navigationData: NavItem[] = [
     url: "/csv",
     gradient: "linear-gradient(135deg, #FDD819 0%, #FF8F00 100%)",
     icon: <FileImageOutlined />,
+    type: NavigationType.Tool,
+  },
+  {
+    name: "ICP 查询",
+    url: "/icp",
+    gradient: "linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%)",
+    icon: <SearchOutlined />,
     type: NavigationType.Tool,
   },
 ];
