@@ -12,7 +12,9 @@ type TableDataItem = DataItem & {
 };
 
 export const ChangeLog = () => {
+  const [originData, setOriginData] = useState<DataItem[]>([]);
   const [data, setData] = useState<TableDataItem[]>([]);
+  const [pageDatas, setPageDatas] = useState<Record<string, any>>({});
   const [type, setType] = useState<"week" | "month">("week");
 
   useEffect(() => {
@@ -22,31 +24,35 @@ export const ChangeLog = () => {
           "https://wiki.dev-hub.top/_next/static/chunks/nextra-data-en-US.json"
         )
         .json();
+      setPageDatas(pageDatas);
 
       await ky
         .get("/last_modified.json")
         .json<DataItem[]>()
         .then((res) => {
-          const list = filterByDateRange(res, type).map((item) => {
-            const { file } = item;
-            const url = file.replace("./pages", "").replace(".mdx", "");
-            const title = pageDatas[url]?.title;
-            return {
-              ...item,
-              url,
-              title,
-            };
-          });
-          setData(list);
+          setOriginData(res);
         });
     };
     fetchData();
-  }, [type]);
+  }, []);
+
+  useEffect(() => {
+    const list = filterByDateRange(originData, type).map((item) => {
+      const { file } = item;
+      const url = file.replace("./pages", "").replace(".mdx", "");
+      const title = pageDatas[url]?.title;
+      return {
+        ...item,
+        url,
+        title,
+      };
+    });
+    setData(list);
+  }, [type, originData, pageDatas]);
 
   const columns: TableProps<TableDataItem>["columns"] = [
     {
       title: "标题",
-      dataIndex: "file",
       width: 450,
       render: (value, record) => {
         const { url, title } = record;
@@ -59,8 +65,17 @@ export const ChangeLog = () => {
     },
     {
       title: "更新次数",
-      dataIndex: "update_count",
       width: 200,
+      render: (value, record) => {
+        switch (type) {
+          case "week":
+            return record.update_count_week;
+          case "month":
+            return record.update_count_month;
+          default:
+            return "\\";
+        }
+      },
     },
     {
       title: "更新时间",

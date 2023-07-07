@@ -3,7 +3,8 @@ import dayjs from "dayjs";
 export type DataItem = {
   file: string;
   last_modified: string;
-  update_count: number;
+  update_count_week: number;
+  update_count_month: number;
 };
 
 type TimeRange = "week" | "month";
