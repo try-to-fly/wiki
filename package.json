@@ -47,7 +47,7 @@
     "json-to-ts": "^1.7.0",
     "jsqr": "^1.4.0",
     "ky": "^0.33.3",
-    "mdx-elements": "^0.0.1",
+    "mdx-elements": "^0.0.4",
     "ms": "^2.1.3",
     "next": "^13.4.1",
     "next-sitemap": "^4.1.3",
