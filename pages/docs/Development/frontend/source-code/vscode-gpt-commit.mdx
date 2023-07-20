@@ -1,0 +1,64 @@
+---
+tag: gpt,source-code
+---
+
+### [I Don't Care About Commit Message](https://github.com/mefengl/vscode-i-dont-care-about-commit-message):Vscode 插件-使用 gpt 创建 git commit <Badge github="https://github.com/mefengl/vscode-i-dont-care-about-commit-message" />
+
+### 核心逻辑
+
+1. 使用`function`来结构化 gpt 的输出结果。
+
+```ts
+ openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'system',
+        content:
+          'You are a smart AI model that can understand git diffs. You should analyze the given git diff, and generate a single line conventional commit message. If there are added lines in a file, consider it as a feature addition ("feat"). If the majority of changes are in a specific scope, consider it as the scope of the commit. The description should be a brief summary of the changes. Do not include any breaking changes.',
+      },
+      {
+        role: 'user',
+        content: gitInfo,
+      },
+    ],
+    functions: [
+      {
+        name: 'createConventionalCommit',
+        description: 'Create a conventional commit message.',
+        parameters: {
+          type: 'object',
+          properties: {
+            type: {
+              type: 'string',
+              description: 'The type of the commit.',
+            },
+            scope: {
+              type: 'string',
+              description: 'The scope or scopes of the commit, separated by a slash.',
+            },
+            description: {
+              type: 'string',
+              description: 'The description of the commit.',
+            },
+            body: {
+              type: 'string',
+              description: 'The body of the commit.',
+            },
+            footer: {
+              type: 'string',
+              description: 'The footer of the commit.',
+            },
+            isBreakingChange: {
+              type: 'boolean',
+              description: 'If the commit introduces a breaking change.',
+            },
+          },
+          required: ['type', 'description'],
+        },
+      },
+    ],
+    function_call: { name: 'createConventionalCommit' },
+  });
+}
+```
