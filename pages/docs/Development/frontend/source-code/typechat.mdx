@@ -1,0 +1,24 @@
+# [TypeChat](https://github.com/microsoft/TypeChat)·: 结构化输出json结构数据
+
+
+### Prompts [源码](https://github.com/microsoft/TypeChat/blob/main/src/typechat.ts#L92)
+
+#### 获取json结构数据
+```ts
+`You are a service that translates user requests into JSON objects of type "${validator.typeName}" according to the following TypeScript definitions:\n` +
+            `\`\`\`\n${validator.schema}\`\`\`\n` +
+            `The following is a user request:\n` +
+            `"""\n${request}\n"""\n` +
+            `The following is the user request translated into a JSON object with 2 spaces of indentation and no properties with the value undefined:\n`
+```
+
+#### 修复json错误
+
+> 可用于json工具的auto fix。
+
+```ts
+ `${origin json} The JSON object is invalid for the following reason:\n` +
+            `"""\n${validationError}\n"""\n` +
+            `The following is a revised JSON object:\n`
+
+```
