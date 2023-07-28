@@ -1,0 +1,36 @@
+---
+title: yabai
+---
+
+# [yabai](https://github.com/koekeishiya/yabai): Mac 窗口管理。<Badge github="https://github.com/koekeishiya/yabai" />
+
+### 快捷键
+
+1. `ctrl + lalt - e`: 自适应窗口。
+2. `lalt - space`: 窗口浮动切换。
+3. `shift + lalt - f `: 全屏切换。
+4. `shift + lalt - y`: 左右交换窗口。
+5. `lalt + n`: 切换到第几个 space。
+
+### 技巧
+
+1. 查看已打开app的命令，方便配置策略：[参考](https://github.com/koekeishiya/yabai/issues/588#issuecomment-647749630)
+
+### 安装步骤
+
+> 仅包含 Apple Silicon 流程, 已官网[教程](https://github.com/koekeishiya/yabai/wiki)为准,当前流程没有记录完善。
+
+#### 管理系统完整性保护[参考](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
+
+1. 关机
+2. 长按电源键开机，直到出现加载启动选项。
+3. 点击继续 -> 菜单栏 -> Utilities -> Terminal
+4. 输入命令: `csrutil enable --without fs --without debug --without nvram`
+5. 重启：`reboot`
+6. 启动非 Apple 签名的 arm64 文件:`sudo nvram boot-args=-arm64e_preview_abi`
+
+#### 安装软件
+
+1. `brew install koekeishiya/formulae/yabai`
+2. `echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa"`
+3. 把步骤 2 的内容复制到: `sudo visudo -f /private/etc/sudoers.d/yabai`

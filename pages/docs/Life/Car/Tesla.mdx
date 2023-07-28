@@ -3,4 +3,37 @@ title: 特斯拉
 ---
 
 1. [查看行车记录仪](https://sentrycam.appspot.com/)
-2. [TeslaMate](https://docs.teslamate.org/)
+
+### [TeslaMate](https://docs.teslamate.org/)
+
+#### 在极空间部署
+
+1. 拆分 compose 为 4 个 docker 容器，分别运行即可。
+
+#### 在极空间中恢复数据
+
+[参考](https://chat.openai.com/share/331c7067-1e2f-4f17-9faa-3fddd7760db0)
+
+1. 暂停其他容器，保留`database`
+2. 把配置文件 copy 到`database`中的`data`目录。
+3. ssh 连接到`database`
+4. 删除旧数据：
+
+```sql
+# 连接数据库
+psql -U teslamate
+# 执行命令
+drop schema public cascade;
+create schema public;
+create extension cube;
+create extension earthdistance;
+# 下面的全部复制执行
+CREATE OR REPLACE FUNCTION public.ll_to_earth(float8, float8)
+    RETURNS public.earth
+    LANGUAGE SQL
+    IMMUTABLE STRICT
+    PARALLEL SAFE
+    AS 'SELECT public.cube(public.cube(public.cube(public.earth()*cos(radians($1))*cos(radians($2))),public.earth()*cos(radians($1))*sin(radians($2))),public.earth()*sin(radians($1)))::public.earth';
+```
+
+5. 输入新数据：`psql -U teslamate -d teslamate < teslamate.bck`
