@@ -19,4 +19,15 @@
 1. 主号：ssh 协议
 2. 小号：http 协议[git-credential-manager-core](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
 
+#### Github Sign in with ssh
+
+[Github](https://github.com/settings/keys)中添加 signingkey，可以和 auth key 保持一致。
+
+```bash
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_rsa.pub
+
+git commit -S -m "commit message"
+```
+
 ### 文章
