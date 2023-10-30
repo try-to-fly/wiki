@@ -1,0 +1,22 @@
+### 配置
+
+> 版本 0.52.3
+
+#### 客户端配置
+
+> 如果不用域名，type 需要用 tcp 才可以使用 ip 地址来访问。
+
+```toml
+[common]
+server_addr = xxx.xxx.xxx.xxx
+server_port = 7000
+authentication_method = token
+token = your_token_here
+
+[secret_service]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 9000
+remote_port = 9000
+custom_domains=[xxx.xxx.xxx.xxx]
+```
