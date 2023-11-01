@@ -17,3 +17,26 @@ https://pypi.tuna.tsinghua.edu.cn/simple
 ```bash
 pip install xxx -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+### 遇到的问题
+
+1. 模块依赖路径错误：在嵌套的目录中引用同目录文件
+   原因：项目是安装启动路径来匹配的。
+
+```python
+# bad
+from refresh import Refresh
+# good
+from a.b.refresh import Refresh
+```
+
+2. 打包的`whl`文件，安装后一直找不到这个包。
+   原因：`streamlit`项目中的`MANIFEST.in`的路径错误，但是`whl`还是正确输出了，也没有报错。导致 debug 时间比较久。
+
+### pip
+
+[Nexus 3](https://yeasy.gitbook.io/docker_practice/repository/nexus3_registry): 管理 PyPIregistry
+
+```
+
+```

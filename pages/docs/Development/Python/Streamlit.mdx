@@ -14,6 +14,48 @@ title: Streamlit
 
 1. pd.read_csv: 读取 csv 文件
 
+### 模块
+
+1. [streamlit_autorefresh](https://github.com/kmcgrady/streamlit-autorefresh): 基于 js 的定时器，可以通过传参中断当前，重新开始计时。
+
+- 页面 10 分后给出提示，可以用这个来判断何时开始 10 分倒计时。
+
+  ```python
+  import streamlit as st
+  import streamlit.components.v1 as components
+
+  import streamlit as st
+
+
+  from streamlit_autorefresh import st_autorefresh
+
+  if "key" not in st.session_state:
+      st.session_state["key"] = 0
+
+  key = f"key_{st.session_state.key}"
+
+
+  count = st_autorefresh(interval=5000, limit=1000, key=key)
+
+  st.write("count", count)
+  st.write("key:", key)
+
+  if st.button("text"):
+      st.session_state["key"] += 1
+
+  if st.button("rerun"):
+      st.rerun()
+
+  if count > 0:
+      components.html(
+          f"""
+          <script>
+              alert('您太久没有操作{key}')
+          </script>
+          """
+      )
+  ```
+
 ### 相关
 
 1. [Pandas](https://pandas.pydata.org/): 一个强大的 Python 数据处理和数据分析库。
