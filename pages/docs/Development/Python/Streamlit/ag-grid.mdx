@@ -1,0 +1,13 @@
+# [streamlit-aggrid](https://github.com/PablocFonseca/streamlit-aggrid): <Badge github="https://github.com/PablocFonseca/streamlit-aggrid" />
+
+### 表格分页
+
+```python
+gb = GridOptionsBuilder.from_dataframe(df_processed)
+# 分页
+gb.configure_pagination(
+    enabled=True, paginationAutoPageSize=False, paginationPageSize=10
+)
+# 单选
+gb.configure_selection(selection_mode="single", use_checkbox=False)
+```
