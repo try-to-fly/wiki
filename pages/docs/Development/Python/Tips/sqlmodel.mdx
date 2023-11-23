@@ -1,0 +1,42 @@
+---
+title: 在 Streamlit 中使用 SQLModel
+---
+
+注意：
+
+1. 修改 model 一定要删除 db，不然不会生效
+2. 必要的时候要重启 streamlit
+
+模型定义
+
+```python
+class Task_Item(SQLModel, table=True):
+    __table_args__ = {"extend_existing": True}
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    group_id: int = Field(foreign_key="task_group.id")  # 修改外键引用
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    group: "Task_Group" = Relationship(back_populates="items")
+
+
+class Task_Group(SQLModel, table=True):
+    __table_args__ = {"extend_existing": True}
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    name: str
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    items: List["Task_Item"] = Relationship(back_populates="group")
+```
+
+使用地方
+
+```python
+def create_group(name):
+    with Session(engine) as session:
+        created_at = datetime.now()
+        group = Task_Group(name=name, created_at=created_at)
+        session.add(group)
+        session.commit()
+        session.refresh(group)
+        return group.id
+```
