@@ -56,6 +56,23 @@ title: Streamlit
       )
   ```
 
+### 技巧
+
+1. 使用 st.connection()来插入 sql
+
+```python
+from sqlalchemy import text
+with conn.session as session:
+    created_at = datetime.now()
+    sql = text(
+        "INSERT INTO task_group (name, created_at) VALUES (:name, :created_at);"
+    )
+
+    # 然后执行查询
+    session.execute(sql, {"name": name, "created_at": created_at})
+    session.commit()
+```
+
 ### 相关
 
 1. [Pandas](https://pandas.pydata.org/): 一个强大的 Python 数据处理和数据分析库。
