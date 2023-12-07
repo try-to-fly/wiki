@@ -1,11 +1,62 @@
 # Nextjs: https://nextjs.org/ <Badge github="https://github.com/vercel/next.js" />
 
-### 类库
+## 类库
 
 1. [next-connect](https://github.com/hoangvvo/next-connect): 灵活中间件和路由处理程序库。<Badge github="https://github.com/hoangvvo/next-connect" npm="next-connect" />
 
-### Real World
+## Real World
 
-#### App Router
+### App Router
 
 1. [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web): 一键拥有你自己的跨平台 ChatGPT 应用。<Badge github="https://github.com/Yidadaa/ChatGPT-Next-Web" />
+
+## 技巧
+
+### 路由跳转
+
+```ts
+"use client";
+import { useRouter } from "next/navigation";
+const router = useRouter();
+router.push("/dashboard");
+```
+
+### 代理请求
+
+所有需要代理的请求都通过`/proxy/[...slug]`路由转发到`[...slug]`
+
+```ts
+// proxy/[...slug]/route.ts
+
+import { NextRequest, NextResponse } from "next/server";
+import got, { Method } from "got";
+
+const defaultEndpoint = "http://xx.xx.xx.x:2000";
+
+async function proxy(
+  request: NextRequest,
+  { params }: { params: { slug: string[] } }
+) {
+  const slug = params.slug;
+  const method = request.method.toLowerCase() as Method;
+  const searchParams = request.nextUrl.searchParams;
+  let json;
+  try {
+    json = await request.json();
+  } catch (e) {}
+  const endpoint = searchParams.get("endpoint") || defaultEndpoint;
+
+  const path = slug.join("/");
+  const url = `${endpoint}/${path}`;
+  console.log(method, url);
+  const res = await got(url, {
+    method: method,
+    json: json,
+  }).json();
+  return NextResponse.json(res);
+}
+
+export const GET = proxy;
+export const POST = proxy;
+export const DELETE = proxy;
+```
