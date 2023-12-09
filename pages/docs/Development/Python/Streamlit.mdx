@@ -76,6 +76,13 @@ with conn.session as session:
     session.commit()
 ```
 
+2. 使用`pm2`进程守护
+
+```bash
+pm2 start --interpreter=<conda_installation_path>/envs/<env_name>/bin/python --name=my-streamlit-app --cwd=<path_to_your_script> --interpreter-args="-m streamlit run" demo.py
+
+```
+
 ### 相关
 
 1. [Pandas](https://pandas.pydata.org/): 一个强大的 Python 数据处理和数据分析库。
