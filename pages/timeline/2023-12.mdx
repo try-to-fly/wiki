@@ -6,6 +6,25 @@ title: 2023年12月
 ### 12-12
 
 1. 在探索`osc52`如何实现 ssh 复制。
+2. [Medium parser](https://chromewebstore.google.com/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc?hl=en):解锁 mudium 的文章
+3. 在 ssh 通过管道`copy`复制内容
+
+```bash
+copy() {
+    # $1: 要复制的文本
+    local text=$1
+    local base64
+    # 如果没有文本被提供，则读取stdin
+    if [ -z "$text" ]; then
+        text=$(cat)
+    fi
+    # 使用base64编码以防止特殊字符的问题
+    base64=$(printf "%s" "$text" | base64 | tr -d '\n')
+
+    # 使用OSC 52 escape sequence将文本发送到剪贴板
+    printf "\e]52;c;%s\e\\" "$base64"
+}
+```
 
 ### 12-10
 

@@ -1,1 +1,17 @@
 1. [curl](./curl.mdx)：发出网络请求，然后得到和提取数据，显示在"标准输出"（stdout）上面。
+
+### 常用命令
+
+1. 查看磁盘剩余空间: `df -h`
+2. 查看文件修改时间: `stat <filename>`
+3. 查看硬盘: `lsblk`
+4. 挂载磁盘: `mount /dev/sdb1 /mnt`
+5. 卸载磁盘: `umount /mnt`
+6. 查看显卡信息: `nvidia-smi`
+7. 查看内存信息: `free -h`
+8. 查看进程: `ps aux | grep <name>`
+9. 杀掉进程: `kill -9 <pid>`
+10. 查看端口占用: `lsof -i:<port>`
+11. 关机: `shutdown -h now`
+12. 使用部分显卡: `CUDA_VISIBLE_DEVICES=0 python3 train.py`
+13. 拷贝服务器文件: `scp -r <username>@<ip>:<path> <local_path>`
