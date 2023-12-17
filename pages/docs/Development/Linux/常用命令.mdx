@@ -15,3 +15,11 @@
 11. 关机: `shutdown -h now`
 12. 使用部分显卡: `CUDA_VISIBLE_DEVICES=0 python3 train.py`
 13. 拷贝服务器文件: `scp -r <username>@<ip>:<path> <local_path>`
+
+### 技巧
+
+1. 修改 UbuntuDSN
+
+- 编辑配置：`sudo vim /etc/resolv.conf`
+- 重启服务：`sudo systemctl restart systemd-resolved
+`
