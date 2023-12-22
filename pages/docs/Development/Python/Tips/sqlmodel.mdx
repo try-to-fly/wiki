@@ -2,6 +2,8 @@
 title: 在 Streamlit 中使用 SQLModel
 ---
 
+### 1. 联表定义
+
 注意：
 
 1. 修改 model 一定要删除 db，不然不会生效
@@ -39,4 +41,18 @@ def create_group(name):
         session.commit()
         session.refresh(group)
         return group.id
+```
+
+### 2. 列支持 JSON
+
+```python
+class Task(SQLModel, table=True):
+    __table_args__ = {"extend_existing": True}
+    id: int = Field(default=None, primary_key=True)
+    base_data: Optional[Dict[str, Any]] = Field(sa_column=Column(JSON))  # 使用 JSON 格式存储
+
+# 配置json_serializer用来避免中文乱码
+engine = create_engine(
+    "sqlite:///myla.db", json_serializer=lambda obj: json.dumps(obj, ensure_ascii=False)
+)
 ```
