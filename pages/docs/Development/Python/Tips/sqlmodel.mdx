@@ -56,3 +56,17 @@ engine = create_engine(
     "sqlite:///myla.db", json_serializer=lambda obj: json.dumps(obj, ensure_ascii=False)
 )
 ```
+
+### 3. 支持多个 sqlite 数据库
+
+```python
+from sqlmodel import SQLModel, MetaData
+class SQLModel1(SQLModel):
+    metadata = MetaData()
+
+class SQLModel2(SQLModel):
+    metadata = MetaData()
+
+SQLModel1.metadata.create_all(engine1)
+SQLModel2.metadata.create_all(engine2)
+```
