@@ -1,0 +1,21 @@
+# Nginx
+
+## 技巧
+
+1. API 请求分发:`:80/api/v1/xxx`的请求转发到`:3001`端口的相同 url 上，其他请求转发到`:2000`端口。
+   nginx version: nginx/1.25.3
+
+```conf
+server {
+    listen 80;
+
+    location /api/v1/xxx {
+        proxy_pass http://172.17.0.1:3001;
+    }
+
+    location / {
+        proxy_pass http://172.17.0.1:2000;
+    }
+}
+
+```
