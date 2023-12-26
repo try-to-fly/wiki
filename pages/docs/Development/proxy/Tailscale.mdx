@@ -39,6 +39,10 @@ sudo systemctl enable headscale
 headscale namespaces create default
 ```
 
+5. 重启: 长时间运行，会导致延迟变高
+
+systemctl restart headscale
+
 #### Tailscale
 
 1. 下载安装包[参考](https://tailscale.com/download)，更多安装包[参考](https://pkgs.tailscale.com/stable/#macos)
