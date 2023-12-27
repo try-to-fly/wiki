@@ -1,0 +1,33 @@
+# [Poetry](https://python-poetry.org/docs/basic-usage/)
+
+## 安装
+
+1.  推荐：`curl -sSL https://install.python-poetry.org | python3 -`
+
+    - root 配置所有用户可用：`export POETRY_HOME=/usr/local`
+
+2.  通过 pip：`pip install poetry`
+
+## 技巧
+
+1. 安装包：
+   - 包名 `poetry add httpx`
+   - url: `poetry add https://xxxx.com/xxx.whl`
+   - 本地目录：`poetry add -e ../xxx`
+   - 安装指定源：`poetry add ship --source pypiserver`
+2. 执行命令：`poetry run xxx`
+3. 进入虚拟环境：`poetry shell`
+
+## 项目配置
+
+1. 初始化项目：`poetry init`
+
+## poetry 配置
+
+1. 查看配置：`poetry config --list`
+
+## 发布包
+
+1. 添加发布源：`poetry config --local repositories.pypiserver http://100.64.0.9:8080`
+2. 打包：`poetry build`
+3. 发布：`poetry publish -r pypiserver --username admin --password admin`
