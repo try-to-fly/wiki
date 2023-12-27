@@ -1,3 +1,7 @@
 .DocSearch-Input {
   box-shadow: none !important;
 }
+
+.\[text-underline-position\:from-font\] {
+  text-underline-position: under !important;
+}
