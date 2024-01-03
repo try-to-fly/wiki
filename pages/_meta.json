@@ -12,6 +12,10 @@
     "title": "Timeline",
     "type": "page"
   },
+  "blog": {
+    "title": "Blog",
+    "type": "page"
+  },
   "cook": {
     "title": "菜谱",
     "type": "page"
