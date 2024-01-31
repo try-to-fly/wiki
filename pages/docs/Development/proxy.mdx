@@ -1,3 +1,20 @@
 # 代理
 
 1. [TailScale](./proxy/TailScale.mdx): 一款基于 WireGuard 的内网穿透工具
+
+# 配置
+
+## Mac
+
+```bash
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
+## Windows
+
+> 注：Windows 系统设置代理后，CMD.exe 也需要配置代理才可以。
+
+```bash
+set https_proxy=http://192.168.0.106:7890
+set http_proxy=http://192.168.0.106:7890
+```
