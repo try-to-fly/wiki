@@ -3,6 +3,14 @@ title: 2024年2月
 date: 2024-02-01
 ---
 
+### 02-26
+
+1. ffmpeg 转换 webm 为 png 序列帧 [via](https://superuser.com/questions/1510821/lossless-vp9-webm-encoding-of-png-sequence-with-alpha-in-ffmpeg)
+
+```bash
+ffmpeg -c:v libvpx-vp9 -i output.webm out%04d.png
+```
+
 ### 02-22
 
 1. 狗腿骨折，最近折腾好多医院，真的是难受，也不知道什么时候能号。
