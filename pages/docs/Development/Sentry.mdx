@@ -10,4 +10,19 @@
 ## Docker 更新
 
 1. `git pull`
-2. `sudo ./install.sh`
+2. `./install.sh`
+3. `docker compose up -d`
+
+## 故障排查
+
+### 不上报数据
+
+1. 查看 nginx 状态: `docker compose logs nginx`, 会有很多 500 错误 [via](https://github.com/getsentry/self-hosted/issues/1278)
+2. 项目中的状态都是空白，没任何数据收集
+
+尝试的解决办法：
+
+1. 删除所有容器：`docker compose down`
+2. 删除`~/.docker/config.json`中的代理配置，怀疑是这个代理导致的
+3. 删除所有缓存：`docker system prune -a`
+4. 重新构建: `./install.sh`

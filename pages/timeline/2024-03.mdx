@@ -3,6 +3,11 @@ title: 2024年3月
 date: 2024-03-01
 ---
 
+### 03-20
+
+1. 构建新版本 Sentry Docker 的时候，一直在使用缓存的 proxy 配置，检查所有设置 proxy 的地方都不可以。尝试清空 docker 的缓存解决问题：`docker system prune -a`
+2. 使用 xargs 根据关键词文件分类日志文件：`cat uids | xargs -I {} sh -c 'grep "{}" 2024-03-20_09-35-18.log > "{}".txt'`
+
 ### 03-14
 
 1. lazygit 如何 cherry-pick [via](https://github.com/jesseduffield/lazygit/issues/720#issuecomment-678839592)

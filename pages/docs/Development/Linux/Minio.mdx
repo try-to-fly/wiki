@@ -1,0 +1,36 @@
+# [Minio](https://min.io/)
+
+## 部署
+
+1. Docker 下部署`Minio`
+
+```bash
+docker run -d \
+   -p 9100:9000 \
+   -p 9101:9001 \
+   --user $(id -u):$(id -g) \
+   --name minio1 \
+   -e "MINIO_ROOT_USER=xxxx" \
+   -e "MINIO_ROOT_PASSWORD=xxxx" \
+   -e "MINIO_SERVER_URL=http://xx.xx.0.x:9100" \
+   -v ${HOME}/minio/data:/data \
+   quay.io/minio/minio server /data --console-address ":9001"
+```
+
+2. Minio 客户端用法
+
+```js
+import * as Minio from "minio";
+
+var client = new Minio.Client({
+  endPoint: "play.min.io",
+  port: 9000,
+  useSSL: true,
+  accessKey: "Q3AM3UQ867SPQQA43P2F",
+  secretKey: "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
+});
+// 上传字符串，设置Content-Type，避免触发浏览器下载
+await client.putObject(bucket, objectPath, content, {
+  "Content-Type": "text/plain;charset=utf-8",
+});
+```
