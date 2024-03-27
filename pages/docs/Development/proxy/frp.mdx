@@ -1,10 +1,12 @@
-### 配置
+# Frp
+
+## 配置
 
 > 版本 0.52.3
 
-#### 服务器配置
+### 服务器配置
 
-#### 客户端配置
+### 客户端配置
 
 > 如果不用域名，type 需要用 tcp 才可以使用 ip 地址来访问。
 
@@ -22,3 +24,7 @@ local_port = 9000
 remote_port = 9000
 custom_domains=[xxx.xxx.xxx.xxx]
 ```
+
+## 遇到的问题
+
+1. start error: port already used: 尝试重启服务器、客户端后解决[via](https://github.com/fatedier/frp/issues/3470)
