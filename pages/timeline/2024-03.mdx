@@ -3,6 +3,11 @@ title: 2024年3月
 date: 2024-03-01
 ---
 
+### 03-27
+
+1. 使用 puppeteer 的`page.waitForFileChooser`上传文件后，人工无法点击这个 input 来上传了。 解决办法：使用 el.uploadFile 后解决了[via](https://blog.apify.com/how-to-download-and-upload-files-in-puppeteer/)
+   - ps: 这个方法会导致部分场景下，图片发送不成功。又回退到之前的方案上了。
+
 ### 03-20
 
 1. 构建新版本 Sentry Docker 的时候，一直在使用缓存的 proxy 配置，检查所有设置 proxy 的地方都不可以。尝试清空 docker 的缓存解决问题：`docker system prune -a`
