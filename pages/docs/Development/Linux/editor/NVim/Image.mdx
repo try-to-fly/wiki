@@ -1,0 +1,24 @@
+# 查看图片
+
+### 修复 image.nvim
+
+1. 编辑：`nvim ~/.luarocks/share/lua/5.1/magick/wand/lib.lua`
+   替换 lib 的加载逻辑，注意 7.1.1 版本的变化
+
+```lua
+lib = try_to_load("/opt/homebrew/Cellar/imagemagick/7.1.1-30/lib/libMagickWand-7.Q16HDRI.dylib")
+
+```
+
+2. 安装 magick
+
+```bash
+luarocks --lua-version=5.1 install magick
+```
+
+3. 设置 bash 环境变量
+
+```bash
+export DYLD_LIBRARY_PATH="/opt/homebrew/lib/"
+
+```
