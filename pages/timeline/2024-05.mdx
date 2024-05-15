@@ -3,10 +3,33 @@ date: 2024-05-01
 title: 2024年5月
 ---
 
+### 05-14
+
+1. 端口=0 会随机分配一个端口
+
+```js
+// 写一个express，监听端口0， 打印出端口号
+const express = require("express");
+const app = express();
+
+app.get("/", (_req, res) => {
+  res.send("hello world");
+});
+
+const listener = app.listen(0, () => {
+  console.log(listener.address().port); // 63610
+});
+```
+
+2. `Electron`中可以通过`partition`来实现多用户登录，每个用户有自己的`cookie`和`localStorage`等
+
 ### 05-13
 
 1. `exa` 可以设置时间格式: `exa --time-style=long-iso`
-   ![](https://raw.githubusercontent.com/smile618/imgs/main/static202405131122865.png)
+   ![exa demo](https://raw.githubusercontent.com/smile618/imgs/main/static202405131122865.png)
+
+2. `prettier-plugin-organize-imports` 可以自动排序 import 语句
+3. 使用阿里镜像加速有时候速度会特别慢，还不如开启代理使用原始地址
 
 ### 05-11
 
