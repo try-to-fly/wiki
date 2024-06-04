@@ -2,11 +2,26 @@
 
 ## 安装
 
+### Mac、Linux 安装
+
 1.  推荐：`curl -sSL https://install.python-poetry.org | python3 -`
 
     - root 配置所有用户可用：`export POETRY_HOME=/usr/local`
 
 2.  通过 pip：`pip install poetry`
+
+### Windows 安装
+
+> 注意事项， windows 安装后，让添加的 path 路径是不正确的。
+> 需要日志里面，根据获取真实的路径
+
+```bash
+Actual environment location may have moved due to redirects, links or junctions.
+  Requested location: "C:\Users\muyu\AppData\Roaming\pypoetry\venv\Scripts\python.exe"
+  Actual location:    "C:\Users\muyu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\Roaming\pypoetry\venv\Scripts\python.exe"
+```
+
+> 所以真实的路径为：`C:\Users\muyu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\Roaming\pypoetry\venv\Scripts`
 
 ## 技巧
 
