@@ -88,6 +88,20 @@ docker run --restart always --net host --name derper -d ghcr.io/yangchuansheng/i
           "InsecureForTests": true
         }
       ]
+    },
+     "902": {
+      "RegionID": 902,
+      "RegionCode": "ddns",
+      "RegionName": "Over DDNS",
+      "Nodes": [
+        {
+          "Name": "902b",
+          "RegionID": 902,
+          "DERPPort": 8443,
+          "HostName": "xxxx.tpddns.cn",
+          "InsecureForTests": true
+        }
+      ]
     }
   }
 }
@@ -126,3 +140,4 @@ headscale node rename <NODE ID> <NEW NAME>
 
 1. Cannot register machine: failed to find user in register machine from auth callback, User not found
    > 修改 USERNAME 为 default
+2. 新版本的 derp 好像不能用，目前用的这个版本的`ghcr.io/yangchuansheng/ip_derper@sha256:56541aeb1631a126588c1ca04f7a7505db2bc4878b3934150bfa5846f7c14bfa`
