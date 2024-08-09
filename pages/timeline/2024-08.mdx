@@ -1,0 +1,25 @@
+---
+date: 2024-08-01
+title: 2024年08月
+---
+
+### 08-09
+
+1. 基于 pnpm workspace 的项目，目前使用的是这个 tsconfig 配置。 由于我期望项目中直接依赖模块的源码，所以看起来使用 NodeNext 配置是最合理的。 使用 Node16 会导致 src 中的源代码无法加载。
+
+```json
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "."
+  }
+}
+```
+
+2. 停止了 2 月更新 wiki，主要是在尝试更好记录内容的方式，尝试了 Notion、AppFlow、滴答清单，但是看起来都还是没那么好用，所有又换回来了。
