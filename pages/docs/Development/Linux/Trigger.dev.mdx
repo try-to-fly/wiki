@@ -1,0 +1,82 @@
+# Trigger.dev
+
+## 部署 v3
+
+### 启动 v3 服务
+
+1. 拉去 docker 代码: `git clone https://github.com/triggerdotdev/docker.git`, 切换到 v3 分支。
+2. 执行`./start.sh -d`，一路回车。
+3. 第一个 hack 地方：解决`trigger-webapp-1`卡住的问题，可以查看这个容器的日志会发现卡在一个命令上了
+   > - 进入该容器：`docker exec -it trigger-webapp-1 bash`
+   > - 设置一个可用的代理：`export https_proxy=http://192.168.0.52:7890 http_proxy=http://192.168.0.52:7890 all_proxy=socks5://192.168.0.52:7890`
+   > - 执行被卡住的命令：`pnpm --filter @trigger.dev/database db:migrate:deploy`
+4. 重启全部容器：`docker container restart $(docker container ls | grep trigger | awk '{print $1}')`
+
+### 配置 Nginx
+
+#### 1. 配置文件
+
+```nginx {filename="nginx.conf"}
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    server {
+        listen 3030 ssl;
+        server_name _;
+
+        ssl_certificate /etc/nginx/certs/nginx.crt;
+        ssl_certificate_key /etc/nginx/certs/nginx.key;
+
+        location / {
+            proxy_pass http://localhost:3040;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+}
+
+```
+
+#### 2. 生成证书
+
+```bash
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./nginx/certs/nginx.key -out ./nginx/certs/nginx.crt -subj "/CN=localhost"
+
+```
+
+#### 3. 启动 Nginx
+
+```bash
+ docker run -d \
+  --network host \
+  --name nginx-proxy \
+  -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro \
+  -v $(pwd)/nginx/certs:/etc/nginx/certs:ro \
+  nginx
+```
+
+### 修改 Trigger.dev 配置
+
+1. 打开`.env`文件，修改最后一行配置，为 nginx 代理好的 https 地址，如：`TRIGGER_DOMAIN=x.x.x.x:3030`
+2. 重启服务: `./stop.sh && ./start.sh -d`
+
+## 使用流程
+
+> 如果 nginx 的证书是自签名的(上面的教程生成的话，就需要在使用 trigger.dev cli 的时候添加一个环境变量): `NODE_TLS_REJECT_UNAUTHORIZED='0'`
+
+1. 登录: `npx trigger.dev login -a https://100.64.0.15:3030`
+2. 初始化: `npx trigger.dev init`: 注意，具体命令参考 web 页面的引导提示，需要具体的项目 id 的
+3. 启动开发服务: `trigger.dev@beta dev`
+
+## 参考资料
+
+1. [Self-hosting](https://trigger.dev/docs/open-source-self-hosting)
