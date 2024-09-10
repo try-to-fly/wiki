@@ -62,7 +62,7 @@ docker run -d -p 8081:80 -v ~/.derp-configs:/usr/share/nginx/html --name mynginx
 1. 使用第三方封装的允许 ip 的镜像
 
 ```bash
-docker run --restart always --net host --name derper -d ghcr.io/yangchuansheng/ip_derper
+docker run --restart always -p 12345:12345 -p 3478:3478/udp -e DERP_ADDR=:12345 --name derper -d ghcr.io/yangchuansheng/ip_derper@sha256:56541aeb1631a126588c1ca04f7a7505db2bc4878b3934150bfa5846f7c14bfa
 ```
 
 #### 添加 derp 到 Headscale 中
@@ -80,7 +80,8 @@ docker run --restart always --net host --name derper -d ghcr.io/yangchuansheng/i
         {
           "Name": "901a",
           "RegionID": 901,
-          "DERPPort": 443,
+          "DERPPort": 12345,
+          "stunport": 3478,
           # 服务器ip地址
           "HostName": "xxxx",
           # 同上
@@ -89,6 +90,7 @@ docker run --restart always --net host --name derper -d ghcr.io/yangchuansheng/i
         }
       ]
     },
+      // 下面配置，只有配置ddns的时候，需要加
      "902": {
       "RegionID": 902,
       "RegionCode": "ddns",
