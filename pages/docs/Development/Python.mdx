@@ -44,6 +44,10 @@ from a.b.refresh import Refresh
 
 [Nexus 3](https://yeasy.gitbook.io/docker_practice/repository/nexus3_registry): 管理 PyPIregistry
 
-```
+### Pypiserver
 
+使用 Docker 启动一个免认证的服务
+
+```bash
+docker run -d -p 8080:8080 -v ~/packages:/data/packages pypiserver/pypiserver:latest run -a . -P .
 ```
