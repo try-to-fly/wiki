@@ -17,8 +17,15 @@
 
 ### 不上报数据
 
+#### 问题 1
+
 1. 查看 nginx 状态: `docker compose logs nginx`, 会有很多 500 错误 [via](https://github.com/getsentry/self-hosted/issues/1278)
 2. 项目中的状态都是空白，没任何数据收集
+
+#### 问题 2
+
+1. Nginx 没有 500 错误，可以正常记录了
+2. 排查 self-host 目录的文件权限问题，需要保持一致。
 
 尝试的解决办法：
 
