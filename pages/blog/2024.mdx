@@ -1,0 +1,64 @@
+# 我的 2024
+
+## Nvim
+
+1. 总共提交了 180 次，反复尝试各种配置和插件 [变更记录](https://github.com/try-to-fly/init.vim/compare/ed672b9..d66ccf5?diff=split&w=)。
+2. 不知不觉使用 `Vim` 已经两年，从最初的无从下手到如今的得心应手。
+3. 使用 `Vim` 最大的便利是随时随地在任何服务器上编码。
+4. 提供快速切换文件、代码跳转、快速代码选区等功能。
+5. 今年新版本的 `Neovim` 优化了大文件的卡顿问题，不再需临时借助 `VSCode` 阅读大文件。
+6. `Nvim` 的插件基于 `Lua` 语言，且 API 简单，所以借助 GPT 开发了不少自用的插件：
+   - [json-path-picker.nvim](https://github.com/try-to-fly/json-path-picker.nvim): 树状结构预览 JSON 数据。
+   - [xml-preview.nvim](https://github.com/try-to-fly/xml-preview.nvim): 实时预览 XML 为 JSON 结构，便于快速理解复杂嵌套的 XML 数据。
+   - [create-index.nvim](https://github.com/try-to-fly/create-index.nvim): 快速创建 TS 的 index 文件，批量导出当前目录的所有模块。
+   - [js-playground.nvim](https://github.com/try-to-fly/js-playground.nvim): 实时预览当前 JS 文件的执行结果。
+   - [telescope-folder-list.nvim](https://github.com/try-to-fly/telescope-folder-list.nvim): 列出当前项目的所有文件夹，便于快速文件夹跳转。
+   - [project-info.nvim](https://github.com/try-to-fly/project-info.nvim): 列出项目名称、当前文件路径、IP 等信息，便于复制。
+
+## 运维能力
+
+1. 最近两年管理公司的 2-3 台云服务器和 8 台本地算法服务器。
+2. 今年熟练掌握了网络配置（无需查文档的网络/DNS）、文件处理等技能（磁盘清理、文件快速预览等）。
+
+## 开发环境
+
+1. 12 月起逐步迁移开发环境，从 `yadm` 和 `devbox` 切换到 `Nix` [这是我的开源配置](https://github.com/try-to-fly/nix-config)。
+2. 所有环境配置基本都使用 `Nix` 管理，意味着可以快速在服务器、新 Mac 上恢复设备。
+3. 下一步计划是抽取公共配置，独立出一份 `Linux` 的开发环境。
+
+## 新的尝试
+
+1. `Remotion`: 基于 Remotion 的视频编辑器，轻松实现视频的预览和合成。
+2. `Trigger.dev`: 异步任务引擎，视频合成、TTS、虚拟主播等任务全部迁移到此，可清晰展示任务参数及重试。
+3. [dir_info](https://github.com/try-to-fly/dir_info): 借助 GPT 尝试用 `Rust` 开发 CLI 命令，目前停滞。
+4. [Tana](https://app.tana.inc)：尝试使用 Tana 来记录知识库，他具备非常强大的标签系统，符合我零碎知识管理的需求。
+5. [BlueSky](https://bsky.app/profile/smile618.bsky.social): 尝试使用`Bksy`记录一些零碎事情，作为知识库的互补吧。
+6. [Password](https://support.apple.com/zh-cn/120758): 开始使用苹果的密码 App 管理所有密码，非常好用，强烈推荐，支持`TOTP`、`Passkey`，还支持分享给其他人
+7. [Kitty](sw.kovidgoyal.net/kitty/): 终端从之前最爱的`Alacritty`切换到`Kitty`，kitty 明显感觉对 Nero Font 适配更合理、支持图片预览、OSC52 等能力,如果说最爱的终端还是喜欢 Ubuntu 桌面版自带的终端，界面和字体都感觉非常的舒服。
+8. 写了一些批量脚本，主要是用来处理相机拍摄的文件
+   - 根据文件后缀分类
+   - 修复 Compressor 转码后丢失原视频拍摄时间的问题
+9. 新的设备
+   - Apple Watch S 10: 替换掉了之前的 S5
+   - Dji Pocket3: 用上了他，卖掉了 Insta 360 相机，Gopro9 也吃灰半年了。
+   - Mac Air M9 ： 替换了之前购买的 M1，使用上没任何区别，唯一好处就是，多了一个可用的 Type C 接口。
+
+## 2024 年最喜欢的 App
+
+### 开发
+
+1. [Nvim](../docs/Development/Linux/editor/NVim.mdx): 目前最舒适的编辑器。
+2. [lazygit](https://github.com/jesseduffield/lazygit): `Git` 的 TUI 版本，90% 的操作都用这个，简单易用。
+
+### 运维
+
+1. [Yazi](https://yazi-rs.github.io/): CLI 文件浏览器，支持文件预览，零配置，比 `nnn` 简单易用。
+2. [ncdu](https://github.com/rofl0r/ncdu): 分析和清理服务器磁盘占用非常方便。
+3. [atuin](https://atuin.sh/): 命令历史的快速检索，比 `Ctrl+R` 更好用。
+4. [lazydocker](https://github.com/jesseduffield/lazydocker#installation): 快速查看和管理不同 `Docker` 容器的状态、日志等。
+5. [btop](https://github.com/aristocratos/btop): 直观查看服务器系统负载。
+
+### 其他
+
+1. `Tailscale`: 私有化组网的第二年，方便管理异地分散的本地服务器和开发设备的关联。
+2. 还有更多 App 和 cli，都在我的 nix 配置中了[参考 1](https://github.com/try-to-fly/nix-config/blob/master/modules/apps.nix)、[参考 2](https://github.com/try-to-fly/nix-config/blob/master/home/default.nix)
