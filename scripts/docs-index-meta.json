@@ -1,0 +1,2823 @@
+{
+  "total": 199,
+  "generatedAt": "2025-11-07T02:46:08.372Z",
+  "topLevel": [
+    {
+      "name": "Development",
+      "count": 128,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "Algorithm.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "算法",
+              "rel": "Development/Algorithm.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Analysis.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "数据分析",
+              "rel": "Development/Analysis.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Automation",
+          "count": 2,
+          "sample": [
+            {
+              "title": "RPA",
+              "rel": "Development/Automation/RPA.mdx"
+            },
+            {
+              "title": "WebDriver",
+              "rel": "Development/Automation/WebDriver.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Automation.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "自动化",
+              "rel": "Development/Automation.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Cross-platform",
+          "count": 2,
+          "sample": [
+            {
+              "title": "[Electron](https://electronjs.org/): <Badge github=\"https://github.com/electron/electron\" npm=\"electron\" />",
+              "rel": "Development/Cross-platform/Electron.mdx"
+            },
+            {
+              "title": "[Tauri](https://tauri.app/)",
+              "rel": "Development/Cross-platform/Tauri.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Cross-platform.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Cross-platform",
+              "rel": "Development/Cross-platform.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Diff.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "文本比对",
+              "rel": "Development/Diff.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Linux",
+          "count": 23,
+          "sample": [
+            {
+              "title": "Docker",
+              "rel": "Development/Linux/Docker.mdx"
+            },
+            {
+              "title": "[LazyGit](https://github.com/jesseduffield/lazygit)",
+              "rel": "Development/Linux/Git/Lazygit.mdx"
+            },
+            {
+              "title": "客户端",
+              "rel": "Development/Linux/Git.mdx"
+            },
+            {
+              "title": "[Minio](https://min.io/)",
+              "rel": "Development/Linux/Minio.mdx"
+            },
+            {
+              "title": "SSH",
+              "rel": "Development/Linux/SSH.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Linux.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Linux",
+              "rel": "Development/Linux.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Nix.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Nix",
+              "rel": "Development/Nix.mdx"
+            }
+          ]
+        },
+        {
+          "name": "PHP.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "PHP",
+              "rel": "Development/PHP.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Python",
+          "count": 8,
+          "sample": [
+            {
+              "title": "[streamlit-aggrid](https://github.com/PablocFonseca/streamlit-aggrid): <Badge github=\"https://github.com/PablocFonseca/streamlit-aggrid\" />",
+              "rel": "Development/Python/Streamlit/ag-grid.mdx"
+            },
+            {
+              "title": "Streamlit",
+              "rel": "Development/Python/Streamlit.mdx"
+            },
+            {
+              "title": "在 Streamlit 中使用 SQLModel",
+              "rel": "Development/Python/Tips/sqlmodel.mdx"
+            },
+            {
+              "title": "导入外部依赖",
+              "rel": "Development/Python/Tips/sys-import.mdx"
+            },
+            {
+              "title": "技巧",
+              "rel": "Development/Python/Tips.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Python.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Python",
+              "rel": "Development/Python.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Regexp.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "正则表达式",
+              "rel": "Development/Regexp.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Sentry.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Sentry",
+              "rel": "Development/Sentry.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Terminal",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Alacritty",
+              "rel": "Development/Terminal/alacritty.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Terminal.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "终端",
+              "rel": "Development/Terminal.mdx"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "count": 1,
+          "sample": [
+            {
+              "title": "[Vercel](https://vercel.com/)",
+              "rel": "Development/deploy/vercel.mdx"
+            }
+          ]
+        },
+        {
+          "name": "frontend",
+          "count": 69,
+          "sample": [
+            {
+              "title": "Babel",
+              "rel": "Development/frontend/Babel.mdx"
+            },
+            {
+              "title": "Debug",
+              "rel": "Development/frontend/Debug.mdx"
+            },
+            {
+              "title": "Interview",
+              "rel": "Development/frontend/Interview.mdx"
+            },
+            {
+              "title": "Js基础",
+              "rel": "Development/frontend/Javascript/Js基础.mdx"
+            },
+            {
+              "title": "Nest.js",
+              "rel": "Development/frontend/Javascript/Nest.js.mdx"
+            }
+          ]
+        },
+        {
+          "name": "frontend.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "前端开发",
+              "rel": "Development/frontend.mdx"
+            }
+          ]
+        },
+        {
+          "name": "hack.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "软件逆向学习",
+              "rel": "Development/hack.mdx"
+            }
+          ]
+        },
+        {
+          "name": "http",
+          "count": 2,
+          "sample": [
+            {
+              "title": "Nginx",
+              "rel": "Development/http/nginx.mdx"
+            },
+            {
+              "title": "[Server-Sent Events](https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)",
+              "rel": "Development/http/sse.mdx"
+            }
+          ]
+        },
+        {
+          "name": "http.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "http",
+              "rel": "Development/http.mdx"
+            }
+          ]
+        },
+        {
+          "name": "proxy",
+          "count": 3,
+          "sample": [
+            {
+              "title": "TailScale",
+              "rel": "Development/proxy/Tailscale.mdx"
+            },
+            {
+              "title": "DDNS",
+              "rel": "Development/proxy/ddns.mdx"
+            },
+            {
+              "title": "Frp",
+              "rel": "Development/proxy/frp.mdx"
+            }
+          ]
+        },
+        {
+          "name": "proxy.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "代理",
+              "rel": "Development/proxy.mdx"
+            }
+          ]
+        },
+        {
+          "name": "sql.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "sql",
+              "rel": "Development/sql.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Development.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "开发",
+          "rel": "Development.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "Devices",
+      "count": 18,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "Dji.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "大疆无人机",
+              "rel": "Devices/Dji.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Fpv.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "穿越机",
+              "rel": "Devices/Fpv.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Mac",
+          "count": 11,
+          "sample": [
+            {
+              "title": "油猴子",
+              "rel": "Devices/Mac/apps/Chrome/extensions/tampermonkey.mdx"
+            },
+            {
+              "title": "extensions",
+              "rel": "Devices/Mac/apps/Chrome/extensions.mdx"
+            },
+            {
+              "title": "Chrome",
+              "rel": "Devices/Mac/apps/Chrome.mdx"
+            },
+            {
+              "title": "钉钉",
+              "rel": "Devices/Mac/apps/dingtalk.mdx"
+            },
+            {
+              "title": "[Raycast](https://www.raycast.com/): Mac 下电脑启动器，不支持 window",
+              "rel": "Devices/Mac/apps/raycast.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Mac.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Mac",
+              "rel": "Devices/Mac.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Storage.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "存储设备",
+              "rel": "Devices/Storage.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Windows.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Windows 系统",
+              "rel": "Devices/Windows.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Zspace.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "极空间",
+              "rel": "Devices/Zspace.mdx"
+            }
+          ]
+        },
+        {
+          "name": "iPhone.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "iPhone",
+              "rel": "Devices/iPhone.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Devices.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "电子设备",
+          "rel": "Devices.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "Life",
+      "count": 7,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "Car",
+          "count": 2,
+          "sample": [
+            {
+              "title": "特斯拉",
+              "rel": "Life/Car/Tesla.mdx"
+            },
+            {
+              "title": "人保免费代步车申请流程",
+              "rel": "Life/Car/人保免费代步车申请流程.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Car.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "汽车",
+              "rel": "Life/Car.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Subscribe.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "订阅服务",
+              "rel": "Life/Subscribe.mdx"
+            }
+          ]
+        },
+        {
+          "name": "pet",
+          "count": 2,
+          "sample": [
+            {
+              "title": "养猫",
+              "rel": "Life/pet/cat.mdx"
+            },
+            {
+              "title": "养狗",
+              "rel": "Life/pet/dog.mdx"
+            }
+          ]
+        },
+        {
+          "name": "pill.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "常用药物",
+              "rel": "Life/pill.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Life.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "生活",
+          "rel": "Life.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "Travel",
+      "count": 3,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "lishui.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "杭州-丽水五天五夜自驾游",
+              "rel": "Travel/lishui.mdx"
+            }
+          ]
+        },
+        {
+          "name": "rizhao.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "日照3天自驾游",
+              "rel": "Travel/rizhao.mdx"
+            }
+          ]
+        },
+        {
+          "name": "xizang.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "西藏",
+              "rel": "Travel/xizang.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Travel.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "旅行",
+          "rel": "Travel.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "UE.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "UE",
+          "rel": "UE.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "Website",
+      "count": 7,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "Docusaurus.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Docusaurus",
+              "rel": "Website/Docusaurus.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Github.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Github",
+              "rel": "Website/Github.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Nextra.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "[官网](https://nextra.site) <Badge github=\"https://github.com/shuding/nextra\" />",
+              "rel": "Website/Nextra.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Twitter.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Twitter",
+              "rel": "Website/Twitter.mdx"
+            }
+          ]
+        },
+        {
+          "name": "fly.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Fly",
+              "rel": "Website/fly.mdx"
+            }
+          ]
+        },
+        {
+          "name": "nav.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "导航&聚合",
+              "rel": "Website/nav.mdx"
+            }
+          ]
+        },
+        {
+          "name": "online.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "在线服务&网站",
+              "rel": "Website/online.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Website.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "网站",
+          "rel": "Website.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "ai",
+      "count": 10,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "LLaMA.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "FaceBook-LLaMA模型",
+              "rel": "ai/LLaMA.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Midjourney.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Midjourney",
+              "rel": "ai/Midjourney.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Stable-Diffusion.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Stable-Diffusion",
+              "rel": "ai/Stable-Diffusion.mdx"
+            }
+          ]
+        },
+        {
+          "name": "chat-pdf.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "利用GPT解读PDF",
+              "rel": "ai/chat-pdf.mdx"
+            }
+          ]
+        },
+        {
+          "name": "chatGPT",
+          "count": 2,
+          "sample": [
+            {
+              "title": "生态系统",
+              "rel": "ai/chatGPT/ecs.mdx"
+            },
+            {
+              "title": "json",
+              "rel": "ai/chatGPT/json.mdx"
+            }
+          ]
+        },
+        {
+          "name": "chatGPT.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "chatGPT",
+              "rel": "ai/chatGPT.mdx"
+            }
+          ]
+        },
+        {
+          "name": "fastchat.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "FastChat",
+              "rel": "ai/fastchat.mdx"
+            }
+          ]
+        },
+        {
+          "name": "langChain.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "[LangChain](https://js.langchain.com/docs/): GPT 框架。 <Badge github=\"https://github.com/hwchase17/langchainjs\" />",
+              "rel": "ai/langChain.mdx"
+            }
+          ]
+        },
+        {
+          "name": "prompts.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "prompts",
+              "rel": "ai/prompts.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ai.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "AI能力",
+          "rel": "ai.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "books.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "books",
+          "rel": "books.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "files",
+      "count": 11,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "Markdown.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "Markdown",
+              "rel": "files/Markdown.mdx"
+            }
+          ]
+        },
+        {
+          "name": "Nerd-font.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "字体名称：DroidSansM Nerd Font",
+              "rel": "files/Nerd-font.mdx"
+            }
+          ]
+        },
+        {
+          "name": "PPT.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "PPT",
+              "rel": "files/PPT.mdx"
+            }
+          ]
+        },
+        {
+          "name": "e-book.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "电子书",
+              "rel": "files/e-book.mdx"
+            }
+          ]
+        },
+        {
+          "name": "image.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "图片",
+              "rel": "files/image.mdx"
+            }
+          ]
+        },
+        {
+          "name": "json.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "json",
+              "rel": "files/json.mdx"
+            }
+          ]
+        },
+        {
+          "name": "mp3.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "mp3",
+              "rel": "files/mp3.mdx"
+            }
+          ]
+        },
+        {
+          "name": "pdf.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "pdf",
+              "rel": "files/pdf.mdx"
+            }
+          ]
+        },
+        {
+          "name": "video",
+          "count": 1,
+          "sample": [
+            {
+              "title": "[ffmpeg](https://ffmpeg.org/)",
+              "rel": "files/video/ffmpeg.mdx"
+            }
+          ]
+        },
+        {
+          "name": "video.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "video",
+              "rel": "files/video.mdx"
+            }
+          ]
+        },
+        {
+          "name": "yaml.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "YAML",
+              "rel": "files/yaml.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "files.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "files",
+          "rel": "files.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "intro.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "介绍",
+          "rel": "intro.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "others",
+      "count": 3,
+      "rootFiles": [],
+      "subdirs": [
+        {
+          "name": "all-in-one.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "All-In-One",
+              "rel": "others/all-in-one.mdx"
+            }
+          ]
+        },
+        {
+          "name": "figma.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "[Figma](https://www.figma.com/)",
+              "rel": "others/figma.mdx"
+            }
+          ]
+        },
+        {
+          "name": "funny.mdx",
+          "count": 1,
+          "sample": [
+            {
+              "title": "有趣的知识",
+              "rel": "others/funny.mdx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "others.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "其他",
+          "rel": "others.mdx"
+        }
+      ],
+      "subdirs": []
+    },
+    {
+      "name": "password-manager.mdx",
+      "count": 1,
+      "rootFiles": [
+        {
+          "title": "密码管理器",
+          "rel": "password-manager.mdx"
+        }
+      ],
+      "subdirs": []
+    }
+  ],
+  "files": [
+    {
+      "title": "算法",
+      "rel": "Development/Algorithm.mdx",
+      "segments": [
+        "Development",
+        "Algorithm.mdx"
+      ]
+    },
+    {
+      "title": "数据分析",
+      "rel": "Development/Analysis.mdx",
+      "segments": [
+        "Development",
+        "Analysis.mdx"
+      ]
+    },
+    {
+      "title": "RPA",
+      "rel": "Development/Automation/RPA.mdx",
+      "segments": [
+        "Development",
+        "Automation",
+        "RPA.mdx"
+      ]
+    },
+    {
+      "title": "WebDriver",
+      "rel": "Development/Automation/WebDriver.mdx",
+      "segments": [
+        "Development",
+        "Automation",
+        "WebDriver.mdx"
+      ]
+    },
+    {
+      "title": "自动化",
+      "rel": "Development/Automation.mdx",
+      "segments": [
+        "Development",
+        "Automation.mdx"
+      ]
+    },
+    {
+      "title": "[Electron](https://electronjs.org/): <Badge github=\"https://github.com/electron/electron\" npm=\"electron\" />",
+      "rel": "Development/Cross-platform/Electron.mdx",
+      "segments": [
+        "Development",
+        "Cross-platform",
+        "Electron.mdx"
+      ]
+    },
+    {
+      "title": "[Tauri](https://tauri.app/)",
+      "rel": "Development/Cross-platform/Tauri.mdx",
+      "segments": [
+        "Development",
+        "Cross-platform",
+        "Tauri.mdx"
+      ]
+    },
+    {
+      "title": "Cross-platform",
+      "rel": "Development/Cross-platform.mdx",
+      "segments": [
+        "Development",
+        "Cross-platform.mdx"
+      ]
+    },
+    {
+      "title": "文本比对",
+      "rel": "Development/Diff.mdx",
+      "segments": [
+        "Development",
+        "Diff.mdx"
+      ]
+    },
+    {
+      "title": "Docker",
+      "rel": "Development/Linux/Docker.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "Docker.mdx"
+      ]
+    },
+    {
+      "title": "[LazyGit](https://github.com/jesseduffield/lazygit)",
+      "rel": "Development/Linux/Git/Lazygit.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "Git",
+        "Lazygit.mdx"
+      ]
+    },
+    {
+      "title": "客户端",
+      "rel": "Development/Linux/Git.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "Git.mdx"
+      ]
+    },
+    {
+      "title": "[Minio](https://min.io/)",
+      "rel": "Development/Linux/Minio.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "Minio.mdx"
+      ]
+    },
+    {
+      "title": "SSH",
+      "rel": "Development/Linux/SSH.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "SSH.mdx"
+      ]
+    },
+    {
+      "title": "kill panel",
+      "rel": "Development/Linux/Tmux.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "Tmux.mdx"
+      ]
+    },
+    {
+      "title": "Trigger.dev",
+      "rel": "Development/Linux/Trigger.dev.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "Trigger.dev.mdx"
+      ]
+    },
+    {
+      "title": "curl",
+      "rel": "Development/Linux/curl.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "curl.mdx"
+      ]
+    },
+    {
+      "title": "Nvim Config",
+      "rel": "Development/Linux/editor/NVim/Config.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Config.mdx"
+      ]
+    },
+    {
+      "title": "插件开发",
+      "rel": "Development/Linux/editor/NVim/Dev-Plugin.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Dev-Plugin.mdx"
+      ]
+    },
+    {
+      "title": "查看图片",
+      "rel": "Development/Linux/editor/NVim/Image.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Image.mdx"
+      ]
+    },
+    {
+      "title": "nvim 插件",
+      "rel": "Development/Linux/editor/NVim/Plugin.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Plugin.mdx"
+      ]
+    },
+    {
+      "title": "最佳场景",
+      "rel": "Development/Linux/editor/NVim/Showcase.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Showcase.mdx"
+      ]
+    },
+    {
+      "title": "技巧",
+      "rel": "Development/Linux/editor/NVim/Skill.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Skill.mdx"
+      ]
+    },
+    {
+      "title": "Telescope",
+      "rel": "Development/Linux/editor/NVim/Telescope.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Telescope.mdx"
+      ]
+    },
+    {
+      "title": "Nvim 主题",
+      "rel": "Development/Linux/editor/NVim/Theme.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim",
+        "Theme.mdx"
+      ]
+    },
+    {
+      "title": "Nvim",
+      "rel": "Development/Linux/editor/NVim.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "NVim.mdx"
+      ]
+    },
+    {
+      "title": "[Vscode](https://code.visualstudio.com/)",
+      "rel": "Development/Linux/editor/Vscode.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "Vscode.mdx"
+      ]
+    },
+    {
+      "title": "sublime",
+      "rel": "Development/Linux/editor/sublime.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor",
+        "sublime.mdx"
+      ]
+    },
+    {
+      "title": "代码编辑器",
+      "rel": "Development/Linux/editor.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "editor.mdx"
+      ]
+    },
+    {
+      "title": "OSC52",
+      "rel": "Development/Linux/osc52.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "osc52.mdx"
+      ]
+    },
+    {
+      "title": "主题",
+      "rel": "Development/Linux/theme.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "theme.mdx"
+      ]
+    },
+    {
+      "title": "常用命令",
+      "rel": "Development/Linux/常用命令.mdx",
+      "segments": [
+        "Development",
+        "Linux",
+        "常用命令.mdx"
+      ]
+    },
+    {
+      "title": "Linux",
+      "rel": "Development/Linux.mdx",
+      "segments": [
+        "Development",
+        "Linux.mdx"
+      ]
+    },
+    {
+      "title": "Nix",
+      "rel": "Development/Nix.mdx",
+      "segments": [
+        "Development",
+        "Nix.mdx"
+      ]
+    },
+    {
+      "title": "PHP",
+      "rel": "Development/PHP.mdx",
+      "segments": [
+        "Development",
+        "PHP.mdx"
+      ]
+    },
+    {
+      "title": "[streamlit-aggrid](https://github.com/PablocFonseca/streamlit-aggrid): <Badge github=\"https://github.com/PablocFonseca/streamlit-aggrid\" />",
+      "rel": "Development/Python/Streamlit/ag-grid.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "Streamlit",
+        "ag-grid.mdx"
+      ]
+    },
+    {
+      "title": "Streamlit",
+      "rel": "Development/Python/Streamlit.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "Streamlit.mdx"
+      ]
+    },
+    {
+      "title": "在 Streamlit 中使用 SQLModel",
+      "rel": "Development/Python/Tips/sqlmodel.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "Tips",
+        "sqlmodel.mdx"
+      ]
+    },
+    {
+      "title": "导入外部依赖",
+      "rel": "Development/Python/Tips/sys-import.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "Tips",
+        "sys-import.mdx"
+      ]
+    },
+    {
+      "title": "技巧",
+      "rel": "Development/Python/Tips.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "Tips.mdx"
+      ]
+    },
+    {
+      "title": "Conda",
+      "rel": "Development/Python/conda.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "conda.mdx"
+      ]
+    },
+    {
+      "title": "PiP",
+      "rel": "Development/Python/pip.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "pip.mdx"
+      ]
+    },
+    {
+      "title": "[Poetry](https://python-poetry.org/docs/basic-usage/)",
+      "rel": "Development/Python/poetry.mdx",
+      "segments": [
+        "Development",
+        "Python",
+        "poetry.mdx"
+      ]
+    },
+    {
+      "title": "Python",
+      "rel": "Development/Python.mdx",
+      "segments": [
+        "Development",
+        "Python.mdx"
+      ]
+    },
+    {
+      "title": "正则表达式",
+      "rel": "Development/Regexp.mdx",
+      "segments": [
+        "Development",
+        "Regexp.mdx"
+      ]
+    },
+    {
+      "title": "Sentry",
+      "rel": "Development/Sentry.mdx",
+      "segments": [
+        "Development",
+        "Sentry.mdx"
+      ]
+    },
+    {
+      "title": "Alacritty",
+      "rel": "Development/Terminal/alacritty.mdx",
+      "segments": [
+        "Development",
+        "Terminal",
+        "alacritty.mdx"
+      ]
+    },
+    {
+      "title": "终端",
+      "rel": "Development/Terminal.mdx",
+      "segments": [
+        "Development",
+        "Terminal.mdx"
+      ]
+    },
+    {
+      "title": "[Vercel](https://vercel.com/)",
+      "rel": "Development/deploy/vercel.mdx",
+      "segments": [
+        "Development",
+        "deploy",
+        "vercel.mdx"
+      ]
+    },
+    {
+      "title": "Babel",
+      "rel": "Development/frontend/Babel.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Babel.mdx"
+      ]
+    },
+    {
+      "title": "Debug",
+      "rel": "Development/frontend/Debug.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Debug.mdx"
+      ]
+    },
+    {
+      "title": "Interview",
+      "rel": "Development/frontend/Interview.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Interview.mdx"
+      ]
+    },
+    {
+      "title": "Js基础",
+      "rel": "Development/frontend/Javascript/Js基础.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "Js基础.mdx"
+      ]
+    },
+    {
+      "title": "Nest.js",
+      "rel": "Development/frontend/Javascript/Nest.js.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "Nest.js.mdx"
+      ]
+    },
+    {
+      "title": "Promise",
+      "rel": "Development/frontend/Javascript/Promise.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "Promise.mdx"
+      ]
+    },
+    {
+      "title": "Rxjs",
+      "rel": "Development/frontend/Javascript/Rxjs.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "Rxjs.mdx"
+      ]
+    },
+    {
+      "title": "Nextjs: https://nextjs.org/ <Badge github=\"https://github.com/vercel/next.js\" />",
+      "rel": "Development/frontend/Javascript/full-stack/nextjs.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "full-stack",
+        "nextjs.mdx"
+      ]
+    },
+    {
+      "title": "全栈框架",
+      "rel": "Development/frontend/Javascript/full-stack.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "full-stack.mdx"
+      ]
+    },
+    {
+      "title": "文章",
+      "rel": "Development/frontend/Javascript/web-framework/React/Article.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "React",
+        "Article.mdx"
+      ]
+    },
+    {
+      "title": "Component-develop",
+      "rel": "Development/frontend/Javascript/web-framework/React/Component-develop.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "React",
+        "Component-develop.mdx"
+      ]
+    },
+    {
+      "title": "react-hooks",
+      "rel": "Development/frontend/Javascript/web-framework/React/react-hooks.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "React",
+        "react-hooks.mdx"
+      ]
+    },
+    {
+      "title": "状态管理",
+      "rel": "Development/frontend/Javascript/web-framework/React/store.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "React",
+        "store.mdx"
+      ]
+    },
+    {
+      "title": "UI-组件库",
+      "rel": "Development/frontend/Javascript/web-framework/React/ui-lib.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "React",
+        "ui-lib.mdx"
+      ]
+    },
+    {
+      "title": "React",
+      "rel": "Development/frontend/Javascript/web-framework/React.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "React.mdx"
+      ]
+    },
+    {
+      "title": "[Svelte](https://svelte.dev/)：编译型框架，高性能、简洁。 <Badge github=\"https://github.com/sveltejs/svelte\" npm=\"svelte\" />",
+      "rel": "Development/frontend/Javascript/web-framework/Svelte.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "Svelte.mdx"
+      ]
+    },
+    {
+      "title": "Web Component",
+      "rel": "Development/frontend/Javascript/web-framework/web-component.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework",
+        "web-component.mdx"
+      ]
+    },
+    {
+      "title": "前端框架",
+      "rel": "Development/frontend/Javascript/web-framework.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-framework.mdx"
+      ]
+    },
+    {
+      "title": "web-worker",
+      "rel": "Development/frontend/Javascript/web-worker.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "web-worker.mdx"
+      ]
+    },
+    {
+      "title": "十万个为什么",
+      "rel": "Development/frontend/Javascript/十万个为什么.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript",
+        "十万个为什么.mdx"
+      ]
+    },
+    {
+      "title": "Javascript",
+      "rel": "Development/frontend/Javascript.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Javascript.mdx"
+      ]
+    },
+    {
+      "title": "Rxjs",
+      "rel": "Development/frontend/Rxjs.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Rxjs.mdx"
+      ]
+    },
+    {
+      "title": "Trend",
+      "rel": "Development/frontend/Trend.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Trend.mdx"
+      ]
+    },
+    {
+      "title": "Typescript Changelog",
+      "rel": "Development/frontend/Typescript/changelog.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Typescript",
+        "changelog.mdx"
+      ]
+    },
+    {
+      "title": "技巧",
+      "rel": "Development/frontend/Typescript/skill.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Typescript",
+        "skill.mdx"
+      ]
+    },
+    {
+      "title": "Typescript",
+      "rel": "Development/frontend/Typescript.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Typescript.mdx"
+      ]
+    },
+    {
+      "title": "Vue",
+      "rel": "Development/frontend/Vue.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "Vue.mdx"
+      ]
+    },
+    {
+      "title": "blog",
+      "rel": "Development/frontend/blog.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "blog.mdx"
+      ]
+    },
+    {
+      "title": "架构",
+      "rel": "Development/frontend/code/架构.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "code",
+        "架构.mdx"
+      ]
+    },
+    {
+      "title": "code",
+      "rel": "Development/frontend/code.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "code.mdx"
+      ]
+    },
+    {
+      "title": "loading效果",
+      "rel": "Development/frontend/css/loading.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "css",
+        "loading.mdx"
+      ]
+    },
+    {
+      "title": "Css Reset",
+      "rel": "Development/frontend/css/reset.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "css",
+        "reset.mdx"
+      ]
+    },
+    {
+      "title": "tailwind",
+      "rel": "Development/frontend/css/tailwind.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "css",
+        "tailwind.mdx"
+      ]
+    },
+    {
+      "title": "css",
+      "rel": "Development/frontend/css.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "css.mdx"
+      ]
+    },
+    {
+      "title": "学习资源",
+      "rel": "Development/frontend/learn.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "learn.mdx"
+      ]
+    },
+    {
+      "title": "工具",
+      "rel": "Development/frontend/node/Prisma.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "node",
+        "Prisma.mdx"
+      ]
+    },
+    {
+      "title": "esm",
+      "rel": "Development/frontend/node/esm.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "node",
+        "esm.mdx"
+      ]
+    },
+    {
+      "title": "Next.js",
+      "rel": "Development/frontend/node/nestjs.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "node",
+        "nestjs.mdx"
+      ]
+    },
+    {
+      "title": "pm2",
+      "rel": "Development/frontend/node/pm2.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "node",
+        "pm2.mdx"
+      ]
+    },
+    {
+      "title": "nodejs",
+      "rel": "Development/frontend/node.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "node.mdx"
+      ]
+    },
+    {
+      "title": "React_Router",
+      "rel": "Development/frontend/npm/React_Router.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "npm",
+        "React_Router.mdx"
+      ]
+    },
+    {
+      "title": "npm",
+      "rel": "Development/frontend/npm.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "npm.mdx"
+      ]
+    },
+    {
+      "title": "富文本编辑器",
+      "rel": "Development/frontend/rich-text-editor.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "rich-text-editor.mdx"
+      ]
+    },
+    {
+      "title": "dnd",
+      "rel": "Development/frontend/skill/dnd.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "skill",
+        "dnd.mdx"
+      ]
+    },
+    {
+      "title": "模糊查询",
+      "rel": "Development/frontend/skill/fuzzy-search.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "skill",
+        "fuzzy-search.mdx"
+      ]
+    },
+    {
+      "title": "拼音",
+      "rel": "Development/frontend/skill/pinyin.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "skill",
+        "pinyin.mdx"
+      ]
+    },
+    {
+      "title": "[ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web): <Badge github=\"https://github.com/Yidadaa/ChatGPT-Next-Web\" />",
+      "rel": "Development/frontend/source-code/ChatGPT-Next-Web.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "ChatGPT-Next-Web.mdx"
+      ]
+    },
+    {
+      "title": "[Dify](https://dify.ai/): <Badge github=\"https://github.com/langgenius/dify\" />",
+      "rel": "Development/frontend/source-code/Dify.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "Dify.mdx"
+      ]
+    },
+    {
+      "title": "[Remotion](https://www.remotion.dev/) <Badge npm=\"remotion\" github=\"https://github.com/remotion-dev/remotion\" />",
+      "rel": "Development/frontend/source-code/Remotion.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "Remotion.mdx"
+      ]
+    },
+    {
+      "title": "[Flowise](https://flowiseai.com/): <Badge github=\"https://github.com/FlowiseAI/Flowise\" />",
+      "rel": "Development/frontend/source-code/flowise.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "flowise.mdx"
+      ]
+    },
+    {
+      "title": "[p-limit](https://github.com/sindresorhus/p-limit):可以控制并发数。<Badge gtihub=\"https://github.com/sindresorhus/p-limit\" npm=\"p-limit\" />",
+      "rel": "Development/frontend/source-code/p-limit.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "p-limit.mdx"
+      ]
+    },
+    {
+      "title": "[TypeChat](https://github.com/microsoft/TypeChat)·: 结构化输出json结构数据",
+      "rel": "Development/frontend/source-code/typechat.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "typechat.mdx"
+      ]
+    },
+    {
+      "title": "vscode-gpt-commit",
+      "rel": "Development/frontend/source-code/vscode-gpt-commit.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "vscode-gpt-commit.mdx"
+      ]
+    },
+    {
+      "title": "[yocto-queue](https://www.npmjs.com/package/yocto-queue): <Badge github=\"https://github.com/sindresorhus/yocto-queue\" npm=\"yocto-queue\" />",
+      "rel": "Development/frontend/source-code/yocto-queue.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code",
+        "yocto-queue.mdx"
+      ]
+    },
+    {
+      "title": "源码阅读",
+      "rel": "Development/frontend/source-code.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "source-code.mdx"
+      ]
+    },
+    {
+      "title": "[Puppeteer](https://pptr.dev/)",
+      "rel": "Development/frontend/spider/puppeteer.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "spider",
+        "puppeteer.mdx"
+      ]
+    },
+    {
+      "title": "text-editor",
+      "rel": "Development/frontend/text-editor.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "text-editor.mdx"
+      ]
+    },
+    {
+      "title": "Pixi.js",
+      "rel": "Development/frontend/web-render/2D/Pixi.js.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "2D",
+        "Pixi.js.mdx"
+      ]
+    },
+    {
+      "title": "canvas",
+      "rel": "Development/frontend/web-render/2D/canvas.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "2D",
+        "canvas.mdx"
+      ]
+    },
+    {
+      "title": "2D",
+      "rel": "Development/frontend/web-render/2D.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "2D.mdx"
+      ]
+    },
+    {
+      "title": "Babylonjs",
+      "rel": "Development/frontend/web-render/3D/Babylonjs.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "3D",
+        "Babylonjs.mdx"
+      ]
+    },
+    {
+      "title": "Three.js",
+      "rel": "Development/frontend/web-render/3D/Three.js.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "3D",
+        "Three.js.mdx"
+      ]
+    },
+    {
+      "title": "3D绘图",
+      "rel": "Development/frontend/web-render/3D.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "3D.mdx"
+      ]
+    },
+    {
+      "title": "可视化",
+      "rel": "Development/frontend/web-render/Visualization.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "Visualization.mdx"
+      ]
+    },
+    {
+      "title": "动画库",
+      "rel": "Development/frontend/web-render/animation.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "animation.mdx"
+      ]
+    },
+    {
+      "title": "webGPU",
+      "rel": "Development/frontend/web-render/webGPU.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render",
+        "webGPU.mdx"
+      ]
+    },
+    {
+      "title": "web渲染引擎",
+      "rel": "Development/frontend/web-render.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "web-render.mdx"
+      ]
+    },
+    {
+      "title": "小程序",
+      "rel": "Development/frontend/webapp.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "webapp.mdx"
+      ]
+    },
+    {
+      "title": "函数式编程",
+      "rel": "Development/frontend/编程模式/函数式编程.mdx",
+      "segments": [
+        "Development",
+        "frontend",
+        "编程模式",
+        "函数式编程.mdx"
+      ]
+    },
+    {
+      "title": "前端开发",
+      "rel": "Development/frontend.mdx",
+      "segments": [
+        "Development",
+        "frontend.mdx"
+      ]
+    },
+    {
+      "title": "软件逆向学习",
+      "rel": "Development/hack.mdx",
+      "segments": [
+        "Development",
+        "hack.mdx"
+      ]
+    },
+    {
+      "title": "Nginx",
+      "rel": "Development/http/nginx.mdx",
+      "segments": [
+        "Development",
+        "http",
+        "nginx.mdx"
+      ]
+    },
+    {
+      "title": "[Server-Sent Events](https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)",
+      "rel": "Development/http/sse.mdx",
+      "segments": [
+        "Development",
+        "http",
+        "sse.mdx"
+      ]
+    },
+    {
+      "title": "http",
+      "rel": "Development/http.mdx",
+      "segments": [
+        "Development",
+        "http.mdx"
+      ]
+    },
+    {
+      "title": "TailScale",
+      "rel": "Development/proxy/Tailscale.mdx",
+      "segments": [
+        "Development",
+        "proxy",
+        "Tailscale.mdx"
+      ]
+    },
+    {
+      "title": "DDNS",
+      "rel": "Development/proxy/ddns.mdx",
+      "segments": [
+        "Development",
+        "proxy",
+        "ddns.mdx"
+      ]
+    },
+    {
+      "title": "Frp",
+      "rel": "Development/proxy/frp.mdx",
+      "segments": [
+        "Development",
+        "proxy",
+        "frp.mdx"
+      ]
+    },
+    {
+      "title": "代理",
+      "rel": "Development/proxy.mdx",
+      "segments": [
+        "Development",
+        "proxy.mdx"
+      ]
+    },
+    {
+      "title": "sql",
+      "rel": "Development/sql.mdx",
+      "segments": [
+        "Development",
+        "sql.mdx"
+      ]
+    },
+    {
+      "title": "开发",
+      "rel": "Development.mdx",
+      "segments": [
+        "Development.mdx"
+      ]
+    },
+    {
+      "title": "大疆无人机",
+      "rel": "Devices/Dji.mdx",
+      "segments": [
+        "Devices",
+        "Dji.mdx"
+      ]
+    },
+    {
+      "title": "穿越机",
+      "rel": "Devices/Fpv.mdx",
+      "segments": [
+        "Devices",
+        "Fpv.mdx"
+      ]
+    },
+    {
+      "title": "油猴子",
+      "rel": "Devices/Mac/apps/Chrome/extensions/tampermonkey.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "Chrome",
+        "extensions",
+        "tampermonkey.mdx"
+      ]
+    },
+    {
+      "title": "extensions",
+      "rel": "Devices/Mac/apps/Chrome/extensions.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "Chrome",
+        "extensions.mdx"
+      ]
+    },
+    {
+      "title": "Chrome",
+      "rel": "Devices/Mac/apps/Chrome.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "Chrome.mdx"
+      ]
+    },
+    {
+      "title": "钉钉",
+      "rel": "Devices/Mac/apps/dingtalk.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "dingtalk.mdx"
+      ]
+    },
+    {
+      "title": "[Raycast](https://www.raycast.com/): Mac 下电脑启动器，不支持 window",
+      "rel": "Devices/Mac/apps/raycast.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "raycast.mdx"
+      ]
+    },
+    {
+      "title": "微信",
+      "rel": "Devices/Mac/apps/wechat.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "wechat.mdx"
+      ]
+    },
+    {
+      "title": "yabai",
+      "rel": "Devices/Mac/apps/yabai.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps",
+        "yabai.mdx"
+      ]
+    },
+    {
+      "title": "推荐App",
+      "rel": "Devices/Mac/apps.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "apps.mdx"
+      ]
+    },
+    {
+      "title": "配置导出",
+      "rel": "Devices/Mac/export-setting.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "export-setting.mdx"
+      ]
+    },
+    {
+      "title": "清理磁盘空间",
+      "rel": "Devices/Mac/skills/清理磁盘空间.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "skills",
+        "清理磁盘空间.mdx"
+      ]
+    },
+    {
+      "title": "Mac使用技巧",
+      "rel": "Devices/Mac/skills.mdx",
+      "segments": [
+        "Devices",
+        "Mac",
+        "skills.mdx"
+      ]
+    },
+    {
+      "title": "Mac",
+      "rel": "Devices/Mac.mdx",
+      "segments": [
+        "Devices",
+        "Mac.mdx"
+      ]
+    },
+    {
+      "title": "存储设备",
+      "rel": "Devices/Storage.mdx",
+      "segments": [
+        "Devices",
+        "Storage.mdx"
+      ]
+    },
+    {
+      "title": "Windows 系统",
+      "rel": "Devices/Windows.mdx",
+      "segments": [
+        "Devices",
+        "Windows.mdx"
+      ]
+    },
+    {
+      "title": "极空间",
+      "rel": "Devices/Zspace.mdx",
+      "segments": [
+        "Devices",
+        "Zspace.mdx"
+      ]
+    },
+    {
+      "title": "iPhone",
+      "rel": "Devices/iPhone.mdx",
+      "segments": [
+        "Devices",
+        "iPhone.mdx"
+      ]
+    },
+    {
+      "title": "电子设备",
+      "rel": "Devices.mdx",
+      "segments": [
+        "Devices.mdx"
+      ]
+    },
+    {
+      "title": "特斯拉",
+      "rel": "Life/Car/Tesla.mdx",
+      "segments": [
+        "Life",
+        "Car",
+        "Tesla.mdx"
+      ]
+    },
+    {
+      "title": "人保免费代步车申请流程",
+      "rel": "Life/Car/人保免费代步车申请流程.mdx",
+      "segments": [
+        "Life",
+        "Car",
+        "人保免费代步车申请流程.mdx"
+      ]
+    },
+    {
+      "title": "汽车",
+      "rel": "Life/Car.mdx",
+      "segments": [
+        "Life",
+        "Car.mdx"
+      ]
+    },
+    {
+      "title": "订阅服务",
+      "rel": "Life/Subscribe.mdx",
+      "segments": [
+        "Life",
+        "Subscribe.mdx"
+      ]
+    },
+    {
+      "title": "养猫",
+      "rel": "Life/pet/cat.mdx",
+      "segments": [
+        "Life",
+        "pet",
+        "cat.mdx"
+      ]
+    },
+    {
+      "title": "养狗",
+      "rel": "Life/pet/dog.mdx",
+      "segments": [
+        "Life",
+        "pet",
+        "dog.mdx"
+      ]
+    },
+    {
+      "title": "常用药物",
+      "rel": "Life/pill.mdx",
+      "segments": [
+        "Life",
+        "pill.mdx"
+      ]
+    },
+    {
+      "title": "生活",
+      "rel": "Life.mdx",
+      "segments": [
+        "Life.mdx"
+      ]
+    },
+    {
+      "title": "杭州-丽水五天五夜自驾游",
+      "rel": "Travel/lishui.mdx",
+      "segments": [
+        "Travel",
+        "lishui.mdx"
+      ]
+    },
+    {
+      "title": "日照3天自驾游",
+      "rel": "Travel/rizhao.mdx",
+      "segments": [
+        "Travel",
+        "rizhao.mdx"
+      ]
+    },
+    {
+      "title": "西藏",
+      "rel": "Travel/xizang.mdx",
+      "segments": [
+        "Travel",
+        "xizang.mdx"
+      ]
+    },
+    {
+      "title": "旅行",
+      "rel": "Travel.mdx",
+      "segments": [
+        "Travel.mdx"
+      ]
+    },
+    {
+      "title": "UE",
+      "rel": "UE.mdx",
+      "segments": [
+        "UE.mdx"
+      ]
+    },
+    {
+      "title": "Docusaurus",
+      "rel": "Website/Docusaurus.mdx",
+      "segments": [
+        "Website",
+        "Docusaurus.mdx"
+      ]
+    },
+    {
+      "title": "Github",
+      "rel": "Website/Github.mdx",
+      "segments": [
+        "Website",
+        "Github.mdx"
+      ]
+    },
+    {
+      "title": "[官网](https://nextra.site) <Badge github=\"https://github.com/shuding/nextra\" />",
+      "rel": "Website/Nextra.mdx",
+      "segments": [
+        "Website",
+        "Nextra.mdx"
+      ]
+    },
+    {
+      "title": "Twitter",
+      "rel": "Website/Twitter.mdx",
+      "segments": [
+        "Website",
+        "Twitter.mdx"
+      ]
+    },
+    {
+      "title": "Fly",
+      "rel": "Website/fly.mdx",
+      "segments": [
+        "Website",
+        "fly.mdx"
+      ]
+    },
+    {
+      "title": "导航&聚合",
+      "rel": "Website/nav.mdx",
+      "segments": [
+        "Website",
+        "nav.mdx"
+      ]
+    },
+    {
+      "title": "在线服务&网站",
+      "rel": "Website/online.mdx",
+      "segments": [
+        "Website",
+        "online.mdx"
+      ]
+    },
+    {
+      "title": "网站",
+      "rel": "Website.mdx",
+      "segments": [
+        "Website.mdx"
+      ]
+    },
+    {
+      "title": "FaceBook-LLaMA模型",
+      "rel": "ai/LLaMA.mdx",
+      "segments": [
+        "ai",
+        "LLaMA.mdx"
+      ]
+    },
+    {
+      "title": "Midjourney",
+      "rel": "ai/Midjourney.mdx",
+      "segments": [
+        "ai",
+        "Midjourney.mdx"
+      ]
+    },
+    {
+      "title": "Stable-Diffusion",
+      "rel": "ai/Stable-Diffusion.mdx",
+      "segments": [
+        "ai",
+        "Stable-Diffusion.mdx"
+      ]
+    },
+    {
+      "title": "利用GPT解读PDF",
+      "rel": "ai/chat-pdf.mdx",
+      "segments": [
+        "ai",
+        "chat-pdf.mdx"
+      ]
+    },
+    {
+      "title": "生态系统",
+      "rel": "ai/chatGPT/ecs.mdx",
+      "segments": [
+        "ai",
+        "chatGPT",
+        "ecs.mdx"
+      ]
+    },
+    {
+      "title": "json",
+      "rel": "ai/chatGPT/json.mdx",
+      "segments": [
+        "ai",
+        "chatGPT",
+        "json.mdx"
+      ]
+    },
+    {
+      "title": "chatGPT",
+      "rel": "ai/chatGPT.mdx",
+      "segments": [
+        "ai",
+        "chatGPT.mdx"
+      ]
+    },
+    {
+      "title": "FastChat",
+      "rel": "ai/fastchat.mdx",
+      "segments": [
+        "ai",
+        "fastchat.mdx"
+      ]
+    },
+    {
+      "title": "[LangChain](https://js.langchain.com/docs/): GPT 框架。 <Badge github=\"https://github.com/hwchase17/langchainjs\" />",
+      "rel": "ai/langChain.mdx",
+      "segments": [
+        "ai",
+        "langChain.mdx"
+      ]
+    },
+    {
+      "title": "prompts",
+      "rel": "ai/prompts.mdx",
+      "segments": [
+        "ai",
+        "prompts.mdx"
+      ]
+    },
+    {
+      "title": "AI能力",
+      "rel": "ai.mdx",
+      "segments": [
+        "ai.mdx"
+      ]
+    },
+    {
+      "title": "books",
+      "rel": "books.mdx",
+      "segments": [
+        "books.mdx"
+      ]
+    },
+    {
+      "title": "Markdown",
+      "rel": "files/Markdown.mdx",
+      "segments": [
+        "files",
+        "Markdown.mdx"
+      ]
+    },
+    {
+      "title": "字体名称：DroidSansM Nerd Font",
+      "rel": "files/Nerd-font.mdx",
+      "segments": [
+        "files",
+        "Nerd-font.mdx"
+      ]
+    },
+    {
+      "title": "PPT",
+      "rel": "files/PPT.mdx",
+      "segments": [
+        "files",
+        "PPT.mdx"
+      ]
+    },
+    {
+      "title": "电子书",
+      "rel": "files/e-book.mdx",
+      "segments": [
+        "files",
+        "e-book.mdx"
+      ]
+    },
+    {
+      "title": "图片",
+      "rel": "files/image.mdx",
+      "segments": [
+        "files",
+        "image.mdx"
+      ]
+    },
+    {
+      "title": "json",
+      "rel": "files/json.mdx",
+      "segments": [
+        "files",
+        "json.mdx"
+      ]
+    },
+    {
+      "title": "mp3",
+      "rel": "files/mp3.mdx",
+      "segments": [
+        "files",
+        "mp3.mdx"
+      ]
+    },
+    {
+      "title": "pdf",
+      "rel": "files/pdf.mdx",
+      "segments": [
+        "files",
+        "pdf.mdx"
+      ]
+    },
+    {
+      "title": "[ffmpeg](https://ffmpeg.org/)",
+      "rel": "files/video/ffmpeg.mdx",
+      "segments": [
+        "files",
+        "video",
+        "ffmpeg.mdx"
+      ]
+    },
+    {
+      "title": "video",
+      "rel": "files/video.mdx",
+      "segments": [
+        "files",
+        "video.mdx"
+      ]
+    },
+    {
+      "title": "YAML",
+      "rel": "files/yaml.mdx",
+      "segments": [
+        "files",
+        "yaml.mdx"
+      ]
+    },
+    {
+      "title": "files",
+      "rel": "files.mdx",
+      "segments": [
+        "files.mdx"
+      ]
+    },
+    {
+      "title": "介绍",
+      "rel": "intro.mdx",
+      "segments": [
+        "intro.mdx"
+      ]
+    },
+    {
+      "title": "All-In-One",
+      "rel": "others/all-in-one.mdx",
+      "segments": [
+        "others",
+        "all-in-one.mdx"
+      ]
+    },
+    {
+      "title": "[Figma](https://www.figma.com/)",
+      "rel": "others/figma.mdx",
+      "segments": [
+        "others",
+        "figma.mdx"
+      ]
+    },
+    {
+      "title": "有趣的知识",
+      "rel": "others/funny.mdx",
+      "segments": [
+        "others",
+        "funny.mdx"
+      ]
+    },
+    {
+      "title": "其他",
+      "rel": "others.mdx",
+      "segments": [
+        "others.mdx"
+      ]
+    },
+    {
+      "title": "密码管理器",
+      "rel": "password-manager.mdx",
+      "segments": [
+        "password-manager.mdx"
+      ]
+    }
+  ]
+}
