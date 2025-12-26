@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:the-guild.dev)",
       "mcp__next-devtools__nextjs_docs",
-      "Bash(npm info:*)"
+      "Bash(npm info:*)",
+      "WebFetch(domain:nextra.site)"
     ]
   }
 }

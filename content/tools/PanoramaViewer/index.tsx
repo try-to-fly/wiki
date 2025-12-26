@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 import {
   BackSide,
   TextureLoader,
-  sRGBEncoding,
+  SRGBColorSpace,
   LinearFilter,
   MOUSE,
 } from "three";
@@ -16,7 +16,7 @@ import styles from "./PanoramaViewer.module.scss";
 import { Wrap } from "@components/Wrap";
 
 const Panorama = ({ url, autoRotate }) => {
-  const meshRef = useRef() as any;
+  const meshRef = useRef<any>(null);
   const [loadingError, setLoadingError] = useState(null);
   const [geometryArgs, setGeometryArgs] = useState<[number, number, number]>([
     500, 60, 40,
@@ -31,7 +31,7 @@ const Panorama = ({ url, autoRotate }) => {
           setLoadingError(null);
         }
         // 设置纹理颜色空间为 sRGB 和 LinearFilter
-        texture.encoding = sRGBEncoding;
+        texture.colorSpace = SRGBColorSpace;
         texture.minFilter = LinearFilter;
         texture.magFilter = LinearFilter;
 
@@ -96,7 +96,6 @@ const PanoramaCanvas = ({ url, autoRotate, fullscreen }) => {
             MIDDLE: MOUSE.DOLLY,
             RIGHT: MOUSE.PAN,
           }}
-          onPointerUp={() => autoRotate(false)}
           reverseOrbit={true}
         />
       </Canvas>

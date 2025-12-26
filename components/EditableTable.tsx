@@ -26,7 +26,7 @@ export const EditableCell: React.FC<any> = ({
   ...restProps
 }) => {
   const [editingCell, setEditingCell] = useState(editing);
-  const inputRef = useRef<any>();
+  const inputRef = useRef<any>(null);
   const form = useContext(EditableContext);
 
   useEffect(() => {
