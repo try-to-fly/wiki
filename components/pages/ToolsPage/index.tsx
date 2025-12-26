@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Col, Row } from "antd";
 import styles from "./Navigation.module.scss";

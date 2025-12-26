@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:the-guild.dev)",
-      "mcp__next-devtools__nextjs_docs"
+      "mcp__next-devtools__nextjs_docs",
+      "Bash(npm info:*)"
     ]
   }
 }

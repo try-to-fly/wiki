@@ -1,3 +1,5 @@
+"use client";
+
 import ky from "ky";
 import { useEffect, useState } from "react";
 import Link from "next/link";

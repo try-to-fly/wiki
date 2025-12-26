@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { javascript } from "@codemirror/lang-javascript";
 import { json } from "@codemirror/lang-json";

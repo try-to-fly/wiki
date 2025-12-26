@@ -1,3 +1,5 @@
+"use client";
+
 import { ConfigProvider, theme } from "antd";
 import { useTheme } from "nextra-theme-docs";
 import React from "react";

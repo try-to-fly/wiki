@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { Input, Form } from "antd";
 
