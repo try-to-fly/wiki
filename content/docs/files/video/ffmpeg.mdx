@@ -7,3 +7,11 @@
 3. [Optimizing Video For Size And Quality](https://www.smashingmagazine.com/2021/02/optimizing-video-size-quality/): 优化视频的大小和质量
 4. [前端视频帧提取 ffmpeg + Webassembly](https://juejin.cn/post/6854573219454844935)
 5. [In-browser transcoding of video files with FFmpeg and WebAssembly](https://blog.scottlogic.com/2020/11/23/ffmpeg-webassembly.html): 使用 FFmpeg 和 WebAssembly 进行浏览器内的视频文件转码
+
+### 常用命令
+
+#### 转 WebM（VP9）透明视频并压缩码率
+
+```bash
+ffmpeg -i logo.webm -c:v libvpx-vp9 -pix_fmt yuva420p -auto-alt-ref 0 -b:v 800k logo_800k.webm
+```
