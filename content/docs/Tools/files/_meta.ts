@@ -1,0 +1,6 @@
+export default {
+  image: '图片',
+  video: '视频',
+  pdf: 'PDF',
+  mp3: '音乐'
+}

@@ -4,7 +4,9 @@
       "WebFetch(domain:the-guild.dev)",
       "mcp__next-devtools__nextjs_docs",
       "Bash(npm info:*)",
-      "WebFetch(domain:nextra.site)"
+      "WebFetch(domain:nextra.site)",
+      "Bash(tree:*)",
+      "Bash(ls:*)"
     ]
   }
 }

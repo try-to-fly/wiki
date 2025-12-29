@@ -1,0 +1,4 @@
+export default {
+  huntun: '馄饨',
+  crayfish: '小龙虾'
+}
