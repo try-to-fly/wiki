@@ -38,7 +38,7 @@
     "antd": "^6.1.2",
     "chart.js": "^4.2.1",
     "clsx": "^1.2.1",
-    "cmdk": "^0.2.0",
+    "cmdk": "^1.1.0",
     "codemirror": "^6.0.1",
     "copy-to-clipboard": "^3.3.3",
     "dayjs": "^1.11.7",

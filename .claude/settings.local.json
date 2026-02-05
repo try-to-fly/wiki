@@ -6,7 +6,9 @@
       "Bash(npm info:*)",
       "WebFetch(domain:nextra.site)",
       "Bash(tree:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npm view:*)"
     ]
   }
 }
