@@ -1,0 +1,26 @@
+---
+title: Claude Code 配置：跳过 Web Fetch 预检（skipWebFetchPreflight）
+---
+
+当 Claude Code 在抓取网页内容（Web fetch / web_fetch）时，可能会遇到类似报错：
+
+> Unable to verify if domain superuser.com is safe to fetch.
+
+这通常是 Claude Code 的「域名安全预检（preflight）」无法验证目标域名导致的。
+
+## 解决方案
+
+在 Claude Code 配置中增加：
+
+```json
+{
+  "skipWebFetchPreflight": true
+}
+```
+
+启用后，Claude Code 会跳过对域名的安全性预检，从而避免上述报错。
+
+## 注意事项
+
+- 跳过预检会降低对潜在恶意站点的拦截能力；只建议在你明确需要抓取的站点可信、且确实被误判/无法验证时开启。
+- 如果你只想临时解决个别站点的问题，可以考虑在排查完毕后再关闭该配置。
