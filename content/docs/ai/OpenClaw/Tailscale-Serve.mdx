@@ -1,0 +1,161 @@
+---
+title: Tailscale Serve（远程访问 Gateway Web UI）
+---
+
+## 目标
+
+在不暴露公网端口的前提下，从另一台电脑远程访问 **Mac mini** 上的 **OpenClaw Gateway Web UI（Dashboard）**。
+
+推荐做法：
+
+- OpenClaw Gateway **只绑定回环**（`127.0.0.1`）
+- 用 **Tailscale Serve** 在 tailnet 内提供 **HTTPS 入口**
+
+最终访问：
+
+- `https://<MagicDNS>.ts.net/`（仅 tailnet 可访问）
+
+---
+
+## 核心能力（为什么这套方案稳）
+
+1) **最小暴露面**：Gateway 不对 LAN / WAN 监听，攻击面只剩本机回环。
+
+2) **Tailscale 提供安全入口**：Serve 负责 HTTPS、路由、tailnet 访问控制。
+
+3) **分层准入**：
+
+- **网络层**：只有 tailnet 成员能访问
+- **应用层**：OpenClaw 仍可要求 token/password（或使用 Tailscale 身份头，视配置而定）
+- **设备层**：首次访问的浏览器/客户端仍需要完成 Gateway 的 **pairing**（批准设备）
+
+---
+
+## 适用场景
+
+- 你需要在外网/异地访问家里或办公室的 Mac mini 上的 OpenClaw Web UI
+- 不想开防火墙端口、也不想配公网反代
+- 希望是 tailnet-only、HTTPS、可控的访问方式
+
+---
+
+## 配置步骤（验证过的最短路径）
+
+### 1) 两端加入同一 Tailnet
+
+在 **Mac mini** 和 **远程电脑**都安装并登录 Tailscale：
+
+```bash
+tailscale up
+```
+
+建议开启：MagicDNS + HTTPS（Tailscale 管理后台设置）。
+
+---
+
+### 2) OpenClaw：Gateway 只绑定 loopback + 开启 tailscale serve
+
+在 OpenClaw 配置中启用：
+
+```json5
+{
+  gateway: {
+    bind: "loopback",
+    tailscale: { mode: "serve" }
+  }
+}
+```
+
+---
+
+### 3) Tailscale：确认 Serve 在 tailnet 侧已启用（最容易踩坑的点）
+
+#### 症状
+
+远程浏览器访问：
+
+- `https://<MagicDNS>.ts.net/`
+
+报错：
+
+- `ERR_EMPTY_RESPONSE` / “未发送任何数据”
+
+#### 根因
+
+- **Tailscale Serve 没有在 tailnet 侧授权启用**，导致没有任何 Serve 配置真正生效。
+
+#### 快速判断
+
+在 Mac mini 上：
+
+```bash
+tailscale serve status
+```
+
+如果看到：
+
+- `No serve config`
+
+优先处理 Serve 授权与配置，而不是怀疑 OpenClaw。
+
+#### 修复
+
+按 `tailscale serve` 命令提示，去控制台链接启用 Serve，然后重新下发：
+
+```bash
+tailscale serve --bg --https=443 http://127.0.0.1:18789
+tailscale serve status
+```
+
+---
+
+### 4) 远程访问与认证
+
+#### 4.1 打开页面
+
+远程电脑访问：
+
+- `https://<MagicDNS>.ts.net/`
+
+如果 `gateway.auth.mode=token/password`，按页面提示完成登录。
+
+#### 4.2 处理 `1008: pairing required`
+
+如果出现：
+
+- `Disconnected (1008): pairing required`
+
+含义：
+
+- 网络已通、认证可能也已通过
+- 但该浏览器设备尚未被 Gateway 批准配对（第一次访问是正常现象）
+
+处理方式：
+
+- 在 Mac mini 本机打开：`http://127.0.0.1:18789/`
+- 在 Devices / Pairing / Pending Requests 中 **Approve** 该设备
+- 远程刷新页面即可
+
+> 备注：清理浏览器数据（localStorage）会让它看起来像“新设备”，可能需要重新配对。
+
+---
+
+## 常用排错清单
+
+### A) Serve 侧是否配置成功
+
+```bash
+tailscale serve status
+```
+
+### B) OpenClaw 在本机回环是否正常
+
+```bash
+curl -I http://127.0.0.1:18789/
+```
+
+### C) OpenClaw 监听状态
+
+```bash
+openclaw gateway status
+```
