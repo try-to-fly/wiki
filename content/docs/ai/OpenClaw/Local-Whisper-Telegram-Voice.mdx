@@ -1,0 +1,132 @@
+---
+title: 本地 Whisper 支持 Telegram 语音转写
+---
+
+本文记录：如何在 OpenClaw 中使用**本地 whisper CLI**，把 Telegram 语音消息转写成文本（transcript），供后续对话/指令使用。
+
+## 目标与链路
+
+- Telegram 发送语音（voice / audio）
+- OpenClaw 下载媒体到临时文件（记为 `MediaPath`）
+- OpenClaw 调用本地 `whisper` CLI 进行转写
+- 将转写文本注入到当前会话中（等同于用户发来了一段文字）
+
+## 前置条件
+
+1) 机器上可用的命令：
+
+- `whisper`（OpenAI Whisper 的 CLI）
+- `ffmpeg`（whisper 通常依赖它做音频解码）
+
+2) OpenClaw 使用的运行用户（如 `fox`）在 PATH 中能找到 `whisper`。
+
+> 如果你是在 shell 里能跑 `whisper`，但 OpenClaw 里报 “command not found”，通常是 PATH/启动环境不同导致的。
+
+## 配置位置
+
+OpenClaw 主配置文件：
+
+- `~/.openclaw/openclaw.json`
+
+音频转写配置入口：
+
+- `tools.media.audio`
+
+Telegram 通道配置入口：
+
+- `channels.telegram`
+
+## 关键 JSON 配置摘录（示例：当前实际配置）
+
+下面代码块**仅摘录与你的本地语音转写相关**配置（省略了 token/key 等敏感字段）：
+
+```json
+{
+  "tools": {
+    "media": {
+      "audio": {
+        "enabled": true,
+        "maxBytes": 20971520,
+        "timeoutSeconds": 60,
+        "maxChars": 12000,
+        "models": [
+          {
+            "type": "cli",
+            "command": "whisper",
+            "args": [
+              "--model",
+              "base",
+              "--output_format",
+              "txt",
+              "--output_dir",
+              "/tmp",
+              "{{MediaPath}}"
+            ],
+            "timeoutSeconds": 60
+          }
+        ]
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "proxy": "http://127.0.0.1:7890"
+    }
+  }
+}
+```
+
+### 字段解释
+
+- `enabled: true`：开启音频处理/转写能力。
+- `maxBytes`：允许下载并处理的媒体最大体积（示例为 20MB）。
+- `timeoutSeconds`：单次转写最大允许耗时。
+- `models[0].type: "cli"`：表示用本地命令行工具转写。
+- `command: "whisper"`：调用的可执行文件名。
+- `args`：传给 whisper 的参数。
+  - `{{MediaPath}}` 是 OpenClaw 注入的占位符：实际会替换成下载到本地的音频文件路径。
+  - `--output_format txt` + `--output_dir /tmp`：whisper 会生成 txt 结果文件到 `/tmp`。
+
+## 如何验证是否生效
+
+1) 在 Telegram 给机器人/会话发一条**短语音**（10-20 秒）。
+2) 观察 OpenClaw 是否在会话中出现类似：
+   - 转写后的文本内容（作为 transcript 注入）
+3) 若没有转写文本：
+   - 优先检查 OpenClaw 日志里是否有 `whisper` 执行失败、超时、或 PATH 找不到命令。
+
+## 常见问题与排障
+
+### 1) `whisper` 找不到 / PATH 不一致
+
+现象：日志出现 “command not found: whisper”。
+
+处理：
+
+- 确认 OpenClaw 的启动方式（launchd/daemon/手动）是否继承了你的 shell PATH。
+- 最稳妥的方式是把 `command` 写成绝对路径（例如 `/opt/homebrew/bin/whisper`），或在服务启动环境里显式指定 PATH。
+
+### 2) 没有转写、或媒体下载失败（Telegram）
+
+如果看起来“语音不进来/下载失败”，经常是**网络代理**问题。
+
+你当前在 `channels.telegram.proxy` 配了代理：
+
+- `"proxy": "http://127.0.0.1:7890"`
+
+这会影响 Telegram 的 API 请求与媒体下载。
+
+> 注意：有时你会误以为是 “TTS/语音处理没生效”，但其实是 Telegram 媒体下载失败导致的；所以排障时先确认 Telegram 通道的代理连通性。
+
+### 3) 超时/语音太长
+
+处理：
+
+- 降低语音长度（先用短语音验证链路）
+- 或调大 `tools.media.audio.timeoutSeconds`
+- 或换更快的模型（例如 `base` 已经相对快；更大模型更慢）
+
+## 相关备注
+
+- 文档只描述“本地 whisper CLI 转写”；如果你后续要做“转写后自动触发某些指令”，可以再补一个工作流文档。
