@@ -1,0 +1,180 @@
+---
+title: right.codes + CLIProxyAPI：改善 OpenClaw 的 Codex 缓存利用率
+---
+
+## 背景
+
+如果 OpenClaw 直接走 `right.codes` 的 OpenAI-compatible 接口，某些 Codex / coding workload 场景里缓存利用率可能偏低。
+
+一个更稳的做法是：
+
+- 本机起一个 `CLIProxyAPI`
+- 上游改接 `https://www.right.codes/codex/v1`
+- 只暴露一个本地 alias，例如 `codex-latest`
+- OpenClaw 再改连本地 `CLIProxyAPI`
+
+这样做的好处：
+
+- OpenClaw 只连本地 `http://127.0.0.1:8317/v1`
+- `right.codes` 的 Codex 路由、key、model alias 都集中在 `config.yaml`
+- 后续要切 key、prefix 或 alias，不用再反复改 OpenClaw 多处配置
+
+## 目录准备
+
+先准备一个独立目录保存 `docker-compose.yml`、`config.yaml` 和认证目录：
+
+```bash
+mkdir -p ~/cliproxyapi-right-codes/auth-dir
+cd ~/cliproxyapi-right-codes
+curl -L https://raw.githubusercontent.com/router-for-me/CLIProxyAPI/main/config.example.yaml -o config.example.yaml
+cp config.example.yaml config.yaml
+```
+
+> 原始模板仓库：`https://github.com/router-for-me/CLIProxyAPI/blob/main/config.example.yaml`
+
+## docker-compose.yml
+
+```yaml
+services:
+  cli-proxy-api:
+    image: eceasy/cli-proxy-api:latest
+    container_name: cli-proxy-api
+    restart: unless-stopped
+    ports:
+      - "8317:8317"
+    volumes:
+      - ./config.yaml:/CLIProxyAPI/config.yaml:ro
+      - ./auth-dir:/root/.cli-proxy-api
+```
+
+## config.yaml（最小可用示例）
+
+把模板裁剪成下面这样即可：
+
+```yaml
+host: ""
+port: 8317
+
+auth-dir: "/root/.cli-proxy-api"
+
+api-keys:
+  - "openclaw-local-key"
+
+debug: false
+usage-statistics-enabled: false
+proxy-url: ""
+
+codex-api-key:
+  - api-key: "YOUR_RIGHT_CODES_KEY"
+    prefix: "test"
+    base-url: "https://www.right.codes/codex/v1"
+    proxy-url: "direct"
+    models:
+      - name: "gpt-5-codex"
+        alias: "codex-latest"
+```
+
+### 字段说明
+
+- `api-keys`：本地代理自己的访问令牌，OpenClaw 之后会拿它连 `CLIProxyAPI`。
+- `api-key`：这里填你的 `right.codes` Codex key；不要把真实 key 提交进 git。
+- `prefix: "test"`：可选。开启后，只有请求 `test/gpt-5-codex` 才会命中这条 credential；如果你不需要前缀路由，可以删掉。
+- `base-url`：明确走 `right.codes` 的 Codex endpoint，而不是别的 OpenAI-compatible 入口。
+- `proxy-url: "direct"`：可选。适合宿主机全局开了 `HTTP_PROXY` / `HTTPS_PROXY`，但你想让这条上游直连时使用。
+- `models`：把上游的 `gpt-5-codex` 映射成对客户端更稳定的别名 `codex-latest`。
+
+## 一个容易踩坑的点：不要照抄 `excluded-models` 示例
+
+`config.example.yaml` 里有一段被注释掉的 `excluded-models` 示例，像这样：
+
+```yaml
+excluded-models:
+  - "gpt-5.4"
+  - "gpt-5.1"
+  - "gpt-5-*"
+  - "*-mini"
+  - "*codex*"
+```
+
+这段是“语法示例”，不是建议你整段原样粘贴。
+
+如果你同时保留：
+
+- `gpt-5-*`
+- `*codex*`
+
+那很可能会把你真正要用的 `gpt-5-codex` 也一起排掉，结果本地 alias 虽然写了，实际请求却匹配不到。
+
+如果你的目标就是暴露 `gpt-5-codex -> codex-latest`，最简单的做法是：
+
+- 先不要配 `excluded-models`
+- 等确认链路跑通后，再按需加精确排除规则
+
+## 启动 CLIProxyAPI
+
+```bash
+docker compose up -d
+docker compose logs -f
+```
+
+## 验证是否成功
+
+先看模型列表：
+
+```bash
+curl http://127.0.0.1:8317/v1/models \
+  -H 'Authorization: Bearer openclaw-local-key'
+```
+
+正常的话，应该能看到你映射出来的 `codex-latest`。
+
+如果没有看到：
+
+- 检查 `config.yaml` 是否真的挂载到了容器内
+- 检查 `excluded-models` 是否把 `gpt-5-codex` 排掉了
+- 检查 `base-url`、`api-key` 是否写对
+- 看 `docker compose logs -f` 里的启动日志
+
+## OpenClaw 接入方式
+
+把 OpenClaw 的 `openai` provider 改指向本地代理：
+
+```json
+{
+  "env": {
+    "OPENAI_API_KEY": "openclaw-local-key"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "openai": {
+        "baseUrl": "http://127.0.0.1:8317/v1",
+        "apiKey": "OPENAI_API_KEY",
+        "api": "openai-completions",
+        "models": []
+      }
+    }
+  }
+}
+```
+
+如果你希望某个 agent 直接使用这条本地 alias，再把它的目标模型改成 `openai/codex-latest`。
+
+## 适用场景
+
+这套方案适合下面几类情况：
+
+- `right.codes` 直连可用，但 OpenClaw 里的缓存表现不理想
+- 想把上游 key / prefix / alias 收口到一个本地代理统一管理
+- 想保留 OpenClaw 原来的 OpenAI-compatible 接入方式，只替换底层上游实现
+
+## 小结
+
+核心思路很简单：
+
+1. 用 `CLIProxyAPI` 在本地起一个 `:8317`
+2. 上游改成 `https://www.right.codes/codex/v1`
+3. 只暴露你需要的 `codex-latest`
+4. 让 OpenClaw 去连本地代理而不是直接连 `right.codes`
+
+这样排障面会小很多，后续要切 key、换 alias、加路由规则也更顺手。
