@@ -1,0 +1,88 @@
+---
+title: Vibe Kanban 与 EnsoAI：Agent 看板与并行 Worktree 工具
+---
+
+这类工具的共同思路，是把 `Git worktree`、AI agent 会话、终端和代码 review 放进一个更顺手的工作台里。
+
+相比只在一个终端里来回切分 `Codex`、`Claude Code`、`Gemini` 等 agent，它们更适合并行推进多个任务，并把上下文隔离在各自的 worktree 里。
+
+## Vibe Kanban
+
+- 官网：https://www.vibekanban.com/
+- 仓库：https://github.com/BloopAI/vibe-kanban
+- 定位：用看板（kanban issues）规划任务，再把任务落到独立 workspace，让 coding agent 在分支、终端和预览环境里执行。
+
+### 适合场景
+
+- 同时管理多个 AI coding task
+- 想把任务规划、执行、review、PR 串成一条流程
+- 团队协作或需要可视化看板时
+
+### 主要能力
+
+- 用 kanban board 创建、排序、分配 issue
+- 为任务创建 workspace，让 agent 在独立分支中执行
+- 支持 review diff、写 inline comments、预览应用
+- 可切换多种 coding agent，例如 `Claude Code`、`Codex`、`Gemini CLI`、`Cursor` 等
+- 可以直接创建 pull request 并继续 review / merge
+
+### 快速开始
+
+```bash
+npx vibe-kanban
+```
+
+### 个人判断
+
+`vibe-kanban` 更像一个面向 AI coding workflow 的「看板 + workspace 编排器」。
+
+重点不只是开 agent，而是把任务拆分、排优先级、review 结果、推进 PR 这些动作收在同一个界面里。
+
+## EnsoAI
+
+- 官网：https://enso.j3.do/
+- 仓库：https://github.com/J3n5en/EnsoAI
+- 定位：本地桌面端的多 Agent worktree 工作台，强调在一个项目里并行跑多个 agent，并为每个 worktree 保留独立的持久化会话。
+
+### 适合场景
+
+- 个人开发为主
+- 想在本地同时跑多个 agent / 多个分支任务
+- 希望切回某个 worktree 时，AI 会话和上下文都还在
+
+### 主要能力
+
+- 多 Agent 矩阵，可切换 `Claude`、`Codex`、`Gemini` 和自定义 CLI agent
+- 每个 worktree 维护独立的 persistent AI session
+- 内置 Git 管理器，可查看 diff、暂存修改、浏览提交
+- 内置 Monaco 编辑器，适合快速修改文件
+- 提供 AI code review、3-way merge、全局搜索等能力
+
+### 安装（macOS）
+
+```bash
+brew tap j3n5en/ensoai
+brew install --cask ensoai
+```
+
+### 个人判断
+
+`EnsoAI` 更像一个围绕 `Git worktree + AI Agent` 设计的轻量桌面 IDE / orchestrator。
+
+如果你主要是自己在本地并行开工，它的路径会比“看板型产品”更直接：开 worktree、切 agent、保留会话、看 diff、顺手改几行代码。
+
+## 怎么选
+
+- 想要「看板驱动的任务管理 + workspace 执行 + review + PR 流程」：优先看 `vibe-kanban`
+- 想要「本地桌面工作台 + 多 worktree + 持久 agent 会话」：优先看 `EnsoAI`
+- 如果你的核心痛点是“多个 agent 同时跑、上下文别串、任务别混”，这两个方向都值得继续跟踪
+
+## 共同点
+
+- 都把 `Git worktree` 当成并行开发的基础单元
+- 都适合管理 `Codex`、`Claude Code`、`Gemini` 这类 coding agent
+- 都是在解决“AI 写代码之后，人更多时间花在规划、切换、review、整合”这个问题
+
+## 备注
+
+如果后面再看到类似产品，可以继续并到这一页，作为「AI agent orchestration / worktree workflow」的同类工具索引。
